@@ -1,0 +1,5394 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>02-Side Menu</title>
+<style id="applicationStylesheet" type="text/css">
+	.mediaViewInfo {
+		--web-view-name: 02-Side Menu;
+		--web-view-id: ID02-Side_Menu;
+		--web-scale-on-resize: true;
+		--web-enable-deep-linking: true;
+	}
+	:root {
+		--web-view-ids: ID02-Side_Menu;
+	}
+	* {
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
+		border: none;
+	}
+	#ID02-Side_Menu {
+		position: absolute;
+		width: 375px;
+		height: 812px;
+		background-color: rgba(33,40,80,1);
+		overflow: hidden;
+		--web-view-name: 02-Side Menu;
+		--web-view-id: ID02-Side_Menu;
+		--web-scale-on-resize: true;
+		--web-enable-deep-linking: true;
+	}
+	@keyframes fadein {
+	
+		0% {
+			opacity: 0;
+		}
+		100% {
+			opacity: 1;
+		}
+	
+	}
+	#Status_bar_fe {
+		opacity: 0.7;
+		position: absolute;
+		width: 347.388px;
+		height: 14px;
+		left: 14px;
+		top: 12.993px;
+		overflow: visible;
+	}
+	#Group_1_ff {
+		position: absolute;
+		width: 347.388px;
+		height: 14px;
+		left: 0px;
+		top: 0px;
+		overflow: visible;
+	}
+	#ID0941_fg {
+		left: 0px;
+		top: 0px;
+		position: absolute;
+		overflow: visible;
+		width: 36px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Circular Std Medium;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 14px;
+		color: rgba(255,255,255,1);
+	}
+	#Sc2prstif_1__fh {
+		position: absolute;
+		width: 14.907px;
+		height: 11.222px;
+		left: 302.667px;
+		top: 1px;
+		overflow: visible;
+	}
+	#Group_4_fi {
+		position: absolute;
+		width: 14.907px;
+		height: 11.222px;
+		left: 0px;
+		top: 0px;
+		overflow: visible;
+	}
+	#Path_9_fj {
+		fill: rgba(255,255,255,1);
+	}
+	.Path_9_fj {
+		overflow: visible;
+		position: absolute;
+		width: 14.907px;
+		height: 4.218px;
+		left: 0px;
+		top: 0px;
+		transform: matrix(1,0,0,1,0,0);
+	}
+	#Path_10_fk {
+		fill: rgba(255,255,255,1);
+	}
+	.Path_10_fk {
+		overflow: visible;
+		position: absolute;
+		width: 11.018px;
+		height: 3.397px;
+		left: 1.934px;
+		top: 2.799px;
+		transform: matrix(1,0,0,1,0,0);
+	}
+	#Path_11_fl {
+		fill: rgba(255,255,255,1);
+	}
+	.Path_11_fl {
+		overflow: visible;
+		position: absolute;
+		width: 7.004px;
+		height: 2.571px;
+		left: 3.983px;
+		top: 5.618px;
+		transform: matrix(1,0,0,1,0,0);
+	}
+	#Path_12_fm {
+		fill: rgba(255,255,255,1);
+	}
+	.Path_12_fm {
+		overflow: visible;
+		position: absolute;
+		width: 2.786px;
+		height: 2.819px;
+		left: 6.095px;
+		top: 8.402px;
+		transform: matrix(1,0,0,1,0,0);
+	}
+	#Group_5_fn {
+		position: absolute;
+		width: 13.537px;
+		height: 11.233px;
+		left: 283.667px;
+		top: 1px;
+		overflow: visible;
+	}
+	#Path_13_fo {
+		fill: rgba(255,255,255,1);
+	}
+	.Path_13_fo {
+		overflow: visible;
+		position: absolute;
+		width: 1.772px;
+		height: 5.067px;
+		left: 0px;
+		top: 6.166px;
+		transform: matrix(1,0,0,1,0,0);
+	}
+	#Path_14_fp {
+		fill: rgba(255,255,255,1);
+	}
+	.Path_14_fp {
+		overflow: visible;
+		position: absolute;
+		width: 1.772px;
+		height: 7.016px;
+		left: 3.933px;
+		top: 4.217px;
+		transform: matrix(1,0,0,1,0,0);
+	}
+	#Path_15_fq {
+		fill: rgba(255,255,255,1);
+	}
+	.Path_15_fq {
+		overflow: visible;
+		position: absolute;
+		width: 1.772px;
+		height: 9.107px;
+		left: 7.831px;
+		top: 2.126px;
+		transform: matrix(1,0,0,1,0,0);
+	}
+	#Path_16_fr {
+		fill: rgba(255,255,255,1);
+	}
+	.Path_16_fr {
+		overflow: visible;
+		position: absolute;
+		width: 1.772px;
+		height: 11.233px;
+		left: 11.765px;
+		top: 0px;
+		transform: matrix(1,0,0,1,0,0);
+	}
+	#Group_6_fs {
+		position: absolute;
+		width: 24.388px;
+		height: 11.407px;
+		left: 323px;
+		top: 0.926px;
+		overflow: visible;
+	}
+	#Path_17_ft {
+		fill: rgba(255,255,255,1);
+	}
+	.Path_17_ft {
+		overflow: visible;
+		position: absolute;
+		width: 17.977px;
+		height: 7.277px;
+		left: 2.045px;
+		top: 2.006px;
+		transform: matrix(1,0,0,1,0,0);
+	}
+	#Path_18_fu {
+		opacity: 0.383;
+		fill: rgba(255,255,255,1);
+	}
+	.Path_18_fu {
+		overflow: visible;
+		position: absolute;
+		width: 21.793px;
+		height: 11.407px;
+		left: 0px;
+		top: 0px;
+		transform: matrix(1,0,0,1,0,0);
+	}
+	#Path_19_fv {
+		opacity: 0.379;
+		fill: rgba(255,255,255,1);
+	}
+	.Path_19_fv {
+		overflow: visible;
+		position: absolute;
+		width: 1.416px;
+		height: 4.052px;
+		left: 22.972px;
+		top: 3.698px;
+		transform: matrix(1,0,0,1,0,0);
+	}
+	#Burger_menu_fw {
+		position: absolute;
+		width: 25.797px;
+		height: 16px;
+		left: 20px;
+		top: 70px;
+		overflow: visible;
+	}
+	#Burger_menu_fx {
+		opacity: 0.8;
+		position: absolute;
+		width: 25.797px;
+		height: 16px;
+		left: 0px;
+		top: 0px;
+		overflow: visible;
+	}
+	#Line_185_fy {
+		fill: transparent;
+		stroke: rgba(255,255,255,1);
+		stroke-width: 3px;
+		stroke-linejoin: miter;
+		stroke-linecap: round;
+		stroke-miterlimit: 4;
+		shape-rendering: auto;
+	}
+	.Line_185_fy {
+		overflow: visible;
+		position: absolute;
+		width: 28.797px;
+		height: 3px;
+		left: 0px;
+		top: 0px;
+		transform: matrix(1,0,0,1,0,0);
+	}
+	#Line_186_fz {
+		fill: transparent;
+		stroke: rgba(255,255,255,1);
+		stroke-width: 3px;
+		stroke-linejoin: miter;
+		stroke-linecap: round;
+		stroke-miterlimit: 4;
+		shape-rendering: auto;
+	}
+	.Line_186_fz {
+		overflow: visible;
+		position: absolute;
+		width: 19px;
+		height: 3px;
+		left: 0px;
+		top: 8px;
+		transform: matrix(1,0,0,1,0,0);
+	}
+	#Path_68415_f {
+		fill: rgba(0,0,0,0);
+		stroke: rgba(255,255,255,1);
+		stroke-width: 3px;
+		stroke-linejoin: miter;
+		stroke-linecap: round;
+		stroke-miterlimit: 4;
+		shape-rendering: auto;
+	}
+	.Path_68415_f {
+		overflow: visible;
+		position: absolute;
+		width: 28.797px;
+		height: 3px;
+		left: 0px;
+		top: 16px;
+		transform: matrix(1,0,0,1,0,0);
+	}
+	#Search_Bar_f {
+		position: absolute;
+		width: 281px;
+		height: 37px;
+		left: 75px;
+		top: 59px;
+		overflow: visible;
+	}
+	#Rectangle_1326_f {
+		fill: rgba(41,46,75,1);
+	}
+	.Rectangle_1326_f {
+		position: absolute;
+		overflow: visible;
+		width: 281px;
+		height: 37px;
+		left: 0px;
+		top: 0px;
+	}
+	#Search_album_song__f {
+		opacity: 0.2;
+		left: 72px;
+		top: 13px;
+		position: absolute;
+		overflow: visible;
+		width: 121px;
+		white-space: nowrap;
+		text-align: center;
+		font-family: Circular Std Book;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 13px;
+		color: rgba(255,255,255,1);
+		letter-spacing: 0.2px;
+	}
+	#musica-searcher_f {
+		opacity: 0.35;
+		position: absolute;
+		width: 18px;
+		height: 18px;
+		left: 13.341px;
+		top: 10px;
+		overflow: visible;
+	}
+	#Path_4221_f {
+		fill: rgba(255,255,255,1);
+	}
+	.Path_4221_f {
+		overflow: visible;
+		position: absolute;
+		width: 18px;
+		height: 18px;
+		left: 0px;
+		top: 0px;
+		transform: matrix(1,0,0,1,0,0);
+	}
+	#Hot_Recommended_f {
+		opacity: 0.8;
+		left: 20px;
+		top: 136px;
+		position: absolute;
+		overflow: visible;
+		width: 134px;
+		white-space: nowrap;
+		line-height: 17px;
+		margin-top: -1px;
+		text-align: left;
+		font-family: Circular Std Medium;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 15px;
+		color: rgba(255,255,255,1);
+		letter-spacing: 0.2px;
+	}
+	#Playlist_f {
+		left: 20px;
+		top: 406px;
+		position: absolute;
+		overflow: visible;
+		width: 51px;
+		white-space: nowrap;
+		line-height: 17px;
+		margin-top: -1px;
+		text-align: left;
+		font-family: Circular Std Medium;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 15px;
+		color: rgba(208,209,212,1);
+		letter-spacing: 0.2px;
+	}
+	#Recently_Played_f {
+		opacity: 0.8;
+		left: 20px;
+		top: 663px;
+		position: absolute;
+		overflow: visible;
+		width: 114px;
+		white-space: nowrap;
+		line-height: 17px;
+		margin-top: -1px;
+		text-align: left;
+		font-family: Circular Std Medium;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 15px;
+		color: rgba(255,255,255,1);
+		letter-spacing: 0.2px;
+	}
+	#View_All_f {
+		left: 313px;
+		top: 415px;
+		position: absolute;
+		overflow: visible;
+		width: 41px;
+		white-space: nowrap;
+		line-height: 17px;
+		margin-top: -3px;
+		text-align: left;
+		font-family: Circular Std Book;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 11px;
+		color: rgba(237,135,112,1);
+		letter-spacing: 0.2px;
+	}
+	#View_All_ga {
+		left: 314px;
+		top: 666px;
+		position: absolute;
+		overflow: visible;
+		width: 41px;
+		white-space: nowrap;
+		line-height: 17px;
+		margin-top: -3px;
+		text-align: left;
+		font-family: Circular Std Book;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 11px;
+		color: rgba(237,135,112,1);
+		letter-spacing: 0.2px;
+	}
+	#Card_gb {
+		position: absolute;
+		width: 229px;
+		height: 178px;
+		left: 20px;
+		top: 171px;
+		overflow: visible;
+	}
+	#Sound_of_Sky_gc {
+		opacity: 0.6;
+		left: 0px;
+		top: 147px;
+		position: absolute;
+		overflow: visible;
+		width: 81px;
+		white-space: nowrap;
+		line-height: 17px;
+		margin-top: -2px;
+		text-align: left;
+		font-family: Circular Std Bold;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 13px;
+		color: rgba(255,255,255,1);
+		letter-spacing: 0.2px;
+	}
+	#Dilon_Bruce_gd {
+		left: 0px;
+		top: 168px;
+		position: absolute;
+		overflow: visible;
+		width: 57px;
+		white-space: nowrap;
+		line-height: 17px;
+		margin-top: -3.5px;
+		text-align: left;
+		font-family: Circular Std Bold;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 10px;
+		color: rgba(88,90,102,1);
+		letter-spacing: 0.4px;
+	}
+	#austin-neill-hgO1wFPXl3I-unspl_ge {
+		position: absolute;
+		width: 229px;
+		height: 125px;
+		left: 0px;
+		top: 0px;
+		overflow: visible;
+	}
+	#Card_gf {
+		position: absolute;
+		width: 110px;
+		height: 161px;
+		left: 20px;
+		top: 445px;
+		overflow: visible;
+	}
+	#Classic_Playlist_gg {
+		opacity: 0.6;
+		left: 0px;
+		top: 130px;
+		position: absolute;
+		overflow: visible;
+		width: 92px;
+		white-space: nowrap;
+		line-height: 17px;
+		margin-top: -2px;
+		text-align: left;
+		font-family: Circular Std Bold;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 13px;
+		color: rgba(255,255,255,1);
+		letter-spacing: 0.2px;
+	}
+	#Piano_Guys_gh {
+		left: 0px;
+		top: 151px;
+		position: absolute;
+		overflow: visible;
+		width: 56px;
+		white-space: nowrap;
+		line-height: 17px;
+		margin-top: -3.5px;
+		text-align: left;
+		font-family: Circular Std Book;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 10px;
+		color: rgba(88,90,102,1);
+		letter-spacing: 0.4px;
+	}
+	#gabriel-gurrola-2UuhMZEChdc-un_gi {
+		position: absolute;
+		width: 110px;
+		height: 110px;
+		left: 0px;
+		top: 0px;
+		overflow: visible;
+	}
+	#Card_gj {
+		position: absolute;
+		width: 110px;
+		height: 161px;
+		left: 148px;
+		top: 445px;
+		overflow: visible;
+	}
+	#Summer_Playlist_gk {
+		opacity: 0.6;
+		left: 0px;
+		top: 130px;
+		position: absolute;
+		overflow: visible;
+		width: 99px;
+		white-space: nowrap;
+		line-height: 17px;
+		margin-top: -2px;
+		text-align: left;
+		font-family: Circular Std Bold;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 13px;
+		color: rgba(255,255,255,1);
+		letter-spacing: 0.2px;
+	}
+	#Dilon_Bruce_gl {
+		left: 0px;
+		top: 151px;
+		position: absolute;
+		overflow: visible;
+		width: 57px;
+		white-space: nowrap;
+		line-height: 17px;
+		margin-top: -3.5px;
+		text-align: left;
+		font-family: Circular Std Book;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 10px;
+		color: rgba(88,90,102,1);
+		letter-spacing: 0.4px;
+	}
+	#NoPath_-_Copy_8_gm {
+		position: absolute;
+		width: 110px;
+		height: 110px;
+		left: 0px;
+		top: 0px;
+		overflow: visible;
+	}
+	#Card_gn {
+		position: absolute;
+		width: 110px;
+		height: 161px;
+		left: 276px;
+		top: 445px;
+		overflow: visible;
+	}
+	#Pop_Music_go {
+		opacity: 0.6;
+		left: 0px;
+		top: 130px;
+		position: absolute;
+		overflow: visible;
+		width: 64px;
+		white-space: nowrap;
+		line-height: 17px;
+		margin-top: -2px;
+		text-align: left;
+		font-family: Circular Std Bold;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 13px;
+		color: rgba(255,255,255,1);
+		letter-spacing: 0.2px;
+	}
+	#Michael_Jackson_gp {
+		left: 0px;
+		top: 151px;
+		position: absolute;
+		overflow: visible;
+		width: 81px;
+		white-space: nowrap;
+		line-height: 17px;
+		margin-top: -3.5px;
+		text-align: left;
+		font-family: Circular Std Book;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 10px;
+		color: rgba(88,90,102,1);
+		letter-spacing: 0.4px;
+	}
+	#NoPath_-_Copy_9_gq {
+		position: absolute;
+		width: 110px;
+		height: 110px;
+		left: 0px;
+		top: 0px;
+		overflow: visible;
+	}
+	#Card_gr {
+		position: absolute;
+		width: 229px;
+		height: 178px;
+		left: 268px;
+		top: 171px;
+		overflow: visible;
+	}
+	#Girl_on_Fire_gs {
+		opacity: 0.6;
+		left: 0px;
+		top: 147px;
+		position: absolute;
+		overflow: visible;
+		width: 68px;
+		white-space: nowrap;
+		line-height: 17px;
+		margin-top: -2px;
+		text-align: left;
+		font-family: Circular Std Bold;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 13px;
+		color: rgba(255,255,255,1);
+		letter-spacing: 0.2px;
+	}
+	#Alecia_Keys_gt {
+		left: 0px;
+		top: 168px;
+		position: absolute;
+		overflow: visible;
+		width: 57px;
+		white-space: nowrap;
+		line-height: 17px;
+		margin-top: -3.5px;
+		text-align: left;
+		font-family: Circular Std Bold;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 10px;
+		color: rgba(88,90,102,1);
+		letter-spacing: 0.4px;
+	}
+	#joshua-fuller-ta7rN3NcWyM-unsp_gu {
+		position: absolute;
+		width: 229px;
+		height: 125px;
+		left: 0px;
+		top: 0px;
+		overflow: visible;
+	}
+	#Line_187_gv {
+		opacity: 0.07;
+		fill: transparent;
+		stroke: rgba(255,255,255,1);
+		stroke-width: 1px;
+		stroke-linejoin: miter;
+		stroke-linecap: butt;
+		stroke-miterlimit: 4;
+		shape-rendering: auto;
+	}
+	.Line_187_gv {
+		overflow: visible;
+		position: absolute;
+		width: 335px;
+		height: 1px;
+		left: 20.5px;
+		top: 377.5px;
+		transform: matrix(1,0,0,1,0,0);
+	}
+	#Line_188_gw {
+		opacity: 0.07;
+		fill: transparent;
+		stroke: rgba(255,255,255,1);
+		stroke-width: 1px;
+		stroke-linejoin: miter;
+		stroke-linecap: butt;
+		stroke-miterlimit: 4;
+		shape-rendering: auto;
+	}
+	.Line_188_gw {
+		overflow: visible;
+		position: absolute;
+		width: 335px;
+		height: 1px;
+		left: 20.5px;
+		top: 634.5px;
+		transform: matrix(1,0,0,1,0,0);
+	}
+	#Song_list_item {
+		position: absolute;
+		width: 336.5px;
+		height: 43.5px;
+		left: 20px;
+		top: 703px;
+		overflow: visible;
+	}
+	#Line_189_gy {
+		opacity: 0.07;
+		fill: transparent;
+		stroke: rgba(255,255,255,1);
+		stroke-width: 1px;
+		stroke-linejoin: miter;
+		stroke-linecap: butt;
+		stroke-miterlimit: 4;
+		shape-rendering: auto;
+	}
+	.Line_189_gy {
+		overflow: visible;
+		position: absolute;
+		width: 290px;
+		height: 1px;
+		left: 46.5px;
+		top: 43.5px;
+		transform: matrix(1,0,0,1,0,0);
+	}
+	#Group_2050_gz {
+		position: absolute;
+		width: 22px;
+		height: 22px;
+		left: 0px;
+		top: 3px;
+		overflow: visible;
+	}
+	#Group_2048_g {
+		position: absolute;
+		width: 22px;
+		height: 22px;
+		left: 0px;
+		top: 0px;
+		overflow: visible;
+	}
+	#Exclusion_1_ha {
+		fill: url(#Exclusion_1_ha);
+	}
+	.Exclusion_1_ha {
+		overflow: visible;
+		position: absolute;
+		width: 22px;
+		height: 22px;
+		left: 0px;
+		top: 0px;
+		transform: matrix(1,0,0,1,0,0);
+	}
+	#Group_2049_g {
+		position: absolute;
+		width: 8px;
+		height: 10px;
+		left: 8px;
+		top: 6px;
+		overflow: visible;
+	}
+	#Polygon_4_ha {
+		fill: url(#Polygon_4_ha);
+	}
+	.Polygon_4_ha {
+		overflow: hidden;
+		position: absolute;
+		width: 10px;
+		height: 8px;
+		transform: translate(-0.096px, 0.269px) matrix(1,0,0,1,-0.9036,0.7308) rotate(90deg);
+		transform-origin: center;
+		left: 0px;
+		top: 0px;
+	}
+	#Billie_Jean_g {
+		opacity: 0.6;
+		left: 46px;
+		top: 0px;
+		position: absolute;
+		overflow: visible;
+		width: 63px;
+		white-space: nowrap;
+		line-height: 17px;
+		margin-top: -2px;
+		text-align: left;
+		font-family: Circular Std Bold;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 13px;
+		color: rgba(255,255,255,1);
+		letter-spacing: 0.2px;
+	}
+	#Michael_Jackson_g {
+		opacity: 0.28;
+		left: 46px;
+		top: 18px;
+		position: absolute;
+		overflow: visible;
+		width: 81px;
+		white-space: nowrap;
+		line-height: 17px;
+		margin-top: -3.5px;
+		text-align: left;
+		font-family: Circular Std Book;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 10px;
+		color: rgba(255,255,255,1);
+		letter-spacing: 0.4px;
+	}
+	#Group_2053_g {
+		position: absolute;
+		width: 68.755px;
+		height: 9.5px;
+		left: 267px;
+		top: 18px;
+		overflow: visible;
+	}
+	#star_g {
+		fill: rgba(225,145,75,1);
+	}
+	.star_g {
+		overflow: visible;
+		position: absolute;
+		width: 9.648px;
+		height: 9.245px;
+		left: 0px;
+		top: 0.255px;
+		transform: matrix(1,0,0,1,0,0);
+	}
+	#star_ha {
+		fill: rgba(225,145,75,1);
+	}
+	.star_ha {
+		overflow: visible;
+		position: absolute;
+		width: 9.648px;
+		height: 9.245px;
+		left: 14.777px;
+		top: 0.255px;
+		transform: matrix(1,0,0,1,0,0);
+	}
+	#star_hb {
+		fill: rgba(225,145,75,1);
+	}
+	.star_hb {
+		overflow: visible;
+		position: absolute;
+		width: 9.648px;
+		height: 9.245px;
+		left: 29.554px;
+		top: 0.255px;
+		transform: matrix(1,0,0,1,0,0);
+	}
+	#star_hc {
+		fill: rgba(225,145,75,1);
+	}
+	.star_hc {
+		overflow: visible;
+		position: absolute;
+		width: 9.648px;
+		height: 9.245px;
+		left: 44.33px;
+		top: 0.255px;
+		transform: matrix(1,0,0,1,0,0);
+	}
+	#star_hd {
+		fill: transparent;
+		stroke: rgba(225,145,75,1);
+		stroke-width: 1px;
+		stroke-linejoin: miter;
+		stroke-linecap: butt;
+		stroke-miterlimit: 4;
+		shape-rendering: auto;
+	}
+	.star_hd {
+		overflow: visible;
+		position: absolute;
+		width: 10.668px;
+		height: 10.261px;
+		left: 59.107px;
+		top: 0px;
+		transform: matrix(1,0,0,1,0,0);
+	}
+	#heart_he {
+		position: absolute;
+		width: 11.47px;
+		height: 9.39px;
+		left: 296px;
+		top: 1px;
+		overflow: visible;
+	}
+	#Path_8609_hf {
+		fill: transparent;
+		stroke: rgba(238,90,48,1);
+		stroke-width: 1px;
+		stroke-linejoin: miter;
+		stroke-linecap: butt;
+		stroke-miterlimit: 4;
+		shape-rendering: auto;
+	}
+	.Path_8609_hf {
+		overflow: visible;
+		position: absolute;
+		width: 12.47px;
+		height: 10.46px;
+		left: 0px;
+		top: 0px;
+		transform: matrix(1,0,0,1,0,0);
+	}
+	#Bottom_nav_hg {
+		position: absolute;
+		width: 375px;
+		height: 74px;
+		left: 0px;
+		top: 738px;
+		overflow: visible;
+	}
+	#Ellipse_29_hh {
+		opacity: 0.43;
+		filter: blur(4px);
+		fill: rgba(0,0,0,1);
+	}
+	.Ellipse_29_hh {
+		position: absolute;
+		overflow: visible;
+		width: 376px;
+		height: 50px;
+		left: 12px;
+		top: 0px;
+	}
+	#Rectangle_1328_hi {
+		fill: rgba(21,24,39,1);
+	}
+	.Rectangle_1328_hi {
+		position: absolute;
+		overflow: visible;
+		width: 375px;
+		height: 67px;
+		left: 0px;
+		top: 7px;
+	}
+	#Group_2077_hj {
+		position: absolute;
+		width: 263px;
+		height: 38px;
+		left: 58px;
+		top: 22px;
+		overflow: visible;
+	}
+	#Discover_hk {
+		position: absolute;
+		width: 28px;
+		height: 38px;
+		left: 0px;
+		top: 0px;
+		overflow: visible;
+	}
+	#Home_hl {
+		left: 0px;
+		top: 28px;
+		position: absolute;
+		overflow: visible;
+		width: 29px;
+		white-space: nowrap;
+		line-height: 17px;
+		margin-top: -3.5px;
+		text-align: center;
+		font-family: Circular Std Book;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 10px;
+		color: rgba(217,81,157,1);
+		letter-spacing: 0.4px;
+	}
+	#Group_2060_hm {
+		position: absolute;
+		width: 20px;
+		height: 21px;
+		left: 4px;
+		top: 0px;
+		overflow: visible;
+	}
+	#Rectangle_1329_ho {
+		fill: url(#Rectangle_1329_ho);
+	}
+	.Rectangle_1329_ho {
+		position: absolute;
+		overflow: visible;
+		width: 9px;
+		height: 9px;
+		left: 0px;
+		top: 0px;
+	}
+	#Rectangle_1330_hq {
+		fill: url(#Rectangle_1330_hq);
+	}
+	.Rectangle_1330_hq {
+		position: absolute;
+		overflow: visible;
+		width: 9px;
+		height: 9px;
+		left: 0px;
+		top: 12px;
+	}
+	#Rectangle_1331_hs {
+		fill: url(#Rectangle_1331_hs);
+	}
+	.Rectangle_1331_hs {
+		position: absolute;
+		overflow: visible;
+		width: 9px;
+		height: 9px;
+		left: 11px;
+		top: 12px;
+	}
+	#Rectangle_1332_hu {
+		fill: url(#Rectangle_1332_hu);
+	}
+	.Rectangle_1332_hu {
+		position: absolute;
+		overflow: visible;
+		width: 9px;
+		height: 9px;
+		left: 11px;
+		top: 0px;
+	}
+	#Songs_hv {
+		position: absolute;
+		width: 30px;
+		height: 38px;
+		left: 114px;
+		top: 0px;
+		overflow: visible;
+		transition: all 0.3s linear;
+		--web-animation: fadein 0.3s linear;
+		--web-action-type: page;
+		--web-action-target: 03_Songs.html;
+		cursor: pointer;
+	}
+	#Songs_hw {
+		opacity: 0.28;
+		left: 0px;
+		top: 28px;
+		position: absolute;
+		overflow: visible;
+		width: 31px;
+		white-space: nowrap;
+		line-height: 17px;
+		margin-top: -3.5px;
+		text-align: left;
+		font-family: Circular Std Book;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 10px;
+		color: rgba(255,255,255,1);
+		letter-spacing: 0.4px;
+	}
+	#ID001-music_hx {
+		position: absolute;
+		width: 18.9px;
+		height: 21.5px;
+		left: 5px;
+		top: 0px;
+		overflow: visible;
+	}
+	#Group_2059_hy {
+		position: absolute;
+		width: 18.9px;
+		height: 21.5px;
+		left: 0px;
+		top: 0px;
+		overflow: visible;
+	}
+	#Path_68417_hz {
+		fill: rgba(99,102,110,1);
+	}
+	.Path_68417_hz {
+		overflow: visible;
+		position: absolute;
+		width: 18.9px;
+		height: 21.5px;
+		left: 0px;
+		top: 0px;
+		transform: matrix(1,0,0,1,0,0);
+	}
+	#Profile_h {
+		position: absolute;
+		width: 38px;
+		height: 10px;
+		left: 225px;
+		top: 28px;
+		overflow: visible;
+		transition: all 0.3s linear;
+		--web-animation: fadein 0.3s linear;
+		--web-action-type: page;
+		--web-action-target: 16_Settings.html;
+		cursor: pointer;
+	}
+	#Settings_h {
+		opacity: 0.28;
+		left: 0px;
+		top: 0px;
+		position: absolute;
+		overflow: visible;
+		width: 39px;
+		white-space: nowrap;
+		line-height: 17px;
+		margin-top: -3.5px;
+		text-align: center;
+		font-family: Circular Std Book;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 10px;
+		color: rgba(255,255,255,1);
+		letter-spacing: 0.4px;
+	}
+	#gear_h {
+		fill: rgba(99,102,110,1);
+	}
+	.gear_h {
+		overflow: visible;
+		position: absolute;
+		width: 20.71px;
+		height: 20.71px;
+		left: 233.219px;
+		top: 0px;
+		transform: matrix(1,0,0,1,0,0);
+		transition: all 0.3s linear;
+		--web-animation: fadein 0.3s linear;
+		--web-action-type: page;
+		--web-action-target: 16_Settings.html;
+		cursor: pointer;
+	}
+	#Side_Menu {
+		position: absolute;
+		width: 313px;
+		height: 812px;
+		left: 0px;
+		top: 0px;
+		overflow: visible;
+	}
+	#Rectangle_1373 {
+		opacity: 0.03;
+		fill: rgba(255,255,255,1);
+		stroke: rgba(112,112,112,1);
+		stroke-width: 1px;
+		stroke-linejoin: miter;
+		stroke-linecap: butt;
+		stroke-miterlimit: 4;
+		shape-rendering: auto;
+	}
+	.Rectangle_1373 {
+		position: absolute;
+		overflow: visible;
+		width: 313px;
+		height: 211px;
+		left: 0px;
+		top: 25px;
+	}
+	#Group_2207 {
+		position: absolute;
+		width: 313px;
+		height: 812px;
+		left: 0px;
+		top: 0px;
+		overflow: visible;
+	}
+	#Rectangle_1372 {
+		fill: rgba(16,18,29,1);
+	}
+	.Rectangle_1372 {
+		filter: drop-shadow(11px 3px 14px rgba(0, 0, 0, 0.678));
+		position: absolute;
+		overflow: visible;
+		width: 355px;
+		height: 854px;
+		left: 0px;
+		top: 0px;
+	}
+	#Equliser {
+		position: absolute;
+		width: 286.504px;
+		height: 39.5px;
+		left: 20px;
+		top: 326px;
+		overflow: visible;
+	}
+	#Equliser_h {
+		opacity: 0.9;
+		left: 41px;
+		top: 4px;
+		position: absolute;
+		overflow: visible;
+		width: 54px;
+		white-space: nowrap;
+		line-height: 17px;
+		margin-top: -1.5px;
+		text-align: left;
+		font-family: Circular Std Medium;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 14px;
+		color: rgba(255,255,255,1);
+		letter-spacing: 0.2px;
+	}
+	#Line_189_h {
+		opacity: 0.07;
+		fill: transparent;
+		stroke: rgba(255,255,255,1);
+		stroke-width: 1px;
+		stroke-linejoin: miter;
+		stroke-linecap: square;
+		stroke-miterlimit: 4;
+		shape-rendering: auto;
+	}
+	.Line_189_h {
+		overflow: visible;
+		position: absolute;
+		width: 245.697px;
+		height: 1px;
+		left: 41.807px;
+		top: 39.5px;
+		transform: matrix(1,0,0,1,0,0);
+	}
+	#ID004-sound-bars {
+		position: absolute;
+		width: 17.516px;
+		height: 17.584px;
+		left: 0px;
+		top: 0px;
+		overflow: visible;
+	}
+	#Path_68467_ic {
+		fill: url(#Path_68467_ic);
+	}
+	.Path_68467_ic {
+		overflow: visible;
+		position: absolute;
+		width: 3.091px;
+		height: 3.16px;
+		left: 4.894px;
+		top: 14.425px;
+		transform: matrix(1,0,0,1,0,0);
+	}
+	#Path_68468_ie {
+		fill: url(#Path_68468_ie);
+	}
+	.Path_68468_ie {
+		overflow: visible;
+		position: absolute;
+		width: 3.091px;
+		height: 11.402px;
+		left: 9.531px;
+		top: 6.182px;
+		transform: matrix(1,0,0,1,0,0);
+	}
+	#Path_68469_ig {
+		fill: url(#Path_68469_ig);
+	}
+	.Path_68469_ig {
+		overflow: visible;
+		position: absolute;
+		width: 3.091px;
+		height: 1.03px;
+		left: 9.531px;
+		top: 2.061px;
+		transform: matrix(1,0,0,1,0,0);
+	}
+	#Path_68470_ii {
+		fill: url(#Path_68470_ii);
+	}
+	.Path_68470_ii {
+		overflow: visible;
+		position: absolute;
+		width: 3.091px;
+		height: 1.03px;
+		left: 9.531px;
+		top: 0px;
+		transform: matrix(1,0,0,1,0,0);
+	}
+	#Path_68471_ik {
+		fill: url(#Path_68471_ik);
+	}
+	.Path_68471_ik {
+		overflow: visible;
+		position: absolute;
+		width: 3.091px;
+		height: 1.03px;
+		left: 4.894px;
+		top: 10.303px;
+		transform: matrix(1,0,0,1,0,0);
+	}
+	#Path_68472_im {
+		fill: url(#Path_68472_im);
+	}
+	.Path_68472_im {
+		overflow: visible;
+		position: absolute;
+		width: 3.091px;
+		height: 1.03px;
+		left: 0px;
+		top: 8.243px;
+		transform: matrix(1,0,0,1,0,0);
+	}
+	#Path_68473_io {
+		fill: url(#Path_68473_io);
+	}
+	.Path_68473_io {
+		overflow: visible;
+		position: absolute;
+		width: 3.091px;
+		height: 1.03px;
+		left: 4.894px;
+		top: 12.364px;
+		transform: matrix(1,0,0,1,0,0);
+	}
+	#Path_68474_iq {
+		fill: url(#Path_68474_iq);
+	}
+	.Path_68474_iq {
+		overflow: visible;
+		position: absolute;
+		width: 3.091px;
+		height: 1.03px;
+		left: 4.894px;
+		top: 8.243px;
+		transform: matrix(1,0,0,1,0,0);
+	}
+	#Path_68475_is {
+		fill: url(#Path_68475_is);
+	}
+	.Path_68475_is {
+		overflow: visible;
+		position: absolute;
+		width: 3.091px;
+		height: 1.03px;
+		left: 4.894px;
+		top: 6.182px;
+		transform: matrix(1,0,0,1,0,0);
+	}
+	#Path_68476_iu {
+		fill: url(#Path_68476_iu);
+	}
+	.Path_68476_iu {
+		overflow: visible;
+		position: absolute;
+		width: 3.091px;
+		height: 1.03px;
+		left: 0px;
+		top: 6.182px;
+		transform: matrix(1,0,0,1,0,0);
+	}
+	#Path_68477_iw {
+		fill: url(#Path_68477_iw);
+	}
+	.Path_68477_iw {
+		overflow: visible;
+		position: absolute;
+		width: 3.091px;
+		height: 1.03px;
+		left: 0px;
+		top: 4.121px;
+		transform: matrix(1,0,0,1,0,0);
+	}
+	#Path_68478_iy {
+		fill: url(#Path_68478_iy);
+	}
+	.Path_68478_iy {
+		overflow: visible;
+		position: absolute;
+		width: 3.091px;
+		height: 1.03px;
+		left: 14.425px;
+		top: 6.182px;
+		transform: matrix(1,0,0,1,0,0);
+	}
+	#Path_68479_i {
+		fill: url(#Path_68479_i);
+	}
+	.Path_68479_i {
+		overflow: visible;
+		position: absolute;
+		width: 3.091px;
+		height: 1.03px;
+		left: 14.425px;
+		top: 4.121px;
+		transform: matrix(1,0,0,1,0,0);
+	}
+	#Path_68480_i {
+		fill: url(#Path_68480_i);
+	}
+	.Path_68480_i {
+		overflow: visible;
+		position: absolute;
+		width: 3.091px;
+		height: 1.03px;
+		left: 9.531px;
+		top: 4.121px;
+		transform: matrix(1,0,0,1,0,0);
+	}
+	#Path_68481_i {
+		fill: url(#Path_68481_i);
+	}
+	.Path_68481_i {
+		overflow: visible;
+		position: absolute;
+		width: 3.091px;
+		height: 7.281px;
+		left: 0px;
+		top: 10.303px;
+		transform: matrix(1,0,0,1,0,0);
+	}
+	#Path_68482_i {
+		fill: url(#Path_68482_i);
+	}
+	.Path_68482_i {
+		overflow: visible;
+		position: absolute;
+		width: 3.091px;
+		height: 9.342px;
+		left: 14.425px;
+		top: 8.243px;
+		transform: matrix(1,0,0,1,0,0);
+	}
+	#Drive_Mode {
+		position: absolute;
+		width: 286.504px;
+		height: 35.5px;
+		left: 20px;
+		top: 384px;
+		overflow: visible;
+		transition: all 0.3s linear;
+		--web-animation: fadein 0.3s linear;
+		--web-action-type: page;
+		--web-action-target: 14_Play_song___Driver_mode.html;
+		cursor: pointer;
+	}
+	#Drive_Mode_i {
+		opacity: 0.9;
+		left: 41px;
+		top: 0px;
+		position: absolute;
+		overflow: visible;
+		width: 75px;
+		white-space: nowrap;
+		line-height: 17px;
+		margin-top: -1.5px;
+		text-align: left;
+		font-family: Circular Std Medium;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 14px;
+		color: rgba(255,255,255,1);
+		letter-spacing: 0.2px;
+	}
+	#Line_189_i {
+		opacity: 0.07;
+		fill: transparent;
+		stroke: rgba(255,255,255,1);
+		stroke-width: 1px;
+		stroke-linejoin: miter;
+		stroke-linecap: square;
+		stroke-miterlimit: 4;
+		shape-rendering: auto;
+	}
+	.Line_189_i {
+		overflow: visible;
+		position: absolute;
+		width: 245.697px;
+		height: 1px;
+		left: 41.807px;
+		top: 35.5px;
+		transform: matrix(1,0,0,1,0,0);
+	}
+	#ID13-car {
+		position: absolute;
+		width: 20.257px;
+		height: 9.646px;
+		left: 0px;
+		top: 2px;
+		overflow: visible;
+	}
+	#glyph {
+		position: absolute;
+		width: 20.257px;
+		height: 9.646px;
+		left: 0px;
+		top: 0px;
+		overflow: visible;
+	}
+	#Path_68483_jd {
+		fill: url(#Path_68483_jd);
+	}
+	.Path_68483_jd {
+		overflow: visible;
+		position: absolute;
+		width: 4.18px;
+		height: 4.18px;
+		left: 2.572px;
+		top: 5.466px;
+		transform: matrix(1,0,0,1,0,0);
+	}
+	#Path_68484_jf {
+		fill: url(#Path_68484_jf);
+	}
+	.Path_68484_jf {
+		overflow: visible;
+		position: absolute;
+		width: 4.18px;
+		height: 4.18px;
+		left: 14.148px;
+		top: 5.466px;
+		transform: matrix(1,0,0,1,0,0);
+	}
+	#Path_68485_jh {
+		fill: url(#Path_68485_jh);
+	}
+	.Path_68485_jh {
+		overflow: visible;
+		position: absolute;
+		width: 20.257px;
+		height: 8.038px;
+		left: 0px;
+		top: 0px;
+		transform: matrix(1,0,0,1,0,0);
+	}
+	#Hidden_Folders {
+		position: absolute;
+		width: 286.504px;
+		height: 36.527px;
+		left: 20px;
+		top: 437.973px;
+		overflow: visible;
+	}
+	#Settings_jj {
+		opacity: 0.9;
+		left: 41px;
+		top: 1.027px;
+		position: absolute;
+		overflow: visible;
+		width: 54px;
+		white-space: nowrap;
+		transition: all 0.3s linear;
+		--web-animation: fadein 0.3s linear;
+		--web-action-type: page;
+		--web-action-target: 16_Settings.html;
+		cursor: pointer;
+		line-height: 17px;
+		margin-top: -1.5px;
+		text-align: left;
+		font-family: Circular Std Medium;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 14px;
+		color: rgba(255,255,255,1);
+		letter-spacing: 0.2px;
+	}
+	#Line_189_jk {
+		opacity: 0.07;
+		fill: transparent;
+		stroke: rgba(255,255,255,1);
+		stroke-width: 1px;
+		stroke-linejoin: miter;
+		stroke-linecap: square;
+		stroke-miterlimit: 4;
+		shape-rendering: auto;
+	}
+	.Line_189_jk {
+		overflow: visible;
+		position: absolute;
+		width: 245.697px;
+		height: 1px;
+		left: 41.807px;
+		top: 36.527px;
+		transform: matrix(1,0,0,1,0,0);
+	}
+	#ID006-folder {
+		position: absolute;
+		width: 20px;
+		height: 16.027px;
+		left: 0px;
+		top: 0px;
+		overflow: visible;
+	}
+	#Group_2197 {
+		position: absolute;
+		width: 18px;
+		height: 14.027px;
+		left: 0px;
+		top: 2px;
+		overflow: visible;
+	}
+	#Group_2196 {
+		position: absolute;
+		width: 18px;
+		height: 14.027px;
+		left: 0px;
+		top: 0px;
+		overflow: visible;
+	}
+	#Path_68486_jp {
+		fill: url(#Path_68486_jp);
+	}
+	.Path_68486_jp {
+		overflow: visible;
+		position: absolute;
+		width: 18px;
+		height: 14.027px;
+		left: 0px;
+		top: 0px;
+		transform: matrix(1,0,0,1,0,0);
+	}
+	#Group_2199 {
+		position: absolute;
+		width: 18px;
+		height: 14.027px;
+		left: 2px;
+		top: 0px;
+		overflow: visible;
+	}
+	#Group_2198 {
+		position: absolute;
+		width: 18px;
+		height: 14.027px;
+		left: 0px;
+		top: 0px;
+		overflow: visible;
+	}
+	#Path_68487_jt {
+		fill: url(#Path_68487_jt);
+	}
+	.Path_68487_jt {
+		overflow: visible;
+		position: absolute;
+		width: 18px;
+		height: 14.027px;
+		left: 0px;
+		top: 0px;
+		transform: matrix(1,0,0,1,0,0);
+	}
+	#Theme {
+		position: absolute;
+		width: 286.504px;
+		height: 40.5px;
+		left: 20px;
+		top: 267px;
+		overflow: visible;
+	}
+	#Themes {
+		opacity: 0.9;
+		left: 41px;
+		top: 5px;
+		position: absolute;
+		overflow: visible;
+		width: 53px;
+		white-space: nowrap;
+		line-height: 17px;
+		margin-top: -1.5px;
+		text-align: left;
+		font-family: Circular Std Medium;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 14px;
+		color: rgba(255,255,255,1);
+		letter-spacing: 0.2px;
+	}
+	#Line_189_jw {
+		opacity: 0.07;
+		fill: transparent;
+		stroke: rgba(255,255,255,1);
+		stroke-width: 1px;
+		stroke-linejoin: miter;
+		stroke-linecap: square;
+		stroke-miterlimit: 4;
+		shape-rendering: auto;
+	}
+	.Line_189_jw {
+		overflow: visible;
+		position: absolute;
+		width: 245.697px;
+		height: 1px;
+		left: 41.807px;
+		top: 40.5px;
+		transform: matrix(1,0,0,1,0,0);
+	}
+	#ID001-paint {
+		position: absolute;
+		width: 23.731px;
+		height: 23.73px;
+		left: 0px;
+		top: 0px;
+		overflow: visible;
+	}
+	#Group_2178 {
+		position: absolute;
+		width: 1.391px;
+		height: 1.391px;
+		left: 4.175px;
+		top: 11.166px;
+		overflow: visible;
+	}
+	#Group_2177 {
+		position: absolute;
+		width: 1.391px;
+		height: 1.391px;
+		left: 0px;
+		top: 0px;
+		overflow: visible;
+	}
+	#Path_68457_j {
+		fill: url(#Path_68457_j);
+	}
+	.Path_68457_j {
+		overflow: visible;
+		position: absolute;
+		width: 1.391px;
+		height: 1.391px;
+		left: 0px;
+		top: 0px;
+		transform: matrix(1,0,0,1,0,0);
+	}
+	#Group_2180 {
+		position: absolute;
+		width: 4.244px;
+		height: 3.283px;
+		left: 9.532px;
+		top: 9.924px;
+		overflow: visible;
+	}
+	#Group_2179 {
+		position: absolute;
+		width: 4.244px;
+		height: 3.283px;
+		left: 0px;
+		top: 0px;
+		overflow: visible;
+	}
+	#Path_68458_j {
+		fill: url(#Path_68458_j);
+	}
+	.Path_68458_j {
+		overflow: visible;
+		position: absolute;
+		width: 4.244px;
+		height: 3.283px;
+		left: 0px;
+		top: 0px;
+		transform: matrix(1,0,0,1,0,0);
+	}
+	#Group_2182 {
+		position: absolute;
+		width: 1.391px;
+		height: 1.391px;
+		left: 5.566px;
+		top: 16.729px;
+		overflow: visible;
+	}
+	#Group_2181 {
+		position: absolute;
+		width: 1.391px;
+		height: 1.391px;
+		left: 0px;
+		top: 0px;
+		overflow: visible;
+	}
+	#Path_68459_j {
+		fill: url(#Path_68459_j);
+	}
+	.Path_68459_j {
+		overflow: visible;
+		position: absolute;
+		width: 1.391px;
+		height: 1.391px;
+		left: 0px;
+		top: 0px;
+		transform: matrix(1,0,0,1,0,0);
+	}
+	#Group_2184 {
+		position: absolute;
+		width: 1.391px;
+		height: 1.391px;
+		left: 6.957px;
+		top: 6.993px;
+		overflow: visible;
+	}
+	#Group_2183 {
+		position: absolute;
+		width: 1.391px;
+		height: 1.391px;
+		left: 0px;
+		top: 0px;
+		overflow: visible;
+	}
+	#Path_68460_kd {
+		fill: url(#Path_68460_kd);
+	}
+	.Path_68460_kd {
+		overflow: visible;
+		position: absolute;
+		width: 1.391px;
+		height: 1.391px;
+		left: 0px;
+		top: 0px;
+		transform: matrix(1,0,0,1,0,0);
+	}
+	#Group_2186 {
+		position: absolute;
+		width: 20.866px;
+		height: 20.872px;
+		left: 0px;
+		top: 2.859px;
+		overflow: visible;
+	}
+	#Group_2185 {
+		position: absolute;
+		width: 20.866px;
+		height: 20.872px;
+		left: 0px;
+		top: 0px;
+		overflow: visible;
+	}
+	#Path_68461_kh {
+		fill: url(#Path_68461_kh);
+	}
+	.Path_68461_kh {
+		overflow: visible;
+		position: absolute;
+		width: 20.866px;
+		height: 20.872px;
+		left: 0px;
+		top: 0px;
+		transform: matrix(1,0,0,1,0,0);
+	}
+	#Group_2188 {
+		position: absolute;
+		width: 4.354px;
+		height: 4.307px;
+		left: 19.377px;
+		top: 0px;
+		overflow: visible;
+	}
+	#Group_2187 {
+		position: absolute;
+		width: 4.354px;
+		height: 4.307px;
+		left: 0px;
+		top: 0px;
+		overflow: visible;
+	}
+	#Path_68462_kl {
+		fill: url(#Path_68462_kl);
+	}
+	.Path_68462_kl {
+		overflow: visible;
+		position: absolute;
+		width: 4.354px;
+		height: 4.307px;
+		left: 0px;
+		top: 0px;
+		transform: matrix(1,0,0,1,0,0);
+	}
+	#Group_2190 {
+		position: absolute;
+		width: 5.927px;
+		height: 5.944px;
+		left: 14.379px;
+		top: 3.378px;
+		overflow: visible;
+	}
+	#Group_2189 {
+		position: absolute;
+		width: 5.927px;
+		height: 5.944px;
+		left: 0px;
+		top: 0px;
+		overflow: visible;
+	}
+	#Path_68463_kp {
+		fill: url(#Path_68463_kp);
+	}
+	.Path_68463_kp {
+		overflow: visible;
+		position: absolute;
+		width: 5.927px;
+		height: 5.944px;
+		left: 0px;
+		top: 0px;
+		transform: matrix(1,0,0,1,0,0);
+	}
+	#Image_1 {
+		position: absolute;
+		width: 152.703px;
+		height: 150px;
+		left: 80px;
+		top: 76px;
+		overflow: visible;
+	}
+</style>
+<script id="applicationScript">
+///////////////////////////////////////
+// INITIALIZATION
+///////////////////////////////////////
+
+/**
+ * Functionality for scaling, showing by media query, and navigation between multiple pages on a single page. 
+ * Code subject to change.
+ **/
+
+if (window.console==null) { window["console"] = { log : function() {} } }; // some browsers do not set console
+
+var Application = function() {
+	// event constants
+	this.prefix = "--web-";
+	this.NAVIGATION_CHANGE = "viewChange";
+	this.VIEW_NOT_FOUND = "viewNotFound";
+	this.VIEW_CHANGE = "viewChange";
+	this.VIEW_CHANGING = "viewChanging";
+	this.STATE_NOT_FOUND = "stateNotFound";
+	this.APPLICATION_COMPLETE = "applicationComplete";
+	this.APPLICATION_RESIZE = "applicationResize";
+	this.SIZE_STATE_NAME = "data-is-view-scaled";
+	this.STATE_NAME = this.prefix + "state";
+
+	this.lastTrigger = null;
+	this.lastView = null;
+	this.lastState = null;
+	this.lastOverlay = null;
+	this.currentView = null;
+	this.currentState = null;
+	this.currentOverlay = null;
+	this.currentQuery = {index: 0, rule: null, mediaText: null, id: null};
+	this.inclusionQuery = "(min-width: 0px)";
+	this.exclusionQuery = "none and (min-width: 99999px)";
+	this.LastModifiedDateLabelName = "LastModifiedDateLabel";
+	this.viewScaleSliderId = "ViewScaleSliderInput";
+	this.pageRefreshedName = "showPageRefreshedNotification";
+	this.applicationStylesheet = null;
+	this.mediaQueryDictionary = {};
+	this.viewsDictionary = {};
+	this.addedViews = [];
+	this.views = {};
+	this.viewIds = [];
+	this.viewQueries = {};
+	this.overlays = {};
+	this.overlayIds = [];
+	this.numberOfViews = 0;
+	this.verticalPadding = 0;
+	this.horizontalPadding = 0;
+	this.stateName = null;
+	this.viewScale = 1;
+	this.viewLeft = 0;
+	this.viewTop = 0;
+	this.horizontalScrollbarsNeeded = false;
+	this.verticalScrollbarsNeeded = false;
+
+	// view settings
+	this.showUpdateNotification = false;
+	this.showNavigationControls = false;
+	this.scaleViewsToFit = false;
+	this.scaleToFitOnDoubleClick = false;
+	this.actualSizeOnDoubleClick = false;
+	this.scaleViewsOnResize = false;
+	this.navigationOnKeypress = false;
+	this.showViewName = false;
+	this.enableDeepLinking = true;
+	this.refreshPageForChanges = false;
+	this.showRefreshNotifications = true;
+
+	// view controls
+	this.scaleViewSlider = null;
+	this.lastModifiedLabel = null;
+	this.supportsPopState = false; // window.history.pushState!=null;
+	this.initialized = false;
+
+	// refresh properties
+	this.refreshDuration = 250;
+	this.lastModifiedDate = null;
+	this.refreshRequest = null;
+	this.refreshInterval = null;
+	this.refreshContent = null;
+	this.refreshContentSize = null;
+	this.refreshCheckContent = false;
+	this.refreshCheckContentSize = false;
+
+	var self = this;
+
+	self.initialize = function(event) {
+		var view = self.getVisibleView();
+		var views = self.getVisibleViews();
+		if (view==null) view = self.getInitialView();
+		self.collectViews();
+		self.collectOverlays();
+		self.collectMediaQueries();
+
+		for (let index = 0; index < views.length; index++) {
+			var view = views[index];
+			self.setViewOptions(view);
+			self.setViewVariables(view);
+			self.centerView(view);
+		}
+
+		// sometimes the body size is 0 so we call this now and again later
+		if (self.initialized) {
+			window.addEventListener(self.NAVIGATION_CHANGE, self.viewChangeHandler);
+			window.addEventListener("keyup", self.keypressHandler);
+			window.addEventListener("keypress", self.keypressHandler);
+			window.addEventListener("resize", self.resizeHandler);
+			window.document.addEventListener("dblclick", self.doubleClickHandler);
+
+			if (self.supportsPopState) {
+				window.addEventListener('popstate', self.popStateHandler);
+			}
+			else {
+				window.addEventListener('hashchange', self.hashChangeHandler);
+			}
+
+			// we are ready to go
+			window.dispatchEvent(new Event(self.APPLICATION_COMPLETE));
+		}
+
+		if (self.initialized==false) {
+			if (self.enableDeepLinking) {
+				self.syncronizeViewToURL();
+			} 
+	
+			if (self.refreshPageForChanges) {
+				self.setupRefreshForChanges();
+			}
+	
+			self.initialized = true;
+		}
+		
+		if (self.scaleViewsToFit) {
+			self.viewScale = self.scaleViewToFit(view);
+			
+			if (self.viewScale<0) {
+				setTimeout(self.scaleViewToFit, 500, view);
+			}
+		}
+		else if (view) {
+			self.viewScale = self.getViewScaleValue(view);
+			self.centerView(view);
+			self.updateSliderValue(self.viewScale);
+		}
+		else {
+			// no view found
+		}
+	
+		if (self.showUpdateNotification) {
+			self.showNotification();
+		}
+
+		//"addEventListener" in window ? null : window.addEventListener = window.attachEvent;
+		//"addEventListener" in document ? null : document.addEventListener = document.attachEvent;
+	}
+
+
+	///////////////////////////////////////
+	// AUTO REFRESH 
+	///////////////////////////////////////
+
+	self.setupRefreshForChanges = function() {
+		self.refreshRequest = new XMLHttpRequest();
+
+		if (!self.refreshRequest) {
+			return false;
+		}
+
+		// get document start values immediately
+		self.requestRefreshUpdate();
+	}
+
+	/**
+	 * Attempt to check the last modified date by the headers 
+	 * or the last modified property from the byte array (experimental)
+	 **/
+	self.requestRefreshUpdate = function() {
+		var url = document.location.href;
+		var protocol = window.location.protocol;
+		var method;
+		
+		try {
+
+			if (self.refreshCheckContentSize) {
+				self.refreshRequest.open('HEAD', url, true);
+			}
+			else if (self.refreshCheckContent) {
+				self.refreshContent = document.documentElement.outerHTML;
+				self.refreshRequest.open('GET', url, true);
+				self.refreshRequest.responseType = "text";
+			}
+			else {
+
+				// get page last modified date for the first call to compare to later
+				if (self.lastModifiedDate==null) {
+
+					// File system does not send headers in FF so get blob if possible
+					if (protocol=="file:") {
+						self.refreshRequest.open("GET", url, true);
+						self.refreshRequest.responseType = "blob";
+					}
+					else {
+						self.refreshRequest.open("HEAD", url, true);
+						self.refreshRequest.responseType = "blob";
+					}
+
+					self.refreshRequest.onload = self.refreshOnLoadOnceHandler;
+
+					// In some browsers (Chrome & Safari) this error occurs at send: 
+					// 
+					// Chrome - Access to XMLHttpRequest at 'file:///index.html' from origin 'null' 
+					// has been blocked by CORS policy: 
+					// Cross origin requests are only supported for protocol schemes: 
+					// http, data, chrome, chrome-extension, https.
+					// 
+					// Safari - XMLHttpRequest cannot load file:///Users/user/Public/index.html. Cross origin requests are only supported for HTTP.
+					// 
+					// Solution is to run a local server, set local permissions or test in another browser
+					self.refreshRequest.send(null);
+
+					// In MS browsers the following behavior occurs possibly due to an AJAX call to check last modified date: 
+					// 
+					// DOM7011: The code on this page disabled back and forward caching.
+
+					// In Brave (Chrome) error when on the server
+					// index.js:221 HEAD https://www.example.com/ net::ERR_INSUFFICIENT_RESOURCES
+					// self.refreshRequest.send(null);
+
+				}
+				else {
+					self.refreshRequest = new XMLHttpRequest();
+					self.refreshRequest.onreadystatechange = self.refreshHandler;
+					self.refreshRequest.ontimeout = function() {
+						self.log("Couldn't find page to check for updates");
+					}
+					
+					var method;
+					if (protocol=="file:") {
+						method = "GET";
+					}
+					else {
+						method = "HEAD";
+					}
+
+					//refreshRequest.open('HEAD', url, true);
+					self.refreshRequest.open(method, url, true);
+					self.refreshRequest.responseType = "blob";
+					self.refreshRequest.send(null);
+				}
+			}
+		}
+		catch (error) {
+			self.log("Refresh failed for the following reason:")
+			self.log(error);
+		}
+	}
+
+	self.refreshHandler = function() {
+		var contentSize;
+
+		try {
+
+			if (self.refreshRequest.readyState === XMLHttpRequest.DONE) {
+				
+				if (self.refreshRequest.status === 2 || 
+					self.refreshRequest.status === 200) {
+					var pageChanged = false;
+
+					self.updateLastModifiedLabel();
+
+					if (self.refreshCheckContentSize) {
+						var lastModifiedHeader = self.refreshRequest.getResponseHeader("Last-Modified");
+						contentSize = self.refreshRequest.getResponseHeader("Content-Length");
+						//lastModifiedDate = refreshRequest.getResponseHeader("Last-Modified");
+						var headers = self.refreshRequest.getAllResponseHeaders();
+						var hasContentHeader = headers.indexOf("Content-Length")!=-1;
+						
+						if (hasContentHeader) {
+							contentSize = self.refreshRequest.getResponseHeader("Content-Length");
+
+							// size has not been set yet
+							if (self.refreshContentSize==null) {
+								self.refreshContentSize = contentSize;
+								// exit and let interval call this method again
+								return;
+							}
+
+							if (contentSize!=self.refreshContentSize) {
+								pageChanged = true;
+							}
+						}
+					}
+					else if (self.refreshCheckContent) {
+
+						if (self.refreshRequest.responseText!=self.refreshContent) {
+							pageChanged = true;
+						}
+					}
+					else {
+						lastModifiedHeader = self.getLastModified(self.refreshRequest);
+
+						if (self.lastModifiedDate!=lastModifiedHeader) {
+							self.log("lastModifiedDate:" + self.lastModifiedDate + ",lastModifiedHeader:" +lastModifiedHeader);
+							pageChanged = true;
+						}
+
+					}
+
+					
+					if (pageChanged) {
+						clearInterval(self.refreshInterval);
+						self.refreshUpdatedPage();
+						return;
+					}
+
+				}
+				else {
+					self.log('There was a problem with the request.');
+				}
+
+			}
+		}
+		catch( error ) {
+			//console.log('Caught Exception: ' + error);
+		}
+	}
+
+	self.refreshOnLoadOnceHandler = function(event) {
+
+		// get the last modified date
+		if (self.refreshRequest.response) {
+			self.lastModifiedDate = self.getLastModified(self.refreshRequest);
+
+			if (self.lastModifiedDate!=null) {
+
+				if (self.refreshInterval==null) {
+					self.refreshInterval = setInterval(self.requestRefreshUpdate, self.refreshDuration);
+				}
+			}
+			else {
+				self.log("Could not get last modified date from the server");
+			}
+		}
+	}
+
+	self.refreshUpdatedPage = function() {
+		if (self.showRefreshNotifications) {
+			var date = new Date().setTime((new Date().getTime()+10000));
+			document.cookie = encodeURIComponent(self.pageRefreshedName) + "=true" + "; max-age=6000;" + " path=/";
+		}
+
+		document.location.reload(true);
+	}
+
+	self.showNotification = function(duration) {
+		var notificationID = self.pageRefreshedName+"ID";
+		var notification = document.getElementById(notificationID);
+		if (duration==null) duration = 4000;
+
+		if (notification!=null) {return;}
+
+		notification = document.createElement("div");
+		notification.id = notificationID;
+		notification.textContent = "PAGE UPDATED";
+		var styleRule = ""
+		styleRule = "position: fixed; padding: 7px 16px 6px 16px; font-family: Arial, sans-serif; font-size: 10px; font-weight: bold; left: 50%;";
+		styleRule += "top: 20px; background-color: rgba(0,0,0,.5); border-radius: 12px; color:rgb(235, 235, 235); transition: all 2s linear;";
+		styleRule += "transform: translateX(-50%); letter-spacing: .5px; filter: drop-shadow(2px 2px 6px rgba(0, 0, 0, .1))";
+		notification.setAttribute("style", styleRule);
+
+		notification.className= "PageRefreshedClass";
+		
+		document.body.appendChild(notification);
+
+		setTimeout(function() {
+			notification.style.opacity = "0";
+			notification.style.filter = "drop-shadow( 0px 0px 0px rgba(0,0,0, .5))";
+			setTimeout(function() {
+				notification.parentNode.removeChild(notification);
+			}, duration)
+		}, duration);
+
+		document.cookie = encodeURIComponent(self.pageRefreshedName) + "=; max-age=1; path=/";
+	}
+
+	/**
+	 * Get the last modified date from the header 
+	 * or file object after request has been received
+	 **/
+	self.getLastModified = function(request) {
+		var date;
+
+		// file protocol - FILE object with last modified property
+		if (request.response && request.response.lastModified) {
+			date = request.response.lastModified;
+		}
+		
+		// http protocol - check headers
+		if (date==null) {
+			date = request.getResponseHeader("Last-Modified");
+		}
+
+		return date;
+	}
+
+	self.updateLastModifiedLabel = function() {
+		var labelValue = "";
+		
+		if (self.lastModifiedLabel==null) {
+			self.lastModifiedLabel = document.getElementById("LastModifiedLabel");
+		}
+
+		if (self.lastModifiedLabel) {
+			var seconds = parseInt(((new Date().getTime() - Date.parse(document.lastModified)) / 1000 / 60) * 100 + "");
+			var minutes = 0;
+			var hours = 0;
+
+			if (seconds < 60) {
+				seconds = Math.floor(seconds/10)*10;
+				labelValue = seconds + " seconds";
+			}
+			else {
+				minutes = parseInt((seconds/60) + "");
+
+				if (minutes>60) {
+					hours = parseInt((seconds/60/60) +"");
+					labelValue += hours==1 ? " hour" : " hours";
+				}
+				else {
+					labelValue = minutes+"";
+					labelValue += minutes==1 ? " minute" : " minutes";
+				}
+			}
+			
+			if (seconds<10) {
+				labelValue = "Updated now";
+			}
+			else {
+				labelValue = "Updated " + labelValue + " ago";
+			}
+
+			if (self.lastModifiedLabel.firstElementChild) {
+				self.lastModifiedLabel.firstElementChild.textContent = labelValue;
+
+			}
+			else if ("textContent" in self.lastModifiedLabel) {
+				self.lastModifiedLabel.textContent = labelValue;
+			}
+		}
+	}
+
+	self.getShortString = function(string, length) {
+		if (length==null) length = 30;
+		string = string!=null ? string.substr(0, length).replace(/\n/g, "") : "[String is null]";
+		return string;
+	}
+
+	self.getShortNumber = function(value, places) {
+		if (places==null || places<1) places = 4;
+		value = Math.round(value * Math.pow(10,places)) / Math.pow(10, places);
+		return value;
+	}
+
+	///////////////////////////////////////
+	// NAVIGATION CONTROLS
+	///////////////////////////////////////
+
+	self.updateViewLabel = function() {
+		var viewNavigationLabel = document.getElementById("ViewNavigationLabel");
+		var view = self.getVisibleView();
+		var viewIndex = view ? self.getViewIndex(view) : -1;
+		var viewName = view ? self.getViewPreferenceValue(view, self.prefix + "view-name") : null;
+		var viewId = view ? view.id : null;
+
+		if (viewNavigationLabel && view) {
+			if (viewName && viewName.indexOf('"')!=-1) {
+				viewName = viewName.replace(/"/g, "");
+			}
+
+			if (self.showViewName) {
+				viewNavigationLabel.textContent = viewName;
+				self.setTooltip(viewNavigationLabel, viewIndex + 1 + " of " + self.numberOfViews);
+			}
+			else {
+				viewNavigationLabel.textContent = viewIndex + 1 + " of " + self.numberOfViews;
+				self.setTooltip(viewNavigationLabel, viewName);
+			}
+
+		}
+	}
+
+	self.updateURL = function(view) {
+		view = view == null ? self.getVisibleView() : view;
+		var viewId = view ? view.id : null
+		var viewFragment = view ? "#"+ viewId : null;
+
+		if (viewId && self.viewIds.length>1 && self.enableDeepLinking) {
+
+			if (self.supportsPopState==false) {
+				self.setFragment(viewId);
+			}
+			else {
+				if (viewFragment!=window.location.hash) {
+
+					if (window.location.hash==null) {
+						window.history.replaceState({name:viewId}, null, viewFragment);
+					}
+					else {
+						window.history.pushState({name:viewId}, null, viewFragment);
+					}
+				}
+			}
+		}
+	}
+
+	self.updateURLState = function(view, stateName) {
+		stateName = view && (stateName=="" || stateName==null) ? self.getStateNameByViewId(view.id) : stateName;
+
+		if (self.supportsPopState==false) {
+			self.setFragment(stateName);
+		}
+		else {
+			if (stateName!=window.location.hash) {
+
+				if (window.location.hash==null) {
+					window.history.replaceState({name:view.viewId}, null, stateName);
+				}
+				else {
+					window.history.pushState({name:view.viewId}, null, stateName);
+				}
+			}
+		}
+	}
+
+	self.setFragment = function(value) {
+		window.location.hash = "#" + value;
+	}
+
+	self.setTooltip = function(element, value) {
+		// setting the tooltip in edge causes a page crash on hover
+		if (/Edge/.test(navigator.userAgent)) { return; }
+
+		if ("title" in element) {
+			element.title = value;
+		}
+	}
+
+	self.getStylesheetRules = function(styleSheet) {
+		try {
+			if (styleSheet) return styleSheet.cssRules || styleSheet.rules;
+	
+			return document.styleSheets[0]["cssRules"] || document.styleSheets[0]["rules"];
+		}
+		catch (error) {
+			// ERRORS:
+			// SecurityError: The operation is insecure.
+			// Errors happen when script loads before stylesheet or loading an external css locally
+
+			// InvalidAccessError: A parameter or an operation is not supported by the underlying object
+			// Place script after stylesheet
+
+			console.log(error);
+			if (error.toString().indexOf("The operation is insecure")!=-1) {
+				console.log("Load the stylesheet before the script or load the stylesheet inline until it can be loaded on a server")
+			}
+			return [];
+		}
+	}
+
+	/**
+	 * If single page application hide all of the views. 
+	 * @param {Number} selectedIndex if provided shows the view at index provided
+	 **/
+	self.hideViews = function(selectedIndex, animation) {
+		var rules = self.getStylesheetRules();
+		var queryIndex = 0;
+		var numberOfRules = rules!=null ? rules.length : 0;
+
+		// loop through rules and hide media queries except selected
+		for (var i=0;i<numberOfRules;i++) {
+			var rule = rules[i];
+
+			if (rule.media!=null) {
+
+				if (queryIndex==selectedIndex) {
+					self.currentQuery.mediaText = rule.conditionText;
+					self.currentQuery.index = selectedIndex;
+					self.currentQuery.rule = rule;
+					self.enableMediaQuery(rule);
+				}
+				else {
+					if (animation) {
+						self.fadeOut(rule)
+					}
+					else {
+						self.disableMediaQuery(rule);
+					}
+				}
+				
+				queryIndex++;
+			}
+		}
+
+		self.numberOfViews = queryIndex;
+		self.updateViewLabel();
+		self.updateURL();
+
+		self.dispatchViewChange();
+
+		var view = self.getVisibleView();
+		var viewIndex = view ? self.getViewIndex(view) : -1;
+
+		return viewIndex==selectedIndex ? view : null;
+	}
+
+	/**
+	 * Hide view
+	 * @param {Object} view element to hide
+	 **/
+	self.hideView = function(view) {
+		var rule = view ? self.mediaQueryDictionary[view.id] : null;
+
+		if (rule) {
+			self.disableMediaQuery(rule);
+		}
+	}
+
+	/**
+	 * Hide overlay
+	 * @param {Object} overlay element to hide
+	 **/
+	self.hideOverlay = function(overlay) {
+		var rule = overlay ? self.mediaQueryDictionary[overlay.id] : null;
+
+		if (rule) {
+			self.disableMediaQuery(rule);
+
+			//if (self.showByMediaQuery) {
+				overlay.style.display = "none";
+			//}
+		}
+	}
+
+	/**
+	 * Show the view by media query. Does not hide current views
+	 * Sets view options by default
+	 * @param {Object} view element to show
+	 * @param {Boolean} setViewOptions sets view options if null or true
+	 */
+	self.showViewByMediaQuery = function(view, setViewOptions) {
+		var id = view ? view.id : null;
+		var query = id ? self.mediaQueryDictionary[id] : null;
+		var isOverlay = view ? self.isOverlay(view) : false;
+		setViewOptions = setViewOptions==null ? true : setViewOptions;
+
+		if (query) {
+			self.enableMediaQuery(query);
+
+			if (isOverlay && view && setViewOptions) {
+				self.setViewVariables(null, view);
+			}
+			else {
+				if (view && setViewOptions) self.setViewOptions(view);
+				if (view && setViewOptions) self.setViewVariables(view);
+			}
+		}
+	}
+
+	/**
+	 * Show the view. Does not hide current views
+	 */
+	self.showView = function(view, setViewOptions) {
+		var id = view ? view.id : null;
+		var query = id ? self.mediaQueryDictionary[id] : null;
+		var display = null;
+		setViewOptions = setViewOptions==null ? true : setViewOptions;
+
+		if (query) {
+			self.enableMediaQuery(query);
+			if (view==null) view =self.getVisibleView();
+			if (view && setViewOptions) self.setViewOptions(view);
+		}
+		else if (id) {
+			display = window.getComputedStyle(view).getPropertyValue("display");
+			if (display=="" || display=="none") {
+				view.style.display = "block";
+			}
+		}
+
+		if (view) {
+			if (self.currentView!=null) {
+				self.lastView = self.currentView;
+			}
+
+			self.currentView = view;
+		}
+	}
+
+	self.showViewById = function(id, setViewOptions) {
+		var view = id ? self.getViewById(id) : null;
+
+		if (view) {
+			self.showView(view);
+			return;
+		}
+
+		self.log("View not found '" + id + "'");
+	}
+
+	self.getElementView = function(element) {
+		var view = element;
+		var viewFound = false;
+
+		while (viewFound==false || view==null) {
+			if (view && self.viewsDictionary[view.id]) {
+				return view;
+			}
+			view = view.parentNode;
+		}
+	}
+
+	/**
+	 * Show overlay over view
+	 * @param {Event | HTMLElement} event event or html element with styles applied
+	 * @param {String} id id of view or view reference
+	 * @param {Number} x x location
+	 * @param {Number} y y location
+	 */
+	self.showOverlay = function(event, id, x, y) {
+		var overlay = id && typeof id === 'string' ? self.getViewById(id) : id ? id : null;
+		var query = overlay ? self.mediaQueryDictionary[overlay.id] : null;
+		var centerHorizontally = false;
+		var centerVertically = false;
+		var anchorLeft = false;
+		var anchorTop = false;
+		var anchorRight = false;
+		var anchorBottom = false;
+		var display = null;
+		var reparent = true;
+		var view = null;
+		
+		if (overlay==null || overlay==false) {
+			self.log("Overlay not found, '"+ id + "'");
+			return;
+		}
+
+		// get enter animation - event target must have css variables declared
+		if (event) {
+			var button = event.currentTarget || event; // can be event or htmlelement
+			var buttonComputedStyles = getComputedStyle(button);
+			var actionTargetValue = buttonComputedStyles.getPropertyValue(self.prefix+"action-target").trim();
+			var animation = buttonComputedStyles.getPropertyValue(self.prefix+"animation").trim();
+			var isAnimated = animation!="";
+			var targetType = buttonComputedStyles.getPropertyValue(self.prefix+"action-type").trim();
+			var actionTarget = self.application ? null : self.getElement(actionTargetValue);
+			var actionTargetStyles = actionTarget ? actionTarget.style : null;
+
+			if (actionTargetStyles) {
+				actionTargetStyles.setProperty("animation", animation);
+			}
+
+			if ("stopImmediatePropagation" in event) {
+				event.stopImmediatePropagation();
+			}
+		}
+		
+		if (self.application==false || targetType=="page") {
+			document.location.href = "./" + actionTargetValue;
+			return;
+		}
+
+		// remove any current overlays
+		if (self.currentOverlay) {
+
+			// act as switch if same button
+			if (self.currentOverlay==actionTarget || self.currentOverlay==null) {
+				if (self.lastTrigger==button) {
+					self.removeOverlay(isAnimated);
+					return;
+				}
+			}
+			else {
+				self.removeOverlay(isAnimated);
+			}
+		}
+
+		if (reparent) {
+			view = self.getElementView(button);
+			if (view) {
+				view.appendChild(overlay);
+			}
+		}
+
+		if (query) {
+			//self.setElementAnimation(overlay, null);
+			//overlay.style.animation = animation;
+			self.enableMediaQuery(query);
+			
+			var display = overlay && overlay.style.display;
+			
+			if (overlay && display=="" || display=="none") {
+				overlay.style.display = "block";
+				//self.setViewOptions(overlay);
+			}
+
+			// add animation defined in event target style declaration
+			if (animation && self.supportAnimations) {
+				self.fadeIn(overlay, false, animation);
+			}
+		}
+		else if (id) {
+
+			display = window.getComputedStyle(overlay).getPropertyValue("display");
+
+			if (display=="" || display=="none") {
+				overlay.style.display = "block";
+			}
+
+			// add animation defined in event target style declaration
+			if (animation && self.supportAnimations) {
+				self.fadeIn(overlay, false, animation);
+			}
+		}
+
+		// do not set x or y position if centering
+		var horizontal = self.prefix + "center-horizontally";
+		var vertical = self.prefix + "center-vertically";
+		var style = overlay.style;
+		var transform = [];
+
+		centerHorizontally = self.getIsStyleDefined(id, horizontal) ? self.getViewPreferenceBoolean(overlay, horizontal) : false;
+		centerVertically = self.getIsStyleDefined(id, vertical) ? self.getViewPreferenceBoolean(overlay, vertical) : false;
+		anchorLeft = self.getIsStyleDefined(id, "left");
+		anchorRight = self.getIsStyleDefined(id, "right");
+		anchorTop = self.getIsStyleDefined(id, "top");
+		anchorBottom = self.getIsStyleDefined(id, "bottom");
+
+		
+		if (self.viewsDictionary[overlay.id] && self.viewsDictionary[overlay.id].styleDeclaration) {
+			style = self.viewsDictionary[overlay.id].styleDeclaration.style;
+		}
+		
+		if (centerHorizontally) {
+			style.left = "50%";
+			style.transformOrigin = "0 0";
+			transform.push("translateX(-50%)");
+		}
+		else if (anchorRight && anchorLeft) {
+			style.left = x + "px";
+		}
+		else if (anchorRight) {
+			//style.right = x + "px";
+		}
+		else {
+			style.left = x + "px";
+		}
+		
+		if (centerVertically) {
+			style.top = "50%";
+			transform.push("translateY(-50%)");
+			style.transformOrigin = "0 0";
+		}
+		else if (anchorTop && anchorBottom) {
+			style.top = y + "px";
+		}
+		else if (anchorBottom) {
+			//style.bottom = y + "px";
+		}
+		else {
+			style.top = y + "px";
+		}
+
+		if (transform.length) {
+			style.transform = transform.join(" ");
+		}
+
+		self.currentOverlay = overlay;
+		self.lastTrigger = button;
+	}
+
+	self.goBack = function() {
+		if (self.currentOverlay) {
+			self.removeOverlay();
+		}
+		else if (self.lastView) {
+			self.goToView(self.lastView.id);
+		}
+	}
+
+	self.removeOverlay = function(animate) {
+		var overlay = self.currentOverlay;
+		animate = animate===false ? false : true;
+
+		if (overlay) {
+			var style = overlay.style;
+			
+			if (style.animation && self.supportAnimations && animate) {
+				self.reverseAnimation(overlay, true);
+
+				var duration = self.getAnimationDuration(style.animation, true);
+		
+				setTimeout(function() {
+					self.setElementAnimation(overlay, null);
+					self.hideOverlay(overlay);
+					self.currentOverlay = null;
+				}, duration);
+			}
+			else {
+				self.setElementAnimation(overlay, null);
+				self.hideOverlay(overlay);
+				self.currentOverlay = null;
+			}
+		}
+	}
+
+	/**
+	 * Reverse the animation and hide after
+	 * @param {Object} target element with animation
+	 * @param {Boolean} hide hide after animation ends
+	 */
+	self.reverseAnimation = function(target, hide) {
+		var lastAnimation = null;
+		var style = target.style;
+
+		style.animationPlayState = "paused";
+		lastAnimation = style.animation;
+		style.animation = null;
+		style.animationPlayState = "paused";
+
+		if (hide) {
+			//target.addEventListener("animationend", self.animationEndHideHandler);
+	
+			var duration = self.getAnimationDuration(lastAnimation, true);
+			var isOverlay = self.isOverlay(target);
+	
+			setTimeout(function() {
+				self.setElementAnimation(target, null);
+
+				if (isOverlay) {
+					self.hideOverlay(target);
+				}
+				else {
+					self.hideView(target);
+				}
+			}, duration);
+		}
+
+		setTimeout(function() {
+			style.animation = lastAnimation;
+			style.animationPlayState = "paused";
+			style.animationDirection = "reverse";
+			style.animationPlayState = "running";
+		}, 30);
+	}
+
+	self.animationEndHandler = function(event) {
+		var target = event.currentTarget;
+		self.dispatchEvent(new Event(event.type));
+	}
+
+	self.isOverlay = function(view) {
+		var result = view ? self.getViewPreferenceBoolean(view, self.prefix + "is-overlay") : false;
+
+		return result;
+	}
+
+	self.animationEndHideHandler = function(event) {
+		var target = event.currentTarget;
+		self.setViewVariables(null, target);
+		self.hideView(target);
+		target.removeEventListener("animationend", self.animationEndHideHandler);
+	}
+
+	self.animationEndShowHandler = function(event) {
+		var target = event.currentTarget;
+		target.removeEventListener("animationend", self.animationEndShowHandler);
+	}
+
+	self.setViewOptions = function(view) {
+
+		if (view) {
+			self.minimumScale = self.getViewPreferenceValue(view, self.prefix + "minimum-scale");
+			self.maximumScale = self.getViewPreferenceValue(view, self.prefix + "maximum-scale");
+			self.scaleViewsToFit = self.getViewPreferenceBoolean(view, self.prefix + "scale-to-fit");
+			self.scaleToFitType = self.getViewPreferenceValue(view, self.prefix + "scale-to-fit-type");
+			self.scaleToFitOnDoubleClick = self.getViewPreferenceBoolean(view, self.prefix + "scale-on-double-click");
+			self.actualSizeOnDoubleClick = self.getViewPreferenceBoolean(view, self.prefix + "actual-size-on-double-click");
+			self.scaleViewsOnResize = self.getViewPreferenceBoolean(view, self.prefix + "scale-on-resize");
+			self.enableScaleUp = self.getViewPreferenceBoolean(view, self.prefix + "enable-scale-up");
+			self.centerHorizontally = self.getViewPreferenceBoolean(view, self.prefix + "center-horizontally");
+			self.centerVertically = self.getViewPreferenceBoolean(view, self.prefix + "center-vertically");
+			self.navigationOnKeypress = self.getViewPreferenceBoolean(view, self.prefix + "navigate-on-keypress");
+			self.showViewName = self.getViewPreferenceBoolean(view, self.prefix + "show-view-name");
+			self.refreshPageForChanges = self.getViewPreferenceBoolean(view, self.prefix + "refresh-for-changes");
+			self.refreshPageForChangesInterval = self.getViewPreferenceValue(view, self.prefix + "refresh-interval");
+			self.showNavigationControls = self.getViewPreferenceBoolean(view, self.prefix + "show-navigation-controls");
+			self.scaleViewSlider = self.getViewPreferenceBoolean(view, self.prefix + "show-scale-controls");
+			self.enableDeepLinking = self.getViewPreferenceBoolean(view, self.prefix + "enable-deep-linking");
+			self.singlePageApplication = self.getViewPreferenceBoolean(view, self.prefix + "application");
+			self.showByMediaQuery = self.getViewPreferenceBoolean(view, self.prefix + "show-by-media-query");
+			self.showUpdateNotification = document.cookie!="" ? document.cookie.indexOf(self.pageRefreshedName)!=-1 : false;
+			self.imageComparisonDuration = self.getViewPreferenceValue(view, self.prefix + "image-comparison-duration");
+			self.supportAnimations = self.getViewPreferenceBoolean(view, self.prefix + "enable-animations", true);
+
+			if (self.scaleViewsToFit) {
+				var newScaleValue = self.scaleViewToFit(view);
+				
+				if (newScaleValue<0) {
+					setTimeout(self.scaleViewToFit, 500, view);
+				}
+			}
+			else {
+				self.viewScale = self.getViewScaleValue(view);
+				self.viewToFitWidthScale = self.getViewFitToViewportWidthScale(view, self.enableScaleUp)
+				self.viewToFitHeightScale = self.getViewFitToViewportScale(view, self.enableScaleUp);
+				self.updateSliderValue(self.viewScale);
+			}
+
+			if (self.imageComparisonDuration!=null) {
+				// todo
+			}
+
+			if (self.refreshPageForChangesInterval!=null) {
+				self.refreshDuration = Number(self.refreshPageForChangesInterval);
+			}
+		}
+	}
+
+	self.previousView = function(event) {
+		var rules = self.getStylesheetRules();
+		var view = self.getVisibleView()
+		var index = view ? self.getViewIndex(view) : -1;
+		var prevQueryIndex = index!=-1 ? index-1 : self.currentQuery.index-1;
+		var queryIndex = 0;
+		var numberOfRules = rules!=null ? rules.length : 0;
+
+		if (event) {
+			event.stopImmediatePropagation();
+		}
+
+		if (prevQueryIndex<0) {
+			return;
+		}
+
+		// loop through rules and hide media queries except selected
+		for (var i=0;i<numberOfRules;i++) {
+			var rule = rules[i];
+			
+			if (rule.media!=null) {
+
+				if (queryIndex==prevQueryIndex) {
+					self.currentQuery.mediaText = rule.conditionText;
+					self.currentQuery.index = prevQueryIndex;
+					self.currentQuery.rule = rule;
+					self.enableMediaQuery(rule);
+					self.updateViewLabel();
+					self.updateURL();
+					self.dispatchViewChange();
+				}
+				else {
+					self.disableMediaQuery(rule);
+				}
+
+				queryIndex++;
+			}
+		}
+	}
+
+	self.nextView = function(event) {
+		var rules = self.getStylesheetRules();
+		var view = self.getVisibleView();
+		var index = view ? self.getViewIndex(view) : -1;
+		var nextQueryIndex = index!=-1 ? index+1 : self.currentQuery.index+1;
+		var queryIndex = 0;
+		var numberOfRules = rules!=null ? rules.length : 0;
+		var numberOfMediaQueries = self.getNumberOfMediaRules();
+
+		if (event) {
+			event.stopImmediatePropagation();
+		}
+
+		if (nextQueryIndex>=numberOfMediaQueries) {
+			return;
+		}
+
+		// loop through rules and hide media queries except selected
+		for (var i=0;i<numberOfRules;i++) {
+			var rule = rules[i];
+			
+			if (rule.media!=null) {
+
+				if (queryIndex==nextQueryIndex) {
+					self.currentQuery.mediaText = rule.conditionText;
+					self.currentQuery.index = nextQueryIndex;
+					self.currentQuery.rule = rule;
+					self.enableMediaQuery(rule);
+					self.updateViewLabel();
+					self.updateURL();
+					self.dispatchViewChange();
+				}
+				else {
+					self.disableMediaQuery(rule);
+				}
+
+				queryIndex++;
+			}
+		}
+	}
+
+	/**
+	 * Enables a view via media query
+	 */
+	self.enableMediaQuery = function(rule) {
+
+		try {
+			rule.media.mediaText = self.inclusionQuery;
+		}
+		catch(error) {
+			//self.log(error);
+			rule.conditionText = self.inclusionQuery;
+		}
+	}
+
+	self.disableMediaQuery = function(rule) {
+
+		try {
+			rule.media.mediaText = self.exclusionQuery;
+		}
+		catch(error) {
+			rule.conditionText = self.exclusionQuery;
+		}
+	}
+
+	self.dispatchViewChange = function() {
+		try {
+			var event = new Event(self.NAVIGATION_CHANGE);
+			window.dispatchEvent(event);
+		}
+		catch (error) {
+			// In IE 11: Object doesn't support this action
+		}
+	}
+
+	self.getNumberOfMediaRules = function() {
+		var rules = self.getStylesheetRules();
+		var numberOfRules = rules ? rules.length : 0;
+		var numberOfQueries = 0;
+
+		for (var i=0;i<numberOfRules;i++) {
+			if (rules[i].media!=null) { numberOfQueries++; }
+		}
+		
+		return numberOfQueries;
+	}
+
+	/////////////////////////////////////////
+	// VIEW SCALE 
+	/////////////////////////////////////////
+
+	self.sliderChangeHandler = function(event) {
+		var value = self.getShortNumber(event.currentTarget.value/100);
+		var view = self.getVisibleView();
+		self.setViewScaleValue(view, false, value, true);
+	}
+
+	self.updateSliderValue = function(scale) {
+		var slider = document.getElementById(self.viewScaleSliderId);
+		var tooltip = parseInt(scale * 100 + "") + "%";
+		var inputType;
+		var inputValue;
+		
+		if (slider) {
+			inputValue = self.getShortNumber(scale * 100);
+			if (inputValue!=slider["value"]) {
+				slider["value"] = inputValue;
+			}
+			inputType = slider.getAttributeNS(null, "type");
+
+			if (inputType!="range") {
+				// input range is not supported
+				slider.style.display = "none";
+			}
+
+			self.setTooltip(slider, tooltip);
+		}
+	}
+
+	self.viewChangeHandler = function(event) {
+		var view = self.getVisibleView();
+		var matrix = view ? getComputedStyle(view).transform : null;
+		
+		if (matrix) {
+			self.viewScale = self.getViewScaleValue(view);
+			
+			var scaleNeededToFit = self.getViewFitToViewportScale(view);
+			var isViewLargerThanViewport = scaleNeededToFit<1;
+			
+			// scale large view to fit if scale to fit is enabled
+			if (self.scaleViewsToFit) {
+				self.scaleViewToFit(view);
+			}
+			else {
+				self.updateSliderValue(self.viewScale);
+			}
+		}
+	}
+
+	self.getViewScaleValue = function(view) {
+		var matrix = getComputedStyle(view).transform;
+
+		if (matrix) {
+			var matrixArray = matrix.replace("matrix(", "").split(",");
+			var scaleX = parseFloat(matrixArray[0]);
+			var scaleY = parseFloat(matrixArray[3]);
+			var scale = Math.min(scaleX, scaleY);
+		}
+
+		return scale;
+	}
+
+	/**
+	 * Scales view to scale. 
+	 * @param {Object} view view to scale. views are in views array
+	 * @param {Boolean} scaleToFit set to true to scale to fit. set false to use desired scale value
+	 * @param {Number} desiredScale scale to define. not used if scale to fit is false
+	 * @param {Boolean} isSliderChange indicates if slider is callee
+	 */
+	self.setViewScaleValue = function(view, scaleToFit, desiredScale, isSliderChange) {
+		var enableScaleUp = self.enableScaleUp;
+		var scaleToFitType = self.scaleToFitType;
+		var minimumScale = self.minimumScale;
+		var maximumScale = self.maximumScale;
+		var hasMinimumScale = !isNaN(minimumScale) && minimumScale!="";
+		var hasMaximumScale = !isNaN(maximumScale) && maximumScale!="";
+		var scaleNeededToFit = self.getViewFitToViewportScale(view, enableScaleUp);
+		var scaleNeededToFitWidth = self.getViewFitToViewportWidthScale(view, enableScaleUp);
+		var scaleNeededToFitHeight = self.getViewFitToViewportHeightScale(view, enableScaleUp);
+		var scaleToFitFull = self.getViewFitToViewportScale(view, true);
+		var scaleToFitFullWidth = self.getViewFitToViewportWidthScale(view, true);
+		var scaleToFitFullHeight = self.getViewFitToViewportHeightScale(view, true);
+		var scaleToWidth = scaleToFitType=="width";
+		var scaleToHeight = scaleToFitType=="height";
+		var shrunkToFit = false;
+		var topPosition = null;
+		var leftPosition = null;
+		var translateY = null;
+		var translateX = null;
+		var transformValue = "";
+		var canCenterVertically = true;
+		var canCenterHorizontally = true;
+		var style = view.style;
+
+		if (view && self.viewsDictionary[view.id] && self.viewsDictionary[view.id].styleDeclaration) {
+			style = self.viewsDictionary[view.id].styleDeclaration.style;
+		}
+
+		if (scaleToFit && isSliderChange!=true) {
+			if (scaleToFitType=="fit" || scaleToFitType=="") {
+				desiredScale = scaleNeededToFit;
+			}
+			else if (scaleToFitType=="width") {
+				desiredScale = scaleNeededToFitWidth;
+			}
+			else if (scaleToFitType=="height") {
+				desiredScale = scaleNeededToFitHeight;
+			}
+		}
+		else {
+			if (isNaN(desiredScale)) {
+				desiredScale = 1;
+			}
+		}
+
+		self.updateSliderValue(desiredScale);
+		
+		// scale to fit width
+		if (scaleToWidth && scaleToHeight==false) {
+			canCenterVertically = scaleNeededToFitHeight>=scaleNeededToFitWidth;
+			canCenterHorizontally = scaleNeededToFitWidth>=1 && enableScaleUp==false;
+
+			if (isSliderChange) {
+				canCenterHorizontally = desiredScale<scaleToFitFullWidth;
+			}
+			else if (scaleToFit) {
+				desiredScale = scaleNeededToFitWidth;
+			}
+
+			if (hasMinimumScale) {
+				desiredScale = Math.max(desiredScale, Number(minimumScale));
+			}
+
+			if (hasMaximumScale) {
+				desiredScale = Math.min(desiredScale, Number(maximumScale));
+			}
+
+			desiredScale = self.getShortNumber(desiredScale);
+
+			canCenterHorizontally = self.canCenterHorizontally(view, "width", enableScaleUp, desiredScale, minimumScale, maximumScale);
+			canCenterVertically = self.canCenterVertically(view, "width", enableScaleUp, desiredScale, minimumScale, maximumScale);
+
+			if (desiredScale>1 && (enableScaleUp || isSliderChange)) {
+				transformValue = "scale(" + desiredScale + ")";
+			}
+			else if (desiredScale>=1 && enableScaleUp==false) {
+				transformValue = "scale(" + 1 + ")";
+			}
+			else {
+				transformValue = "scale(" + desiredScale + ")";
+			}
+
+			if (self.centerVertically) {
+				if (canCenterVertically) {
+					translateY = "-50%";
+					topPosition = "50%";
+				}
+				else {
+					translateY = "0";
+					topPosition = "0";
+				}
+				
+				if (style.top != topPosition) {
+					style.top = topPosition + "";
+				}
+
+				if (canCenterVertically) {
+					transformValue += " translateY(" + translateY+ ")";
+				}
+			}
+
+			if (self.centerHorizontally) {
+				if (canCenterHorizontally) {
+					translateX = "-50%";
+					leftPosition = "50%";
+				}
+				else {
+					translateX = "0";
+					leftPosition = "0";
+				}
+
+				if (style.left != leftPosition) {
+					style.left = leftPosition + "";
+				}
+
+				if (canCenterHorizontally) {
+					transformValue += " translateX(" + translateX+ ")";
+				}
+			}
+
+			style.transformOrigin = "0 0";
+			style.transform = transformValue;
+
+			self.viewScale = desiredScale;
+			self.viewToFitWidthScale = scaleNeededToFitWidth;
+			self.viewToFitHeightScale = scaleNeededToFitHeight;
+			self.viewLeft = leftPosition;
+			self.viewTop = topPosition;
+
+			return desiredScale;
+		}
+
+		// scale to fit height
+		if (scaleToHeight && scaleToWidth==false) {
+			//canCenterVertically = scaleNeededToFitHeight>=scaleNeededToFitWidth;
+			//canCenterHorizontally = scaleNeededToFitHeight<=scaleNeededToFitWidth && enableScaleUp==false;
+			canCenterVertically = scaleNeededToFitHeight>=scaleNeededToFitWidth;
+			canCenterHorizontally = scaleNeededToFitWidth>=1 && enableScaleUp==false;
+			
+			if (isSliderChange) {
+				canCenterHorizontally = desiredScale<scaleToFitFullHeight;
+			}
+			else if (scaleToFit) {
+				desiredScale = scaleNeededToFitHeight;
+			}
+
+			if (hasMinimumScale) {
+				desiredScale = Math.max(desiredScale, Number(minimumScale));
+			}
+
+			if (hasMaximumScale) {
+				desiredScale = Math.min(desiredScale, Number(maximumScale));
+				//canCenterVertically = desiredScale>=scaleNeededToFitHeight && enableScaleUp==false;
+			}
+
+			desiredScale = self.getShortNumber(desiredScale);
+
+			canCenterHorizontally = self.canCenterHorizontally(view, "height", enableScaleUp, desiredScale, minimumScale, maximumScale);
+			canCenterVertically = self.canCenterVertically(view, "height", enableScaleUp, desiredScale, minimumScale, maximumScale);
+
+			if (desiredScale>1 && (enableScaleUp || isSliderChange)) {
+				transformValue = "scale(" + desiredScale + ")";
+			}
+			else if (desiredScale>=1 && enableScaleUp==false) {
+				transformValue = "scale(" + 1 + ")";
+			}
+			else {
+				transformValue = "scale(" + desiredScale + ")";
+			}
+
+			if (self.centerHorizontally) {
+				if (canCenterHorizontally) {
+					translateX = "-50%";
+					leftPosition = "50%";
+				}
+				else {
+					translateX = "0";
+					leftPosition = "0";
+				}
+
+				if (style.left != leftPosition) {
+					style.left = leftPosition + "";
+				}
+
+				if (canCenterHorizontally) {
+					transformValue += " translateX(" + translateX+ ")";
+				}
+			}
+
+			if (self.centerVertically) {
+				if (canCenterVertically) {
+					translateY = "-50%";
+					topPosition = "50%";
+				}
+				else {
+					translateY = "0";
+					topPosition = "0";
+				}
+				
+				if (style.top != topPosition) {
+					style.top = topPosition + "";
+				}
+
+				if (canCenterVertically) {
+					transformValue += " translateY(" + translateY+ ")";
+				}
+			}
+
+			style.transformOrigin = "0 0";
+			style.transform = transformValue;
+
+			self.viewScale = desiredScale;
+			self.viewToFitWidthScale = scaleNeededToFitWidth;
+			self.viewToFitHeightScale = scaleNeededToFitHeight;
+			self.viewLeft = leftPosition;
+			self.viewTop = topPosition;
+
+			return scaleNeededToFitHeight;
+		}
+
+		if (scaleToFitType=="fit") {
+			//canCenterVertically = scaleNeededToFitHeight>=scaleNeededToFitWidth;
+			//canCenterHorizontally = scaleNeededToFitWidth>=scaleNeededToFitHeight;
+			canCenterVertically = scaleNeededToFitHeight>=scaleNeededToFit;
+			canCenterHorizontally = scaleNeededToFitWidth>=scaleNeededToFit;
+
+			if (hasMinimumScale) {
+				desiredScale = Math.max(desiredScale, Number(minimumScale));
+			}
+
+			desiredScale = self.getShortNumber(desiredScale);
+
+			if (isSliderChange || scaleToFit==false) {
+				canCenterVertically = scaleToFitFullHeight>=desiredScale;
+				canCenterHorizontally = desiredScale<scaleToFitFullWidth;
+			}
+			else if (scaleToFit) {
+				desiredScale = scaleNeededToFit;
+			}
+
+			transformValue = "scale(" + desiredScale + ")";
+
+			//canCenterHorizontally = self.canCenterHorizontally(view, "fit", false, desiredScale);
+			//canCenterVertically = self.canCenterVertically(view, "fit", false, desiredScale);
+			
+			if (self.centerVertically) {
+				if (canCenterVertically) {
+					translateY = "-50%";
+					topPosition = "50%";
+				}
+				else {
+					translateY = "0";
+					topPosition = "0";
+				}
+				
+				if (style.top != topPosition) {
+					style.top = topPosition + "";
+				}
+
+				if (canCenterVertically) {
+					transformValue += " translateY(" + translateY+ ")";
+				}
+			}
+
+			if (self.centerHorizontally) {
+				if (canCenterHorizontally) {
+					translateX = "-50%";
+					leftPosition = "50%";
+				}
+				else {
+					translateX = "0";
+					leftPosition = "0";
+				}
+
+				if (style.left != leftPosition) {
+					style.left = leftPosition + "";
+				}
+
+				if (canCenterHorizontally) {
+					transformValue += " translateX(" + translateX+ ")";
+				}
+			}
+
+			style.transformOrigin = "0 0";
+			style.transform = transformValue;
+
+			self.viewScale = desiredScale;
+			self.viewToFitWidthScale = scaleNeededToFitWidth;
+			self.viewToFitHeightScale = scaleNeededToFitHeight;
+			self.viewLeft = leftPosition;
+			self.viewTop = topPosition;
+
+			self.updateSliderValue(desiredScale);
+			
+			return desiredScale;
+		}
+
+		if (scaleToFitType=="default" || scaleToFitType=="") {
+			desiredScale = 1;
+
+			if (hasMinimumScale) {
+				desiredScale = Math.max(desiredScale, Number(minimumScale));
+			}
+			if (hasMaximumScale) {
+				desiredScale = Math.min(desiredScale, Number(maximumScale));
+			}
+
+			canCenterHorizontally = self.canCenterHorizontally(view, "none", false, desiredScale, minimumScale, maximumScale);
+			canCenterVertically = self.canCenterVertically(view, "none", false, desiredScale, minimumScale, maximumScale);
+
+			if (self.centerVertically) {
+				if (canCenterVertically) {
+					translateY = "-50%";
+					topPosition = "50%";
+				}
+				else {
+					translateY = "0";
+					topPosition = "0";
+				}
+				
+				if (style.top != topPosition) {
+					style.top = topPosition + "";
+				}
+
+				if (canCenterVertically) {
+					transformValue += " translateY(" + translateY+ ")";
+				}
+			}
+
+			if (self.centerHorizontally) {
+				if (canCenterHorizontally) {
+					translateX = "-50%";
+					leftPosition = "50%";
+				}
+				else {
+					translateX = "0";
+					leftPosition = "0";
+				}
+
+				if (style.left != leftPosition) {
+					style.left = leftPosition + "";
+				}
+
+				if (canCenterHorizontally) {
+					transformValue += " translateX(" + translateX+ ")";
+				}
+				else {
+					transformValue += " translateX(" + 0 + ")";
+				}
+			}
+
+			style.transformOrigin = "0 0";
+			style.transform = transformValue;
+
+
+			self.viewScale = desiredScale;
+			self.viewToFitWidthScale = scaleNeededToFitWidth;
+			self.viewToFitHeightScale = scaleNeededToFitHeight;
+			self.viewLeft = leftPosition;
+			self.viewTop = topPosition;
+
+			self.updateSliderValue(desiredScale);
+			
+			return desiredScale;
+		}
+	}
+
+	/**
+	 * Returns true if view can be centered horizontally
+	 * @param {HTMLElement} view view
+	 * @param {String} type type of scaling - width, height, all, none
+	 * @param {Boolean} scaleUp if scale up enabled 
+	 * @param {Number} scale target scale value 
+	 */
+	self.canCenterHorizontally = function(view, type, scaleUp, scale, minimumScale, maximumScale) {
+		var scaleNeededToFit = self.getViewFitToViewportScale(view, scaleUp);
+		var scaleNeededToFitHeight = self.getViewFitToViewportHeightScale(view, scaleUp);
+		var scaleNeededToFitWidth = self.getViewFitToViewportWidthScale(view, scaleUp);
+		var canCenter = false;
+		var minScale;
+
+		type = type==null ? "none" : type;
+		scale = scale==null ? scale : scaleNeededToFitWidth;
+		scaleUp = scaleUp == null ? false : scaleUp;
+
+		if (type=="width") {
+	
+			if (scaleUp && maximumScale==null) {
+				canCenter = false;
+			}
+			else if (scaleNeededToFitWidth>=1) {
+				canCenter = true;
+			}
+		}
+		else if (type=="height") {
+			minScale = Math.min(1, scaleNeededToFitHeight);
+			if (minimumScale!="" && maximumScale!="") {
+				minScale = Math.max(minimumScale, Math.min(maximumScale, scaleNeededToFitHeight));
+			}
+			else {
+				if (minimumScale!="") {
+					minScale = Math.max(minimumScale, scaleNeededToFitHeight);
+				}
+				if (maximumScale!="") {
+					minScale = Math.max(minimumScale, Math.min(maximumScale, scaleNeededToFitHeight));
+				}
+			}
+	
+			if (scaleUp && maximumScale=="") {
+				canCenter = false;
+			}
+			else if (scaleNeededToFitWidth>=minScale) {
+				canCenter = true;
+			}
+		}
+		else if (type=="fit") {
+			canCenter = scaleNeededToFitWidth>=scaleNeededToFit;
+		}
+		else {
+			if (scaleUp) {
+				canCenter = false;
+			}
+			else if (scaleNeededToFitWidth>=1) {
+				canCenter = true;
+			}
+		}
+
+		self.horizontalScrollbarsNeeded = canCenter;
+		
+		return canCenter;
+	}
+
+	/**
+	 * Returns true if view can be centered horizontally
+	 * @param {HTMLElement} view view to scale
+	 * @param {String} type type of scaling
+	 * @param {Boolean} scaleUp if scale up enabled 
+	 * @param {Number} scale target scale value 
+	 */
+	self.canCenterVertically = function(view, type, scaleUp, scale, minimumScale, maximumScale) {
+		var scaleNeededToFit = self.getViewFitToViewportScale(view, scaleUp);
+		var scaleNeededToFitWidth = self.getViewFitToViewportWidthScale(view, scaleUp);
+		var scaleNeededToFitHeight = self.getViewFitToViewportHeightScale(view, scaleUp);
+		var canCenter = false;
+		var minScale;
+
+		type = type==null ? "none" : type;
+		scale = scale==null ? 1 : scale;
+		scaleUp = scaleUp == null ? false : scaleUp;
+	
+		if (type=="width") {
+			canCenter = scaleNeededToFitHeight>=scaleNeededToFitWidth;
+		}
+		else if (type=="height") {
+			minScale = Math.max(minimumScale, Math.min(maximumScale, scaleNeededToFit));
+			canCenter = scaleNeededToFitHeight>=minScale;
+		}
+		else if (type=="fit") {
+			canCenter = scaleNeededToFitHeight>=scaleNeededToFit;
+		}
+		else {
+			if (scaleUp) {
+				canCenter = false;
+			}
+			else if (scaleNeededToFitHeight>=1) {
+				canCenter = true;
+			}
+		}
+
+		self.verticalScrollbarsNeeded = canCenter;
+		
+		return canCenter;
+	}
+
+	self.getViewFitToViewportScale = function(view, scaleUp) {
+		var enableScaleUp = scaleUp;
+		var availableWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+		var availableHeight = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
+		var elementWidth = parseFloat(getComputedStyle(view, "style").width);
+		var elementHeight = parseFloat(getComputedStyle(view, "style").height);
+		var newScale = 1;
+
+		// if element is not added to the document computed values are NaN
+		if (isNaN(elementWidth) || isNaN(elementHeight)) {
+			return newScale;
+		}
+
+		availableWidth -= self.horizontalPadding;
+		availableHeight -= self.verticalPadding;
+
+		if (enableScaleUp) {
+			newScale = Math.min(availableHeight/elementHeight, availableWidth/elementWidth);
+		}
+		else if (elementWidth > availableWidth || elementHeight > availableHeight) {
+			newScale = Math.min(availableHeight/elementHeight, availableWidth/elementWidth);
+		}
+		
+		return newScale;
+	}
+
+	self.getViewFitToViewportWidthScale = function(view, scaleUp) {
+		// need to get browser viewport width when element
+		var isParentWindow = view && view.parentNode && view.parentNode===document.body;
+		var enableScaleUp = scaleUp;
+		var availableWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+		var elementWidth = parseFloat(getComputedStyle(view, "style").width);
+		var newScale = 1;
+
+		// if element is not added to the document computed values are NaN
+		if (isNaN(elementWidth)) {
+			return newScale;
+		}
+
+		availableWidth -= self.horizontalPadding;
+
+		if (enableScaleUp) {
+			newScale = availableWidth/elementWidth;
+		}
+		else if (elementWidth > availableWidth) {
+			newScale = availableWidth/elementWidth;
+		}
+		
+		return newScale;
+	}
+
+	self.getViewFitToViewportHeightScale = function(view, scaleUp) {
+		var enableScaleUp = scaleUp;
+		var availableHeight = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
+		var elementHeight = parseFloat(getComputedStyle(view, "style").height);
+		var newScale = 1;
+
+		// if element is not added to the document computed values are NaN
+		if (isNaN(elementHeight)) {
+			return newScale;
+		}
+
+		availableHeight -= self.verticalPadding;
+
+		if (enableScaleUp) {
+			newScale = availableHeight/elementHeight;
+		}
+		else if (elementHeight > availableHeight) {
+			newScale = availableHeight/elementHeight;
+		}
+		
+		return newScale;
+	}
+
+	self.keypressHandler = function(event) {
+		var rightKey = 39;
+		var leftKey = 37;
+		
+		// listen for both events 
+		if (event.type=="keypress") {
+			window.removeEventListener("keyup", self.keypressHandler);
+		}
+		else {
+			window.removeEventListener("keypress", self.keypressHandler);
+		}
+		
+		if (self.showNavigationControls) {
+			if (self.navigationOnKeypress) {
+				if (event.keyCode==rightKey) {
+					self.nextView();
+				}
+				if (event.keyCode==leftKey) {
+					self.previousView();
+				}
+			}
+		}
+		else if (self.navigationOnKeypress) {
+			if (event.keyCode==rightKey) {
+				self.nextView();
+			}
+			if (event.keyCode==leftKey) {
+				self.previousView();
+			}
+		}
+	}
+
+	///////////////////////////////////
+	// GENERAL FUNCTIONS
+	///////////////////////////////////
+
+	self.getViewById = function(id) {
+		id = id ? id.replace("#", "") : "";
+		var view = self.viewIds.indexOf(id)!=-1 && self.getElement(id);
+		return view;
+	}
+
+	self.getViewIds = function() {
+		var viewIds = self.getViewPreferenceValue(document.body, self.prefix + "view-ids");
+		var viewId = null;
+
+		viewIds = viewIds!=null && viewIds!="" ? viewIds.split(",") : [];
+
+		if (viewIds.length==0) {
+			viewId = self.getViewPreferenceValue(document.body, self.prefix + "view-id");
+			viewIds = viewId ? [viewId] : [];
+		}
+
+		return viewIds;
+	}
+
+	self.getInitialViewId = function() {
+		var viewId = self.getViewPreferenceValue(document.body, self.prefix + "view-id");
+		return viewId;
+	}
+
+	self.getApplicationStylesheet = function() {
+		var stylesheetId = self.getViewPreferenceValue(document.body, self.prefix + "stylesheet-id");
+		self.applicationStylesheet = document.getElementById("applicationStylesheet");
+		return self.applicationStylesheet.sheet;
+	}
+
+	self.getVisibleView = function() {
+		var viewIds = self.getViewIds();
+		
+		for (var i=0;i<viewIds.length;i++) {
+			var viewId = viewIds[i].replace(/[\#?\.?](.*)/, "$" + "1");
+			var view = self.getElement(viewId);
+			var postName = "_Class";
+
+			if (view==null && viewId && viewId.lastIndexOf(postName)!=-1) {
+				view = self.getElement(viewId.replace(postName, ""));
+			}
+			
+			if (view) {
+				var display = getComputedStyle(view).display;
+		
+				if (display=="block" || display=="flex") {
+					return view;
+				}
+			}
+		}
+
+		return null;
+	}
+
+	self.getVisibleViews = function() {
+		var viewIds = self.getViewIds();
+		var views = [];
+		
+		for (var i=0;i<viewIds.length;i++) {
+			var viewId = viewIds[i].replace(/[\#?\.?](.*)/, "$" + "1");
+			var view = self.getElement(viewId);
+			var postName = "_Class";
+
+			if (view==null && viewId && viewId.lastIndexOf(postName)!=-1) {
+				view = self.getElement(viewId.replace(postName, ""));
+			}
+			
+			if (view) {
+				var display = getComputedStyle(view).display;
+				
+				if (display=="none") {
+					continue;
+				}
+
+				if (display=="block" || display=="flex") {
+					views.push(view);
+				}
+			}
+		}
+
+		return views;
+	}
+
+	self.getStateNameByViewId = function(id) {
+		var state = self.viewsDictionary[id];
+		return state && state.stateName;
+	}
+
+	self.getMatchingViews = function(ids) {
+		var views = self.addedViews.slice(0);
+		var matchingViews = [];
+
+		if (self.showByMediaQuery) {
+			for (let index = 0; index < views.length; index++) {
+				var viewId = views[index];
+				var state = self.viewsDictionary[viewId];
+				var rule = state && state.rule; 
+				var matchResults = window.matchMedia(rule.conditionText);
+				var view = self.views[viewId];
+				
+				if (matchResults.matches) {
+					if (ids==true) {
+						matchingViews.push(viewId);
+					}
+					else {
+						matchingViews.push(view);
+					}
+				}
+			}
+		}
+
+		return matchingViews;
+	}
+
+	self.ruleMatchesQuery = function(rule) {
+		var result = window.matchMedia(rule.conditionText);
+		return result.matches;
+	}
+
+	self.getViewsByStateName = function(stateName, matchQuery) {
+		var views = self.addedViews.slice(0);
+		var matchingViews = [];
+
+		if (self.showByMediaQuery) {
+
+			// find state name
+			for (let index = 0; index < views.length; index++) {
+				var viewId = views[index];
+				var state = self.viewsDictionary[viewId];
+				var rule = state.rule;
+				var mediaRule = state.mediaRule;
+				var view = self.views[viewId];
+				var viewStateName = self.getStyleRuleValue(mediaRule, self.STATE_NAME, state);
+				var stateFoundAtt = view.getAttribute(self.STATE_NAME)==state;
+				var matchesResults = false;
+				
+				if (viewStateName==stateName) {
+					if (matchQuery) {
+						matchesResults = self.ruleMatchesQuery(rule);
+
+						if (matchesResults) {
+							matchingViews.push(view);
+						}
+					}
+					else {
+						matchingViews.push(view);
+					}
+				}
+			}
+		}
+
+		return matchingViews;
+	}
+
+	self.getInitialView = function() {
+		var viewId = self.getInitialViewId();
+		viewId = viewId.replace(/[\#?\.?](.*)/, "$" + "1");
+		var view = self.getElement(viewId);
+		var postName = "_Class";
+
+		if (view==null && viewId && viewId.lastIndexOf(postName)!=-1) {
+			view = self.getElement(viewId.replace(postName, ""));
+		}
+
+		return view;
+	}
+
+	self.getViewIndex = function(view) {
+		var viewIds = self.getViewIds();
+		var id = view ? view.id : null;
+		var index = id && viewIds ? viewIds.indexOf(id) : -1;
+
+		return index;
+	}
+
+	self.syncronizeViewToURL = function() {
+		var fragment = self.getHashFragment();
+
+		if (self.showByMediaQuery) {
+			var stateName = fragment;
+			
+			if (stateName==null || stateName=="") {
+				var initialView = self.getInitialView();
+				stateName = initialView ? self.getStateNameByViewId(initialView.id) : null;
+			}
+			
+			self.showMediaQueryViewsByState(stateName);
+			return;
+		}
+
+		var view = self.getViewById(fragment);
+		var index = view ? self.getViewIndex(view) : 0;
+		if (index==-1) index = 0;
+		var currentView = self.hideViews(index);
+
+		if (self.supportsPopState && currentView) {
+
+			if (fragment==null) {
+				window.history.replaceState({name:currentView.id}, null, "#"+ currentView.id);
+			}
+			else {
+				window.history.pushState({name:currentView.id}, null, "#"+ currentView.id);
+			}
+		}
+		
+		self.setViewVariables(view);
+		return view;
+	}
+
+	/**
+	 * Set the currentView or currentOverlay properties and set the lastView or lastOverlay properties
+	 */
+	self.setViewVariables = function(view, overlay, parentView) {
+		if (view) {
+			if (self.currentView) {
+				self.lastView = self.currentView;
+			}
+			self.currentView = view;
+		}
+
+		if (overlay) {
+			if (self.currentOverlay) {
+				self.lastOverlay = self.currentOverlay;
+			}
+			self.currentOverlay = overlay;
+		}
+	}
+
+	self.getViewPreferenceBoolean = function(view, property, altValue) {
+		var computedStyle = window.getComputedStyle(view);
+		var value = computedStyle.getPropertyValue(property);
+		var type = typeof value;
+		
+		if (value=="true" || (type=="string" && value.indexOf("true")!=-1)) {
+			return true;
+		}
+		else if (value=="" && arguments.length==3) {
+			return altValue;
+		}
+
+		return false;
+	}
+
+	self.getViewPreferenceValue = function(view, property, defaultValue) {
+		var value = window.getComputedStyle(view).getPropertyValue(property);
+
+		if (value===undefined) {
+			return defaultValue;
+		}
+		
+		value = value.replace(/^[\s\"]*/, "");
+		value = value.replace(/[\s\"]*$/, "");
+		value = value.replace(/^[\s"]*(.*?)[\s"]*$/, function (match, capture) { 
+			return capture;
+		});
+
+		return value;
+	}
+
+	self.getStyleRuleValue = function(cssRule, property) {
+		var value = cssRule ? cssRule.style.getPropertyValue(property) : null;
+
+		if (value===undefined) {
+			return null;
+		}
+		
+		value = value.replace(/^[\s\"]*/, "");
+		value = value.replace(/[\s\"]*$/, "");
+		value = value.replace(/^[\s"]*(.*?)[\s"]*$/, function (match, capture) { 
+			return capture;
+		});
+
+		return value;
+	}
+
+	/**
+	 * Get the first defined value of property. Returns empty string if not defined
+	 * @param {String} id id of element
+	 * @param {String} property 
+	 */
+	self.getCSSPropertyValueForElement = function(id, property) {
+		var styleSheets = document.styleSheets;
+		var numOfStylesheets = styleSheets.length;
+		var values = [];
+		var selectorIDText = "#" + id;
+		var selectorClassText = "." + id + "_Class";
+		var value;
+
+		for(var i=0;i<numOfStylesheets;i++) {
+			var styleSheet = styleSheets[i];
+			var cssRules = self.getStylesheetRules(styleSheet);
+			var numOfCSSRules = cssRules.length;
+			var cssRule;
+			
+			for (var j=0;j<numOfCSSRules;j++) {
+				cssRule = cssRules[j];
+				
+				if (cssRule.media) {
+					var mediaRules = cssRule.cssRules;
+					var numOfMediaRules = mediaRules ? mediaRules.length : 0;
+					
+					for(var k=0;k<numOfMediaRules;k++) {
+						var mediaRule = mediaRules[k];
+						
+						if (mediaRule.selectorText==selectorIDText || mediaRule.selectorText==selectorClassText) {
+							
+							if (mediaRule.style && mediaRule.style.getPropertyValue(property)!="") {
+								value = mediaRule.style.getPropertyValue(property);
+								values.push(value);
+							}
+						}
+					}
+				}
+				else {
+
+					if (cssRule.selectorText==selectorIDText || cssRule.selectorText==selectorClassText) {
+						if (cssRule.style && cssRule.style.getPropertyValue(property)!="") {
+							value = cssRule.style.getPropertyValue(property);
+							values.push(value);
+						}
+					}
+				}
+			}
+		}
+
+		return values.pop();
+	}
+
+	self.getIsStyleDefined = function(id, property) {
+		var value = self.getCSSPropertyValueForElement(id, property);
+		return value!==undefined && value!="";
+	}
+
+	self.collectViews = function() {
+		var viewIds = self.getViewIds();
+
+		for (let index = 0; index < viewIds.length; index++) {
+			const id = viewIds[index];
+			const view = self.getElement(id);
+			self.views[id] = view;
+		}
+		
+		self.viewIds = viewIds;
+	}
+
+	self.collectOverlays = function() {
+		var viewIds = self.getViewIds();
+		var ids = [];
+
+		for (let index = 0; index < viewIds.length; index++) {
+			const id = viewIds[index];
+			const view = self.getViewById(id);
+			const isOverlay = view && self.isOverlay(view);
+			
+			if (isOverlay) {
+				ids.push(id);
+				self.overlays[id] = view;
+			}
+		}
+		
+		self.overlayIds = ids;
+	}
+
+	self.collectMediaQueries = function() {
+		var viewIds = self.getViewIds();
+		var styleSheet = self.getApplicationStylesheet();
+		var cssRules = self.getStylesheetRules(styleSheet);
+		var numOfCSSRules = cssRules ? cssRules.length : 0;
+		var cssRule;
+		var id = viewIds.length ? viewIds[0]: ""; // single view
+		var selectorIDText = "#" + id;
+		var selectorClassText = "." + id + "_Class";
+		var viewsNotFound = viewIds.slice();
+		var viewsFound = [];
+		var selectorText = null;
+		var property = self.prefix + "view-id";
+		var stateName = self.prefix + "state";
+		var stateValue;
+		
+		for (var j=0;j<numOfCSSRules;j++) {
+			cssRule = cssRules[j];
+			
+			if (cssRule.media) {
+				var mediaRules = cssRule.cssRules;
+				var numOfMediaRules = mediaRules ? mediaRules.length : 0;
+				var mediaViewInfoFound = false;
+				var mediaId = null;
+				
+				for(var k=0;k<numOfMediaRules;k++) {
+					var mediaRule = mediaRules[k];
+
+					selectorText = mediaRule.selectorText;
+					
+					if (selectorText==".mediaViewInfo" && mediaViewInfoFound==false) {
+
+						mediaId = self.getStyleRuleValue(mediaRule, property);
+						stateValue = self.getStyleRuleValue(mediaRule, stateName);
+
+						selectorIDText = "#" + mediaId;
+						selectorClassText = "." + mediaId + "_Class";
+						
+						// prevent duplicates from load and domcontentloaded events
+						if (self.addedViews.indexOf(mediaId)==-1) {
+							self.addView(mediaId, cssRule, mediaRule, stateValue);
+						}
+
+						viewsFound.push(mediaId);
+
+						if (viewsNotFound.indexOf(mediaId)!=-1) {
+							viewsNotFound.splice(viewsNotFound.indexOf(mediaId));
+						}
+
+						mediaViewInfoFound = true;
+					}
+
+					if (selectorIDText==selectorText || selectorClassText==selectorText) {
+						var styleObject = self.viewsDictionary[mediaId];
+						if (styleObject) {
+							styleObject.styleDeclaration = mediaRule;
+						}
+						break;
+					}
+				}
+			}
+			else {
+				selectorText = cssRule.selectorText.replace(/[#|\s|*]?/g, "");
+
+				if (viewIds.indexOf(selectorText)!=-1) {
+					self.addView(selectorText, cssRule, null, stateValue);
+
+					if (viewsNotFound.indexOf(selectorText)!=-1) {
+						viewsNotFound.splice(viewsNotFound.indexOf(selectorText));
+					}
+
+					break;
+				}
+			}
+		}
+
+		if (viewsNotFound.length) {
+			console.log("Could not find the following views:" + viewsNotFound.join(",") + "");
+			console.log("Views found:" + viewsFound.join(",") + "");
+		}
+	}
+
+	/**
+	 * Adds a view. A view object contains the id of the view and the style rule
+	 * Use enableMediaQuery(rule) to enable
+	 * An array of view names are in self.addedViews array
+	 */
+	self.addView = function(viewId, cssRule, mediaRule, stateName) {
+		var state = {name:viewId, rule:cssRule, id:viewId, mediaRule:mediaRule, stateName:stateName};
+		self.addedViews.push(viewId);
+		self.viewsDictionary[viewId] = state;
+		self.mediaQueryDictionary[viewId] = cssRule;
+	}
+
+	self.hasView = function(name) {
+
+		if (self.addedViews.indexOf(name)!=-1) {
+			return true;
+		}
+		return false;
+	}
+
+	/**
+	 * Go to view by id. Views are added in addView()
+	 * @param {String} id id of view in current
+	 * @param {Boolean} maintainPreviousState if true then do not hide other views
+	 * @param {String} parent id of parent view
+	 */
+	self.goToView = function(id, maintainPreviousState, parent) {
+		var state = self.viewsDictionary[id];
+
+		if (state) {
+			if (maintainPreviousState==false || maintainPreviousState==null) {
+				self.hideViews();
+			}
+			self.enableMediaQuery(state.rule);
+			self.updateViewLabel();
+			self.updateURL();
+		}
+		else {
+			var event = new Event(self.STATE_NOT_FOUND);
+			self.stateName = id;
+			window.dispatchEvent(event);
+		}
+	}
+
+	/**
+	 * Go to the view in the event targets CSS variable
+	 */
+	self.goToTargetView = function(event) {
+		var button = event.currentTarget;
+		var buttonComputedStyles = getComputedStyle(button);
+		var actionTargetValue = buttonComputedStyles.getPropertyValue(self.prefix+"action-target").trim();
+		var animation = buttonComputedStyles.getPropertyValue(self.prefix+"animation").trim();
+		var targetType = buttonComputedStyles.getPropertyValue(self.prefix+"action-type").trim();
+		var targetView = self.application ? null : self.getElement(actionTargetValue);
+		var targetState = targetView ? self.getStateNameByViewId(targetView.id) : null;
+		var actionTargetStyles = targetView ? targetView.style : null;
+		var state = self.viewsDictionary[actionTargetValue];
+		
+		// navigate to page
+		if (self.application==false || targetType=="page") {
+			document.location.href = "./" + actionTargetValue;
+			return;
+		}
+
+		// if view is found
+		if (targetView) {
+
+			if (self.currentOverlay) {
+				self.removeOverlay(false);
+			}
+
+			if (self.showByMediaQuery) {
+				var stateName = targetState;
+				
+				if (stateName==null || stateName=="") {
+					var initialView = self.getInitialView();
+					stateName = initialView ? self.getStateNameByViewId(initialView.id) : null;
+				}
+				self.showMediaQueryViewsByState(stateName, event);
+				return;
+			}
+
+			// add animation set in event target style declaration
+			if (animation && self.supportAnimations) {
+				self.crossFade(self.currentView, targetView, false, animation);
+			}
+			else {
+				self.setViewVariables(self.currentView);
+				self.hideViews();
+				self.enableMediaQuery(state.rule);
+				self.scaleViewIfNeeded(targetView);
+				self.centerView(targetView);
+				self.updateViewLabel();
+				self.updateURL();
+			}
+		}
+		else {
+			var stateEvent = new Event(self.STATE_NOT_FOUND);
+			self.stateName = name;
+			window.dispatchEvent(stateEvent);
+		}
+
+		event.stopImmediatePropagation();
+	}
+
+	/**
+	 * Cross fade between views
+	 **/
+	self.crossFade = function(from, to, update, animation) {
+		var targetIndex = to.parentNode
+		var fromIndex = Array.prototype.slice.call(from.parentElement.children).indexOf(from);
+		var toIndex = Array.prototype.slice.call(to.parentElement.children).indexOf(to);
+
+		if (from.parentNode==to.parentNode) {
+			var reverse = self.getReverseAnimation(animation);
+			var duration = self.getAnimationDuration(animation, true);
+
+			// if target view is above (higher index)
+			// then fade in target view 
+			// and after fade in then hide previous view instantly
+			if (fromIndex<toIndex) {
+				self.setElementAnimation(from, null);
+				self.setElementAnimation(to, null);
+				self.showViewByMediaQuery(to);
+				self.fadeIn(to, update, animation);
+
+				setTimeout(function() {
+					self.setElementAnimation(to, null);
+					self.setElementAnimation(from, null);
+					self.hideView(from);
+					self.updateURL();
+					self.setViewVariables(to);
+					self.updateViewLabel();
+				}, duration)
+			}
+			// if target view is on bottom
+			// then show target view instantly 
+			// and fade out current view
+			else if (fromIndex>toIndex) {
+				self.setElementAnimation(to, null);
+				self.setElementAnimation(from, null);
+				self.showViewByMediaQuery(to);
+				self.fadeOut(from, update, reverse);
+
+				setTimeout(function() {
+					self.setElementAnimation(to, null);
+					self.setElementAnimation(from, null);
+					self.hideView(from);
+					self.updateURL();
+					self.setViewVariables(to);
+				}, duration)
+			}
+		}
+	}
+
+	self.fadeIn = function(element, update, animation) {
+		self.showViewByMediaQuery(element);
+
+		if (update) {
+			self.updateURL(element);
+
+			element.addEventListener("animationend", function(event) {
+				element.style.animation = null;
+				self.setViewVariables(element);
+				self.updateViewLabel();
+				element.removeEventListener("animationend", arguments.callee);
+			});
+		}
+
+		self.setElementAnimation(element, null);
+		
+		element.style.animation = animation;
+	}
+
+	self.fadeOutCurrentView = function(animation, update) {
+		if (self.currentView) {
+			self.fadeOut(self.currentView, update, animation);
+		}
+		if (self.currentOverlay) {
+			self.fadeOut(self.currentOverlay, update, animation);
+		}
+	}
+
+	self.fadeOut = function(element, update, animation) {
+		if (update) {
+			element.addEventListener("animationend", function(event) {
+				element.style.animation = null;
+				self.hideView(element);
+				element.removeEventListener("animationend", arguments.callee);
+			});
+		}
+
+		element.style.animationPlayState = "paused";
+		element.style.animation = animation;
+		element.style.animationPlayState = "running";
+	}
+
+	self.getReverseAnimation = function(animation) {
+		if (animation && animation.indexOf("reverse")==-1) {
+			animation += " reverse";
+		}
+
+		return animation;
+	}
+
+	/**
+	 * Get duration in animation string
+	 * @param {String} animation animation value
+	 * @param {Boolean} inMilliseconds length in milliseconds if true
+	 */
+	self.getAnimationDuration = function(animation, inMilliseconds) {
+		var duration = 0;
+		var expression = /.+(\d\.\d)s.+/;
+
+		if (animation && animation.match(expression)) {
+			duration = parseFloat(animation.replace(expression, "$" + "1"));
+			if (duration && inMilliseconds) duration = duration * 1000;
+		}
+
+		return duration;
+	}
+
+	self.setElementAnimation = function(element, animation, priority) {
+		element.style.setProperty("animation", animation, "important");
+	}
+
+	self.getElement = function(id) {
+		var elementId = id ? id.trim() : id;
+		var element = elementId ? document.getElementById(elementId) : null;
+
+		return element;
+	}
+
+	self.resizeHandler = function(event) {
+		
+		if (self.showByMediaQuery) {
+			if (self.enableDeepLinking) {
+				var stateName = self.getHashFragment();
+
+				if (stateName==null || stateName=="") {
+					var initialView = self.getInitialView();
+					stateName = initialView ? self.getStateNameByViewId(initialView.id) : null;
+				}
+				self.showMediaQueryViewsByState(stateName, event);
+			}
+		}
+		else {
+			var visibleViews = self.getVisibleViews();
+
+			for (let index = 0; index < visibleViews.length; index++) {	
+				var view = visibleViews[index];
+				self.scaleViewIfNeeded(view);
+			}
+		}
+
+		window.dispatchEvent(new Event(self.APPLICATION_RESIZE));
+	}
+
+	self.scaleViewIfNeeded = function(view) {
+
+		if (self.scaleViewsOnResize) {
+			if (view==null) {
+				view = self.getVisibleView();
+			}
+
+			var isViewScaled = view.getAttributeNS(null, self.SIZE_STATE_NAME)=="false" ? false : true;
+
+			if (isViewScaled) {
+				self.scaleViewToFit(view, true);
+			}
+			else {
+				self.scaleViewToActualSize(view);
+			}
+		}
+		else if (view) {
+			self.centerView(view);
+		}
+	}
+
+	self.centerView = function(view) {
+
+		if (self.scaleViewsToFit) {
+			self.scaleViewToFit(view, true);
+		}
+		else {
+			self.scaleViewToActualSize(view);  // for centering support for now
+		}
+	}
+
+	self.preventDoubleClick = function(event) {
+		event.stopImmediatePropagation();
+	}
+
+	self.getHashFragment = function() {
+		var value = window.location.hash ? window.location.hash.replace("#", "") : "";
+		return value;
+	}
+
+	self.showBlockElement = function(view) {
+		view.style.display = "block";
+	}
+
+	self.hideElement = function(view) {
+		view.style.display = "none";
+	}
+
+	self.showStateFunction = null;
+
+	self.showMediaQueryViewsByState = function(state, event) {
+		// browser will hide and show by media query (small, medium, large)
+		// but if multiple views exists at same size user may want specific view
+		// if showStateFunction is defined that is called with state fragment and user can show or hide each media matching view by returning true or false
+		// if showStateFunction is not defined and state is defined and view has a defined state that matches then show that and hide other matching views
+		// if no state is defined show view 
+		// an viewChanging event is dispatched before views are shown or hidden that can be prevented 
+
+		// get all matched queries
+		// if state name is specified then show that view and hide other views
+		// if no state name is defined then show
+		var matchedViews = self.getMatchingViews();
+		var matchMediaQuery = true;
+		var foundViews = self.getViewsByStateName(state, matchMediaQuery);
+		var showViews = [];
+		var hideViews = [];
+
+		// loop views that match media query 
+		for (let index = 0; index < matchedViews.length; index++) {
+			var view = matchedViews[index];
+			
+			// let user determine visible view
+			if (self.showStateFunction!=null) {
+				if (self.showStateFunction(view, state)) {
+					showViews.push(view);
+				}
+				else {
+					hideViews.push(view);
+				}
+			}
+			// state was defined so check if view matches state
+			else if (foundViews.length) {
+
+				if (foundViews.indexOf(view)!=-1) {
+					showViews.push(view);
+				}
+				else {
+					hideViews.push(view);
+				}
+			}
+			// if no state names are defined show view (define unused state name to exclude)
+			else if (state==null || state=="") {
+				showViews.push(view);
+			}
+		}
+
+		if (showViews.length) {
+			var viewChangingEvent = new Event(self.VIEW_CHANGING);
+			viewChangingEvent.showViews = showViews;
+			viewChangingEvent.hideViews = hideViews;
+			window.dispatchEvent(viewChangingEvent);
+
+			if (viewChangingEvent.defaultPrevented==false) {
+				for (var index = 0; index < hideViews.length; index++) {
+					var view = hideViews[index];
+
+					if (self.isOverlay(view)) {
+						self.removeOverlay(view);
+					}
+					else {
+						self.hideElement(view);
+					}
+				}
+
+				for (var index = 0; index < showViews.length; index++) {
+					var view = showViews[index];
+
+					if (index==showViews.length-1) {
+						self.clearDisplay(view);
+						self.setViewOptions(view);
+						self.setViewVariables(view);
+						self.centerView(view);
+						self.updateURLState(view, state);
+					}
+				}
+			}
+
+			var viewChangeEvent = new Event(self.VIEW_CHANGE);
+			viewChangeEvent.showViews = showViews;
+			viewChangeEvent.hideViews = hideViews;
+			window.dispatchEvent(viewChangeEvent);
+		}
+		
+	}
+
+	self.clearDisplay = function(view) {
+		view.style.setProperty("display", null);
+	}
+
+	self.hashChangeHandler = function(event) {
+		var fragment = self.getHashFragment();
+		var view = self.getViewById(fragment);
+
+		if (self.showByMediaQuery) {
+			var stateName = fragment;
+
+			if (stateName==null || stateName=="") {
+				var initialView = self.getInitialView();
+				stateName = initialView ? self.getStateNameByViewId(initialView.id) : null;
+			}
+			self.showMediaQueryViewsByState(stateName);
+		}
+		else {
+			if (view) {
+				self.hideViews();
+				self.showView(view);
+				self.setViewVariables(view);
+				self.updateViewLabel();
+				
+				window.dispatchEvent(new Event(self.VIEW_CHANGE));
+			}
+			else {
+				window.dispatchEvent(new Event(self.VIEW_NOT_FOUND));
+			}
+		}
+	}
+
+	self.popStateHandler = function(event) {
+		var state = event.state;
+		var fragment = state ? state.name : window.location.hash;
+		var view = self.getViewById(fragment);
+
+		if (view) {
+			self.hideViews();
+			self.showView(view);
+			self.updateViewLabel();
+		}
+		else {
+			window.dispatchEvent(new Event(self.VIEW_NOT_FOUND));
+		}
+	}
+
+	self.doubleClickHandler = function(event) {
+		var view = self.getVisibleView();
+		var scaleValue = view ? self.getViewScaleValue(view) : 1;
+		var scaleNeededToFit = view ? self.getViewFitToViewportScale(view) : 1;
+		var scaleNeededToFitWidth = view ? self.getViewFitToViewportWidthScale(view) : 1;
+		var scaleNeededToFitHeight = view ? self.getViewFitToViewportHeightScale(view) : 1;
+		var scaleToFitType = self.scaleToFitType;
+
+		// Three scenarios
+		// - scale to fit on double click
+		// - set scale to actual size on double click
+		// - switch between scale to fit and actual page size
+
+		if (scaleToFitType=="width") {
+			scaleNeededToFit = scaleNeededToFitWidth;
+		}
+		else if (scaleToFitType=="height") {
+			scaleNeededToFit = scaleNeededToFitHeight;
+		}
+
+		// if scale and actual size enabled then switch between
+		if (self.scaleToFitOnDoubleClick && self.actualSizeOnDoubleClick) {
+			var isViewScaled = view.getAttributeNS(null, self.SIZE_STATE_NAME);
+			var isScaled = false;
+			
+			// if scale is not 1 then view needs scaling
+			if (scaleNeededToFit!=1) {
+
+				// if current scale is at 1 it is at actual size
+				// scale it to fit
+				if (scaleValue==1) {
+					self.scaleViewToFit(view);
+					isScaled = true;
+				}
+				else {
+					// scale is not at 1 so switch to actual size
+					self.scaleViewToActualSize(view);
+					isScaled = false;
+				}
+			}
+			else {
+				// view is smaller than viewport 
+				// so scale to fit() is scale actual size
+				// actual size and scaled size are the same
+				// but call scale to fit to retain centering
+				self.scaleViewToFit(view);
+				isScaled = false;
+			}
+			
+			view.setAttributeNS(null, self.SIZE_STATE_NAME, isScaled+"");
+			isViewScaled = view.getAttributeNS(null, self.SIZE_STATE_NAME);
+		}
+		else if (self.scaleToFitOnDoubleClick) {
+			self.scaleViewToFit(view);
+		}
+		else if (self.actualSizeOnDoubleClick) {
+			self.scaleViewToActualSize(view);
+		}
+
+	}
+
+	self.scaleViewToFit = function(view) {
+		return self.setViewScaleValue(view, true);
+	}
+
+	self.scaleViewToActualSize = function(view) {
+		self.setViewScaleValue(view, false, 1);
+	}
+
+	self.onloadHandler = function(event) {
+		self.initialize();
+	}
+
+	self.setElementHTML = function(id, value) {
+		var element = self.getElement(id);
+		element.innerHTML = value;
+	}
+
+	self.getStackArray = function(error) {
+		var value = "";
+		
+		if (error==null) {
+		  try {
+			 error = new Error("Stack");
+		  }
+		  catch (e) {
+			 
+		  }
+		}
+		
+		if ("stack" in error) {
+		  value = error.stack;
+		  var methods = value.split(/\n/g);
+	 
+		  var newArray = methods ? methods.map(function (value, index, array) {
+			 value = value.replace(/\@.*/,"");
+			 return value;
+		  }) : null;
+	 
+		  if (newArray && newArray[0].includes("getStackTrace")) {
+			 newArray.shift();
+		  }
+		  if (newArray && newArray[0].includes("getStackArray")) {
+			 newArray.shift();
+		  }
+		  if (newArray && newArray[0]=="") {
+			 newArray.shift();
+		  }
+	 
+			return newArray;
+		}
+		
+		return null;
+	}
+
+	self.log = function(value) {
+		console.log.apply(this, [value]);
+	}
+	
+	// initialize on load
+	// sometimes the body size is 0 so we call this now and again later
+	window.addEventListener("load", self.onloadHandler);
+	window.document.addEventListener("DOMContentLoaded", self.onloadHandler);
+}
+
+window.application = new Application();
+</script>
+</head>
+<body>
+<div id="ID02-Side_Menu">
+	<div id="Status_bar_fe">
+		<div id="Group_1_ff">
+			<div id="ID0941_fg">
+				<span>09:41</span>
+			</div>
+			<div id="Sc2prstif_1__fh">
+				<div id="Group_4_fi">
+					<svg class="Path_9_fj" viewBox="0 -0.042 14.907 4.218">
+						<path id="Path_9_fj" d="M 0 3.320532321929932 C 0.07048340886831284 3.109082221984863 0.2114502340555191 2.968115329742432 0.3524170517921448 2.791906833648682 C 1.973535537719727 1.241271734237671 3.911829471588135 0.324987381696701 6.13205623626709 0.04305371269583702 C 9.021875381469727 -0.3093633353710175 11.59452152252197 0.4307124316692352 13.88523197174072 2.228039264678955 C 14.16716575622559 2.439489603042603 14.44909858703613 2.721423387527466 14.69579124450684 2.968115329742432 C 14.80151653289795 3.073840618133545 14.83675861358643 3.214807510375977 14.90724182128906 3.320532321929932 C 14.90724182128906 3.426257848739624 14.90724182128906 3.531982660293579 14.90724182128906 3.602466106414795 C 14.90724182128906 3.637707948684692 14.8720006942749 3.637707948684692 14.8720006942749 3.672949552536011 C 14.69579124450684 4.166333198547363 14.13192462921143 4.307300090789795 13.70902347564697 3.954883575439453 C 13.28612422943115 3.602466106414795 12.86322212219238 3.214807748794556 12.40508079528809 2.897632122039795 C 11.34782981872559 2.157556295394897 10.1496114730835 1.699414014816284 8.845668792724609 1.487963795661926 C 6.801648616790771 1.170788407325745 4.863355159759521 1.523205637931824 3.030786752700806 2.545214891433716 C 2.361194610595703 2.932873964309692 1.762085437774658 3.391016244888306 1.1982182264328 3.954883575439453 C 0.8105595111846924 4.34254264831543 0.2114504426717758 4.20157527923584 0.03524192422628403 3.672949552536011 C 0.03524192422628403 3.637707710266113 2.179340583552403e-07 3.637707710266113 2.179340583552403e-07 3.602466106414795 C 0 3.531982660293579 0 3.426257848739624 0 3.320532321929932 Z">
+						</path>
+					</svg>
+					<svg class="Path_10_fk" viewBox="5.487 7.9 11.018 3.397">
+						<path id="Path_10_fk" d="M 11.20106029510498 7.900000095367432 C 13.06887054443359 7.935242176055908 14.83095550537109 8.64007568359375 16.27586555480957 10.08498573303223 C 16.55779647827148 10.36691951751709 16.59304046630859 10.78982067108154 16.31110572814941 11.07175254821777 C 16.02917098999023 11.35368633270264 15.60627269744873 11.38892841339111 15.32433795928955 11.07175254821777 C 14.4432954788208 10.19071006774902 13.38604545593262 9.626842498779297 12.11734390258789 9.415392875671387 C 10.14380741119385 9.062975883483887 8.381723403930664 9.591601371765137 6.866329669952393 10.9307861328125 C 6.725363254547119 11.03651142120361 6.584395885467529 11.17747783660889 6.408187389373779 11.24796104431152 C 6.126253604888916 11.35368633270264 5.773836135864258 11.21271991729736 5.597628116607666 10.96602821350098 C 5.421419620513916 10.68409442901611 5.456661701202393 10.33167743682861 5.703352928161621 10.08498573303223 C 6.231978893280029 9.556360244750977 6.831088066101074 9.098217964172363 7.500679969787598 8.745800971984863 C 8.628415107727051 8.181933403015137 9.79139232635498 7.935242176055908 11.20106029510498 7.900000095367432 Z">
+						</path>
+					</svg>
+					<svg class="Path_11_fl" viewBox="11.301 15.9 7.004 2.571">
+						<path id="Path_11_fl" d="M 14.68358325958252 15.89999866485596 C 16.05801010131836 15.93524169921875 17.1505012512207 16.3581428527832 18.06678771972656 17.23918533325195 C 18.27823448181152 17.4153938293457 18.34871864318848 17.66208648681641 18.27823448181152 17.94401931762695 C 18.13726997375488 18.4726448059082 17.50292015075684 18.64885330200195 17.11526107788086 18.26119613647461 C 16.65711784362793 17.83829307556152 16.16373634338379 17.5211181640625 15.52938461303711 17.38015174865723 C 14.3664083480835 17.13346099853516 13.37964057922363 17.4153938293457 12.53384017944336 18.2259521484375 C 12.32238960266113 18.43740272521973 12.07569789886475 18.50788497924805 11.79376411437988 18.43740272521973 C 11.30037975311279 18.29643821716309 11.12417221069336 17.66208648681641 11.51183128356934 17.27442741394043 C 12.21666431427002 16.56959342956543 13.06246566772461 16.1114501953125 14.04923343658447 15.97048282623291 C 14.29592514038086 15.89999866485596 14.54261684417725 15.89999866485596 14.68358325958252 15.89999866485596 Z">
+						</path>
+					</svg>
+					<svg class="Path_12_fm" viewBox="17.296 23.8 2.785 2.819">
+						<path id="Path_12_fm" d="M 18.67185211181641 23.79999923706055 C 19.44717025756836 23.79999923706055 20.08152008056641 24.43435096740723 20.08152008056641 25.20966911315918 C 20.08152008056641 25.98498725891113 19.44717025756836 26.61933517456055 18.67185211181641 26.61933517456055 C 17.89653396606445 26.61933517456055 17.26218414306641 25.98498725891113 17.29742622375488 25.20966911315918 C 17.26218414306641 24.43435096740723 17.89653396606445 23.79999923706055 18.67185211181641 23.79999923706055 Z">
+						</path>
+					</svg>
+				</div>
+			</div>
+			<div id="Group_5_fn">
+				<svg class="Path_13_fo" viewBox="0 17.4 1.772 5.067">
+					<path id="Path_13_fo" d="M 0.8859096169471741 17.39999961853027 C 0.3898002505302429 17.39999961853027 0 17.7898006439209 0 18.28590965270996 L 0 21.58149337768555 C 0 22.07760429382324 0.3898002505302429 22.46740341186523 0.8859096169471741 22.46740341186523 C 1.38201916217804 22.46740341186523 1.771819233894348 22.07760429382324 1.771819233894348 21.58149337768555 L 1.771819233894348 18.28590965270996 C 1.771819233894348 17.7898006439209 1.38201916217804 17.39999961853027 0.8859096169471741 17.39999961853027 Z">
+					</path>
+				</svg>
+				<svg class="Path_14_fp" viewBox="11.1 11.9 1.772 7.016">
+					<path id="Path_14_fp" d="M 11.9859094619751 11.89999961853027 C 11.48980045318604 11.89999961853027 11.10000038146973 12.28979969024658 11.10000038146973 12.78590869903564 L 11.10000038146973 18.03049468994141 C 11.10000038146973 18.5266056060791 11.48980045318604 18.91640472412109 11.9859094619751 18.91640472412109 C 12.48201942443848 18.91640472412109 12.87181949615479 18.5266056060791 12.87181949615479 18.03049468994141 L 12.87181949615479 12.78590869903564 C 12.87181949615479 12.28979969024658 12.48201942443848 11.89999961853027 11.9859094619751 11.89999961853027 Z">
+					</path>
+				</svg>
+				<svg class="Path_15_fq" viewBox="22.1 6 1.772 9.107">
+					<path id="Path_15_fq" d="M 22.98591423034668 6.000000476837158 C 22.48980522155762 6.000000476837158 22.10000228881836 6.389800548553467 22.10000228881836 6.885910511016846 L 22.10000228881836 14.22124099731445 C 22.10000228881836 14.71735191345215 22.48980522155762 15.10715198516846 22.98591423034668 15.10715198516846 C 23.48202323913574 15.10715198516846 23.8718204498291 14.71735191345215 23.8718204498291 14.22124099731445 L 23.8718204498291 6.885910511016846 C 23.8718204498291 6.389800548553467 23.48202323913574 6.000000476837158 22.98591423034668 6.000000476837158 Z">
+					</path>
+				</svg>
+				<svg class="Path_16_fr" viewBox="33.2 0 1.772 11.233">
+					<path id="Path_16_fr" d="M 34.08591461181641 0 C 33.58980178833008 0 33.20000076293945 0.3898002505302429 33.20000076293945 0.8859096169471741 L 33.20000076293945 10.34742546081543 C 33.20000076293945 10.84353446960449 33.58980178833008 11.2333345413208 34.08591461181641 11.2333345413208 C 34.58202362060547 11.2333345413208 34.97182083129883 10.84353446960449 34.97182083129883 10.34742546081543 L 34.97182083129883 0.8859096169471741 C 34.97182083129883 0.3898002505302429 34.54658126831055 0 34.08591461181641 0 Z">
+					</path>
+				</svg>
+			</div>
+			<div id="Group_6_fs">
+				<svg class="Path_17_ft" viewBox="5.2 5.1 17.977 7.277">
+					<path id="Path_17_ft" d="M 21.99649238586426 5.09999942779541 L 6.380080699920654 5.09999942779541 C 5.711368560791016 5.09999942779541 5.199999809265137 5.611368179321289 5.199999809265137 6.280081272125244 L 5.199999809265137 11.19708728790283 C 5.199999809265137 11.86580085754395 5.711368560791016 12.37716960906982 6.380080699920654 12.37716960906982 L 21.99649238586426 12.37716960906982 C 22.66520500183105 12.37716960906982 23.17657279968262 11.86580085754395 23.17657279968262 11.19708728790283 L 23.17657279968262 6.280081272125244 C 23.17657279968262 5.611368179321289 22.66520309448242 5.09999942779541 21.99649238586426 5.09999942779541 Z">
+					</path>
+				</svg>
+				<svg class="Path_18_fu" viewBox="0 0 21.793 11.407">
+					<path id="Path_18_fu" d="M 19.51067733764648 0 L 2.320826768875122 0 C 1.062073111534119 0 0 1.062073111534119 0 2.320826768875122 L 0 9.047289848327637 C 0 10.34537887573242 1.062073111534119 11.40745258331299 2.320826768875122 11.40745258331299 L 19.47134208679199 11.40745258331299 C 20.76943016052246 11.40745258331299 21.79216766357422 10.34537887573242 21.79216766357422 9.086627006530762 L 21.79216766357422 2.320826768875122 C 21.83150672912598 1.062073111534119 20.76943016052246 0 19.51067733764648 0 Z M 20.84810256958008 9.086627006530762 C 20.84810256958008 9.834011077880859 20.2580623626709 10.42405128479004 19.51067733764648 10.42405128479004 L 2.320826768875122 10.42405128479004 C 1.573441743850708 10.42405128479004 0.9834011197090149 9.834011077880859 0.9834011197090149 9.086627006530762 L 0.9834011197090149 2.320826768875122 C 0.9834011197090149 1.573441743850708 1.573441743850708 0.9834011197090149 2.320826768875122 0.9834011197090149 L 19.47134208679199 0.9834011197090149 C 20.2580623626709 0.9834011197090149 20.84810256958008 1.573441743850708 20.84810256958008 2.320826768875122 L 20.84810256958008 9.086627006530762 Z">
+					</path>
+				</svg>
+				<svg class="Path_19_fv" viewBox="58.4 9.4 1.416 4.052">
+					<path id="Path_19_fv" d="M 59.18672561645508 9.399999618530273 L 58.40000152587891 9.399999618530273 L 58.40000152587891 13.45161247253418 L 59.2260627746582 13.45161247253418 C 59.54074478149414 13.45161247253418 59.81609725952148 13.17625999450684 59.81609725952148 12.861572265625 L 59.81609725952148 10.02937698364258 C 59.81609725952148 9.675352096557617 59.54074478149414 9.399999618530273 59.18672561645508 9.399999618530273 Z">
+					</path>
+				</svg>
+			</div>
+		</div>
+	</div>
+	<div id="Burger_menu_fw" class="Burger_menu">
+		<div id="Burger_menu_fx">
+			<svg class="Line_185_fy" viewBox="0 0 25.797 3">
+				<path id="Line_185_fy" d="M 0 0 L 25.79656982421875 0">
+				</path>
+			</svg>
+			<svg class="Line_186_fz" viewBox="0 0 16 3">
+				<path id="Line_186_fz" d="M 0 0 L 16 0">
+				</path>
+			</svg>
+			<svg class="Path_68415_f" viewBox="0 0 25.797 3">
+				<path id="Path_68415_f" d="M 0 0 L 25.79656982421875 0">
+				</path>
+			</svg>
+		</div>
+	</div>
+	<div id="Search_Bar_f">
+		<svg class="Rectangle_1326_f">
+			<rect id="Rectangle_1326_f" rx="18.5" ry="18.5" x="0" y="0" width="281" height="37">
+			</rect>
+		</svg>
+		<div id="Search_album_song__f">
+			<span>Search album song </span>
+		</div>
+		<div id="musica-searcher_f">
+			<svg class="Path_4221_f" viewBox="0 0 18 18">
+				<path id="Path_4221_f" d="M 17.55947875976562 15.43222713470459 L 13.64907073974609 11.52189445495605 C 13.62828922271729 11.50111103057861 13.60391044616699 11.48658466339111 13.58219432830811 11.46724224090576 C 14.35163307189941 10.30006694793701 14.80071353912354 8.902921676635742 14.80071353912354 7.400429248809814 C 14.80071353912354 3.313265085220337 11.48744678497314 0 7.400356769561768 0 C 3.313266038894653 0 0 3.313265085220337 0 7.400356769561768 C 0 11.4873743057251 3.313193321228027 14.80071353912354 7.400284767150879 14.80071353912354 C 8.902850151062012 14.80071353912354 10.29992198944092 14.35163307189941 11.46709823608398 13.58219432830811 C 11.48644065856934 13.60383892059326 11.50089550018311 13.62821769714355 11.52167797088623 13.64900016784668 L 15.43215847015381 17.55947875976562 C 16.01959228515625 18.14684295654297 16.97197151184082 18.14684295654297 17.55947875976562 17.55947875976562 C 18.14684104919434 16.97204399108887 18.14684104919434 16.01966285705566 17.55947875976562 15.43222713470459 Z M 7.400356769561768 12.23524188995361 C 4.730041027069092 12.23524188995361 2.565398693084717 10.07059955596924 2.565398693084717 7.400356292724609 C 2.565398693084717 4.730040550231934 4.73011302947998 2.565398216247559 7.400356769561768 2.565398216247559 C 10.07052803039551 2.565398216247559 12.23524188995361 4.73011302947998 12.23524188995361 7.400356292724609 C 12.23524188995361 10.07060050964355 10.07052803039551 12.23524188995361 7.400356769561768 12.23524188995361 Z">
+				</path>
+			</svg>
+		</div>
+	</div>
+	<div id="Hot_Recommended_f">
+		<span>Hot Recommended</span>
+	</div>
+	<div id="Playlist_f">
+		<span>Playlist</span>
+	</div>
+	<div id="Recently_Played_f">
+		<span>Recently Played</span>
+	</div>
+	<div id="View_All_f">
+		<span>View All</span>
+	</div>
+	<div id="View_All_ga">
+		<span>View All</span>
+	</div>
+	<div id="Card_gb" class="Card">
+		<div id="Sound_of_Sky_gc">
+			<span>Sound of Sky</span>
+		</div>
+		<div id="Dilon_Bruce_gd">
+			<span>Dilon Bruce</span>
+		</div>
+		<img id="austin-neill-hgO1wFPXl3I-unspl_ge" src="austin-neill-hgO1wFPXl3I-unspl_ge.png" srcset="austin-neill-hgO1wFPXl3I-unspl_ge.png 1x, austin-neill-hgO1wFPXl3I-unspl_ge@2x.png 2x">
+	</div>
+	<div id="Card_gf" class="Card">
+		<div id="Classic_Playlist_gg">
+			<span>Classic Playlist</span>
+		</div>
+		<div id="Piano_Guys_gh">
+			<span>Piano Guys</span>
+		</div>
+		<img id="gabriel-gurrola-2UuhMZEChdc-un_gi" src="gabriel-gurrola-2UuhMZEChdc-un_gi.png" srcset="gabriel-gurrola-2UuhMZEChdc-un_gi.png 1x, gabriel-gurrola-2UuhMZEChdc-un_gi@2x.png 2x">
+	</div>
+	<div id="Card_gj" class="Card">
+		<div id="Summer_Playlist_gk">
+			<span>Summer Playlist</span>
+		</div>
+		<div id="Dilon_Bruce_gl">
+			<span>Dilon Bruce</span>
+		</div>
+		<img id="NoPath_-_Copy_8_gm" src="NoPath_-_Copy_8_gm.png" srcset="NoPath_-_Copy_8_gm.png 1x, NoPath_-_Copy_8_gm@2x.png 2x">
+	</div>
+	<div id="Card_gn" class="Card">
+		<div id="Pop_Music_go">
+			<span>Pop Music</span>
+		</div>
+		<div id="Michael_Jackson_gp">
+			<span>Michael Jackson</span>
+		</div>
+		<img id="NoPath_-_Copy_9_gq" src="NoPath_-_Copy_9_gq.png" srcset="NoPath_-_Copy_9_gq.png 1x, NoPath_-_Copy_9_gq@2x.png 2x">
+	</div>
+	<div id="Card_gr" class="Card">
+		<div id="Girl_on_Fire_gs">
+			<span>Girl on Fire</span>
+		</div>
+		<div id="Alecia_Keys_gt">
+			<span>Alecia Keys</span>
+		</div>
+		<img id="joshua-fuller-ta7rN3NcWyM-unsp_gu" src="joshua-fuller-ta7rN3NcWyM-unsp_gu.png" srcset="joshua-fuller-ta7rN3NcWyM-unsp_gu.png 1x, joshua-fuller-ta7rN3NcWyM-unsp_gu@2x.png 2x">
+	</div>
+	<svg class="Line_187_gv" viewBox="0 0 335 1">
+		<path id="Line_187_gv" d="M 0 0 L 335 0">
+		</path>
+	</svg>
+	<svg class="Line_188_gw" viewBox="0 0 335 1">
+		<path id="Line_188_gw" d="M 0 0 L 335 0">
+		</path>
+	</svg>
+	<div id="Song_list_item">
+		<svg class="Line_189_gy" viewBox="0 0 290 1">
+			<path id="Line_189_gy" d="M 0 0 L 290 0">
+			</path>
+		</svg>
+		<div id="Group_2050_gz">
+			<div id="Group_2048_g">
+				<svg class="Exclusion_1_ha" viewBox="0 0 22 22">
+					<linearGradient id="Exclusion_1_ha" spreadMethod="pad" x1="0.5" x2="0.5" y1="0" y2="1">
+						<stop offset="0" stop-color="#ed8770" stop-opacity="1"></stop>
+						<stop offset="1" stop-color="#d9519d" stop-opacity="1"></stop>
+					</linearGradient>
+					<path id="Exclusion_1_ha" d="M 10.99969482421875 22 C 8.061614990234375 22 5.299346923828125 20.85580444335938 3.22174072265625 18.77818298339844 C 1.1441650390625 16.70053863525391 0 13.93818664550781 0 11.00000762939453 C 0 8.061813354492188 1.1441650390625 5.299476623535156 3.22174072265625 3.221839904785156 C 5.29931640625 1.144203186035156 8.06158447265625 0 10.99969482421875 0 C 13.9378662109375 0 16.70025634765625 1.144203186035156 18.77798461914062 3.221839904785156 C 20.85574340820312 5.299530029296875 22 8.061866760253906 22 11.00000762939453 C 22 13.93814086914062 20.85574340820312 16.70048522949219 18.77798461914062 18.77818298339844 C 16.7001953125 20.85580444335938 13.9378662109375 22 10.99969482421875 22 Z M 11.0267333984375 1.130416870117188 C 5.570220947265625 1.130416870117188 1.131011962890625 5.569740295410156 1.131011962890625 11.02640533447266 C 1.131011962890625 16.48307037353516 5.570220947265625 20.92237854003906 11.0267333984375 20.92237854003906 C 16.48287963867188 20.92237854003906 20.92181396484375 16.48307037353516 20.92181396484375 11.02640533447266 C 20.92181396484375 5.569740295410156 16.48287963867188 1.130416870117188 11.0267333984375 1.130416870117188 Z">
+					</path>
+				</svg>
+			</div>
+			<div id="Group_2049_g">
+				<svg class="Polygon_4_ha" viewBox="0 0 10 8">
+					<linearGradient id="Polygon_4_ha" spreadMethod="pad" x1="0.5" x2="0.5" y1="0" y2="1">
+						<stop offset="0" stop-color="#ed8770" stop-opacity="1"></stop>
+						<stop offset="1" stop-color="#d9519d" stop-opacity="1"></stop>
+					</linearGradient>
+					<path id="Polygon_4_ha" d="M 4.15200138092041 1.356797456741333 C 4.543668746948242 0.7301293015480042 5.456330299377441 0.7301291823387146 5.847998142242432 1.356797337532043 L 9.043750762939453 6.470001220703125 C 9.460030555725098 7.136049270629883 8.98118782043457 8 8.195752143859863 8 L 1.804247498512268 8 C 1.018811941146851 8 0.5399692058563232 7.136049270629883 0.9562492370605469 6.470001220703125 Z">
+					</path>
+				</svg>
+			</div>
+		</div>
+		<div id="Billie_Jean_g">
+			<span>Billie Jean</span>
+		</div>
+		<div id="Michael_Jackson_g">
+			<span>Michael Jackson</span>
+		</div>
+		<div id="Group_2053_g">
+			<svg class="star_g" viewBox="0 0.496 9.647 9.245">
+				<path id="star_g" d="M 9.621784210205078 3.989448308944702 C 9.558263778686523 3.794098377227783 9.384994506835938 3.655794620513916 9.180812835693359 3.63731861114502 L 6.395867347717285 3.384483098983765 L 5.295241832733154 0.8076968193054199 C 5.213981151580811 0.6183826327323914 5.029084205627441 0.4961968064308167 4.823282241821289 0.4961968064308167 C 4.617479801177979 0.4961968064308167 4.432509422302246 0.6183822154998779 4.351765155792236 0.8076968193054199 L 3.251139402389526 3.384483098983765 L 0.4657604396343231 3.63731861114502 C 0.2615791261196136 3.656162261962891 0.08867911994457245 3.794466972351074 0.02478989213705063 3.989448308944702 C -0.03873170539736748 4.184797763824463 0.01993191055953503 4.399064064025879 0.174356535077095 4.534499168395996 L 2.279558181762695 6.380453586578369 L 1.658841609954834 9.114315032958984 C 1.613427042961121 9.315333366394043 1.69144880771637 9.523193359375 1.858238697052002 9.643760681152344 C 1.947890520095825 9.708902359008789 2.053221225738525 9.741435050964355 2.158917188644409 9.741435050964355 C 2.249746561050415 9.741435050964355 2.340649604797363 9.717292785644531 2.421836137771606 9.668712615966797 L 4.823287010192871 8.232814788818359 L 7.224305629730225 9.668712615966797 C 7.400443553924561 9.773969650268555 7.621923923492432 9.764327049255371 7.788345813751221 9.643760681152344 C 7.955135822296143 9.523194313049316 8.033158302307129 9.315333366394043 7.98774242401123 9.114315032958984 L 7.367026329040527 6.380453586578369 L 9.472227096557617 4.534499168395996 C 9.626579284667969 4.399064064025879 9.685317039489746 4.185238838195801 9.621794700622559 3.989448308944702 Z M 4.869511604309082 8.205071449279785">
+				</path>
+			</svg>
+			<svg class="star_ha" viewBox="0 0.496 9.647 9.245">
+				<path id="star_ha" d="M 9.621784210205078 3.989448308944702 C 9.558263778686523 3.794098377227783 9.384994506835938 3.655794620513916 9.180812835693359 3.63731861114502 L 6.395867347717285 3.384483098983765 L 5.295241832733154 0.8076968193054199 C 5.213981151580811 0.6183826327323914 5.029084205627441 0.4961968064308167 4.823282241821289 0.4961968064308167 C 4.617479801177979 0.4961968064308167 4.432509422302246 0.6183822154998779 4.351765155792236 0.8076968193054199 L 3.251139402389526 3.384483098983765 L 0.4657604396343231 3.63731861114502 C 0.2615791261196136 3.656162261962891 0.08867911994457245 3.794466972351074 0.02478989213705063 3.989448308944702 C -0.03873170539736748 4.184797763824463 0.01993191055953503 4.399064064025879 0.174356535077095 4.534499168395996 L 2.279558181762695 6.380453586578369 L 1.658841609954834 9.114315032958984 C 1.613427042961121 9.315333366394043 1.69144880771637 9.523193359375 1.858238697052002 9.643760681152344 C 1.947890520095825 9.708902359008789 2.053221225738525 9.741435050964355 2.158917188644409 9.741435050964355 C 2.249746561050415 9.741435050964355 2.340649604797363 9.717292785644531 2.421836137771606 9.668712615966797 L 4.823287010192871 8.232814788818359 L 7.224305629730225 9.668712615966797 C 7.400443553924561 9.773969650268555 7.621923923492432 9.764327049255371 7.788345813751221 9.643760681152344 C 7.955135822296143 9.523194313049316 8.033158302307129 9.315333366394043 7.98774242401123 9.114315032958984 L 7.367026329040527 6.380453586578369 L 9.472227096557617 4.534499168395996 C 9.626579284667969 4.399064064025879 9.685317039489746 4.185238838195801 9.621794700622559 3.989448308944702 Z M 4.869511604309082 8.205071449279785">
+				</path>
+			</svg>
+			<svg class="star_hb" viewBox="0 0.496 9.647 9.245">
+				<path id="star_hb" d="M 9.621784210205078 3.989448308944702 C 9.558263778686523 3.794098377227783 9.384994506835938 3.655794620513916 9.180812835693359 3.63731861114502 L 6.395867347717285 3.384483098983765 L 5.295241832733154 0.8076968193054199 C 5.213981151580811 0.6183826327323914 5.029084205627441 0.4961968064308167 4.823282241821289 0.4961968064308167 C 4.617479801177979 0.4961968064308167 4.432509422302246 0.6183822154998779 4.351765155792236 0.8076968193054199 L 3.251139402389526 3.384483098983765 L 0.4657604396343231 3.63731861114502 C 0.2615791261196136 3.656162261962891 0.08867911994457245 3.794466972351074 0.02478989213705063 3.989448308944702 C -0.03873170539736748 4.184797763824463 0.01993191055953503 4.399064064025879 0.174356535077095 4.534499168395996 L 2.279558181762695 6.380453586578369 L 1.658841609954834 9.114315032958984 C 1.613427042961121 9.315333366394043 1.69144880771637 9.523193359375 1.858238697052002 9.643760681152344 C 1.947890520095825 9.708902359008789 2.053221225738525 9.741435050964355 2.158917188644409 9.741435050964355 C 2.249746561050415 9.741435050964355 2.340649604797363 9.717292785644531 2.421836137771606 9.668712615966797 L 4.823287010192871 8.232814788818359 L 7.224305629730225 9.668712615966797 C 7.400443553924561 9.773969650268555 7.621923923492432 9.764327049255371 7.788345813751221 9.643760681152344 C 7.955135822296143 9.523194313049316 8.033158302307129 9.315333366394043 7.98774242401123 9.114315032958984 L 7.367026329040527 6.380453586578369 L 9.472227096557617 4.534499168395996 C 9.626579284667969 4.399064064025879 9.685317039489746 4.185238838195801 9.621794700622559 3.989448308944702 Z M 4.869511604309082 8.205071449279785">
+				</path>
+			</svg>
+			<svg class="star_hc" viewBox="0 0.496 9.647 9.245">
+				<path id="star_hc" d="M 9.621784210205078 3.989448308944702 C 9.558263778686523 3.794098377227783 9.384994506835938 3.655794620513916 9.180812835693359 3.63731861114502 L 6.395867347717285 3.384483098983765 L 5.295241832733154 0.8076968193054199 C 5.213981151580811 0.6183826327323914 5.029084205627441 0.4961968064308167 4.823282241821289 0.4961968064308167 C 4.617479801177979 0.4961968064308167 4.432509422302246 0.6183822154998779 4.351765155792236 0.8076968193054199 L 3.251139402389526 3.384483098983765 L 0.4657604396343231 3.63731861114502 C 0.2615791261196136 3.656162261962891 0.08867911994457245 3.794466972351074 0.02478989213705063 3.989448308944702 C -0.03873170539736748 4.184797763824463 0.01993191055953503 4.399064064025879 0.174356535077095 4.534499168395996 L 2.279558181762695 6.380453586578369 L 1.658841609954834 9.114315032958984 C 1.613427042961121 9.315333366394043 1.69144880771637 9.523193359375 1.858238697052002 9.643760681152344 C 1.947890520095825 9.708902359008789 2.053221225738525 9.741435050964355 2.158917188644409 9.741435050964355 C 2.249746561050415 9.741435050964355 2.340649604797363 9.717292785644531 2.421836137771606 9.668712615966797 L 4.823287010192871 8.232814788818359 L 7.224305629730225 9.668712615966797 C 7.400443553924561 9.773969650268555 7.621923923492432 9.764327049255371 7.788345813751221 9.643760681152344 C 7.955135822296143 9.523194313049316 8.033158302307129 9.315333366394043 7.98774242401123 9.114315032958984 L 7.367026329040527 6.380453586578369 L 9.472227096557617 4.534499168395996 C 9.626579284667969 4.399064064025879 9.685317039489746 4.185238838195801 9.621794700622559 3.989448308944702 Z M 4.869511604309082 8.205071449279785">
+				</path>
+			</svg>
+			<svg class="star_hd" viewBox="0 0.496 9.647 9.245">
+				<path id="star_hd" d="M 9.621784210205078 3.989448308944702 C 9.558263778686523 3.794098377227783 9.384994506835938 3.655794620513916 9.180812835693359 3.63731861114502 L 6.395867347717285 3.384483098983765 L 5.295241832733154 0.8076968193054199 C 5.213981151580811 0.6183826327323914 5.029084205627441 0.4961968064308167 4.823282241821289 0.4961968064308167 C 4.617479801177979 0.4961968064308167 4.432509422302246 0.6183822154998779 4.351765155792236 0.8076968193054199 L 3.251139402389526 3.384483098983765 L 0.4657604396343231 3.63731861114502 C 0.2615791261196136 3.656162261962891 0.08867911994457245 3.794466972351074 0.02478989213705063 3.989448308944702 C -0.03873170539736748 4.184797763824463 0.01993191055953503 4.399064064025879 0.174356535077095 4.534499168395996 L 2.279558181762695 6.380453586578369 L 1.658841609954834 9.114315032958984 C 1.613427042961121 9.315333366394043 1.69144880771637 9.523193359375 1.858238697052002 9.643760681152344 C 1.947890520095825 9.708902359008789 2.053221225738525 9.741435050964355 2.158917188644409 9.741435050964355 C 2.249746561050415 9.741435050964355 2.340649604797363 9.717292785644531 2.421836137771606 9.668712615966797 L 4.823287010192871 8.232814788818359 L 7.224305629730225 9.668712615966797 C 7.400443553924561 9.773969650268555 7.621923923492432 9.764327049255371 7.788345813751221 9.643760681152344 C 7.955135822296143 9.523194313049316 8.033158302307129 9.315333366394043 7.98774242401123 9.114315032958984 L 7.367026329040527 6.380453586578369 L 9.472227096557617 4.534499168395996 C 9.626579284667969 4.399064064025879 9.685317039489746 4.185238838195801 9.621794700622559 3.989448308944702 Z M 4.869511604309082 8.205071449279785">
+				</path>
+			</svg>
+		</div>
+		<div id="heart_he">
+			<svg class="Path_8609_hf" viewBox="0 35.525 11.47 9.39">
+				<path id="Path_8609_hf" d="M 8.350157737731934 35.52487945556641 C 10.0697078704834 35.53324890136719 11.46163940429688 36.92515563964844 11.47001171112061 38.64472961425781 C 11.47001171112061 41.79513931274414 5.735019683837891 44.91499710083008 5.735019683837891 44.91499710083008 C 5.735019683837891 44.91499710083008 0 41.74927139282227 0 38.64472961425781 C 0 36.92169952392578 1.396791100502014 35.52487945556641 3.119853019714355 35.52487945556641 L 3.119853019714355 35.52487945556641 C 4.174596309661865 35.51665496826172 5.160666942596436 36.04715347290039 5.735021114349365 36.93185424804688 C 6.313296794891357 36.05146026611328 7.296819686889648 35.52233123779297 8.350157737731934 35.52487945556641 Z">
+				</path>
+			</svg>
+		</div>
+	</div>
+	<div id="Bottom_nav_hg" class="Bottom_nav">
+		<svg class="Ellipse_29_hh">
+			<ellipse id="Ellipse_29_hh" rx="176" ry="13" cx="176" cy="13">
+			</ellipse>
+		</svg>
+		<svg class="Rectangle_1328_hi">
+			<rect id="Rectangle_1328_hi" rx="0" ry="0" x="0" y="0" width="375" height="67">
+			</rect>
+		</svg>
+		<div id="Group_2077_hj">
+			<div id="Discover_hk">
+				<div id="Home_hl">
+					<span>Home</span>
+				</div>
+				<div id="Group_2060_hm">
+					<svg class="Rectangle_1329_ho">
+						<linearGradient id="Rectangle_1329_ho" spreadMethod="pad" x1="0.5" x2="0.5" y1="0" y2="1">
+							<stop offset="0" stop-color="#ed8770" stop-opacity="1"></stop>
+							<stop offset="1" stop-color="#d9519d" stop-opacity="1"></stop>
+						</linearGradient>
+						<rect id="Rectangle_1329_ho" rx="1" ry="1" x="0" y="0" width="9" height="9">
+						</rect>
+					</svg>
+					<svg class="Rectangle_1330_hq">
+						<linearGradient id="Rectangle_1330_hq" spreadMethod="pad" x1="0.5" x2="0.5" y1="0" y2="1">
+							<stop offset="0" stop-color="#ed8770" stop-opacity="1"></stop>
+							<stop offset="1" stop-color="#d9519d" stop-opacity="1"></stop>
+						</linearGradient>
+						<rect id="Rectangle_1330_hq" rx="1" ry="1" x="0" y="0" width="9" height="9">
+						</rect>
+					</svg>
+					<svg class="Rectangle_1331_hs">
+						<linearGradient id="Rectangle_1331_hs" spreadMethod="pad" x1="0.5" x2="0.5" y1="0" y2="1">
+							<stop offset="0" stop-color="#ed8770" stop-opacity="1"></stop>
+							<stop offset="1" stop-color="#d9519d" stop-opacity="1"></stop>
+						</linearGradient>
+						<rect id="Rectangle_1331_hs" rx="1" ry="1" x="0" y="0" width="9" height="9">
+						</rect>
+					</svg>
+					<svg class="Rectangle_1332_hu">
+						<linearGradient id="Rectangle_1332_hu" spreadMethod="pad" x1="0.5" x2="0.5" y1="0" y2="1">
+							<stop offset="0" stop-color="#ed8770" stop-opacity="1"></stop>
+							<stop offset="1" stop-color="#d9519d" stop-opacity="1"></stop>
+						</linearGradient>
+						<rect id="Rectangle_1332_hu" rx="4.5" ry="4.5" x="0" y="0" width="9" height="9">
+						</rect>
+					</svg>
+				</div>
+			</div>
+			<div onclick="application.goToTargetView(event)" id="Songs_hv">
+				<div id="Songs_hw">
+					<span>Songs</span>
+				</div>
+				<div id="ID001-music_hx">
+					<div id="Group_2059_hy">
+						<svg class="Path_68417_hz" viewBox="30.958 0 18.9 21.5">
+							<path id="Path_68417_hz" d="M 37.25799942016602 4.200226783752441 L 37.25799942016602 17.09980583190918 C 36.59271240234375 16.70465850830078 35.7193603515625 16.46001243591309 34.73800277709961 16.46001243591309 C 32.6185302734375 16.46001243591309 30.95799255371094 17.56684303283691 30.95799255371094 18.98000717163086 C 30.95799255371094 20.3931713104248 32.61848831176758 21.5 34.73800277709961 21.5 C 36.85751342773438 21.5 38.51801300048828 20.39316940307617 38.51801300048828 18.98000717163086 L 38.51801300048828 8.888066291809082 L 48.59803009033203 5.528103351593018 L 48.59803009033203 13.31975269317627 C 47.93274307250977 12.92460632324219 47.05939102172852 12.67996025085449 46.07803726196289 12.67996025085449 C 43.95856857299805 12.67996025085449 42.29802322387695 13.786789894104 42.29802322387695 15.19995403289795 C 42.29802322387695 16.61311721801758 43.95852661132812 17.71994781494141 46.07803726196289 17.71994781494141 C 48.19755172729492 17.71994781494141 49.85804748535156 16.61311721801758 49.85804748535156 15.19995403289795 L 49.85804748535156 0 L 37.25799942016602 4.200226783752441 Z">
+							</path>
+						</svg>
+					</div>
+				</div>
+			</div>
+			<div onclick="application.goToTargetView(event)" id="Profile_h">
+				<div id="Settings_h">
+					<span>Settings</span>
+				</div>
+			</div>
+			<svg class="gear_h" viewBox="0 0 20.71 20.71">
+				<path onclick="application.goToTargetView(event)" id="gear_h" d="M 20.22303009033203 7.996941566467285 L 18.63125419616699 7.650904178619385 C 18.49283981323242 7.227125644683838 18.32140159606934 6.813778400421143 18.11899185180664 6.415595531463623 L 19.00020599365234 5.044877052307129 C 19.15757942199707 4.799964427947998 19.12297439575195 4.478417873382568 18.91724967956543 4.272693634033203 L 16.43747138977051 1.792915225028992 C 16.23174476623535 1.587188720703125 15.91019725799561 1.552585005760193 15.66528701782227 1.70996105670929 L 14.29456901550293 2.591173648834229 C 13.89638900756836 2.388765096664429 13.48303985595703 2.217326402664185 13.05926132202148 2.078910112380981 L 12.71322345733643 0.4871356189250946 C 12.651442527771 0.2027211785316467 12.39957809448242 -0.000162124604685232 12.10852813720703 -0.000162124604685232 L 8.601698875427246 -0.000162124604685232 C 8.310647964477539 -0.000162124604685232 8.058782577514648 0.2027203738689423 7.997003078460693 0.4871356189250946 L 7.650965213775635 2.078910112380981 C 7.227186679840088 2.21732497215271 6.813838958740234 2.388763904571533 6.415657520294189 2.591173648834229 L 5.044938564300537 1.7099609375 C 4.800025463104248 1.552584886550903 4.478479862213135 1.587188482284546 4.272755146026611 1.792915105819702 L 1.792976379394531 4.272693634033203 C 1.587249636650085 4.478419780731201 1.552645921707153 4.799968242645264 1.710022211074829 5.044877052307129 L 2.591234683990479 6.415595531463623 C 2.388826131820679 6.813776016235352 2.217387437820435 7.227125644683838 2.078970909118652 7.650904178619385 L 0.4871966540813446 7.996941566467285 C 0.2027822285890579 8.058880805969238 -0.0001010894775390625 8.310587882995605 -0.0001010894775390625 8.601639747619629 L -0.0001010894775390625 12.10846710205078 C -0.0001010894775390625 12.39951801300049 0.2027814090251923 12.65122699737549 0.4871966540813446 12.71316337585449 L 2.078970909118652 13.05920124053955 C 2.21738600730896 13.4829797744751 2.388824939727783 13.89632606506348 2.591234683990479 14.29450798034668 L 1.71002197265625 15.66522598266602 C 1.552645921707153 15.91013717651367 1.587249636650085 16.2316837310791 1.792976140975952 16.43740844726562 L 4.272755146026611 18.91718864440918 C 4.478481292724609 19.1229133605957 4.800029277801514 19.15751647949219 5.044938564300537 19.00014114379883 L 6.415657520294189 18.11892700195312 C 6.81383752822876 18.32133865356445 7.227186679840088 18.49277687072754 7.650965213775635 18.63119316101074 L 7.997003078460693 20.22296524047852 C 8.058783531188965 20.50738334655762 8.310648918151855 20.71026611328125 8.601698875427246 20.71026611328125 L 12.10852813720703 20.71026611328125 C 12.39958000183105 20.71026611328125 12.65144443511963 20.50738334655762 12.71322345733643 20.22296524047852 L 13.05926132202148 18.63119316101074 C 13.48303985595703 18.49277687072754 13.89638900756836 18.32133865356445 14.29456901550293 18.11892700195312 L 15.66528701782227 19.00014114379883 C 15.91020107269287 19.15751647949219 16.23174667358398 19.12306976318359 16.43747138977051 18.91718864440918 L 18.91724967956543 16.43740844726562 C 19.12297439575195 16.23168182373047 19.15757942199707 15.91013622283936 19.00020599365234 15.66522598266602 L 18.11899185180664 14.29450798034668 C 18.3213996887207 13.89632797241211 18.49283790588379 13.4829797744751 18.63125419616699 13.05920124053955 L 20.22303009033203 12.71316337585449 C 20.50744438171387 12.65122318267822 20.71032905578613 12.39951610565186 20.71032905578613 12.10846710205078 L 20.71032905578613 8.601639747619629 C 20.71032905578613 8.310587882995605 20.50744438171387 8.058878898620605 20.22303009033203 7.996941566467285 Z M 14.06814861297607 10.35505485534668 C 14.06814861297607 12.40236568450928 12.40242862701416 14.06808662414551 10.35511684417725 14.06808662414551 C 8.307806015014648 14.06808662414551 6.642085075378418 12.40236568450928 6.642085075378418 10.35505485534668 C 6.642085075378418 8.307744026184082 8.307806015014648 6.642022132873535 10.35511684417725 6.642022132873535 C 12.40242671966553 6.642022132873535 14.06814861297607 8.307744979858398 14.06814861297607 10.35505485534668 Z M 14.06814861297607 10.35505485534668">
+				</path>
+			</svg>
+		</div>
+	</div>
+	<div id="Side_Menu">
+		<svg class="Rectangle_1373">
+			<rect id="Rectangle_1373" rx="0" ry="0" x="0" y="0" width="313" height="211">
+			</rect>
+		</svg>
+		<div id="Group_2207">
+			<svg class="Rectangle_1372">
+				<rect id="Rectangle_1372" rx="0" ry="0" x="0" y="0" width="313" height="812">
+				</rect>
+			</svg>
+		</div>
+		<div id="Equliser">
+			<div id="Equliser_h">
+				<span>Equliser</span>
+			</div>
+			<svg class="Line_189_h" viewBox="0 0 244.697 1">
+				<path id="Line_189_h" d="M 0 0 L 244.697265625 0">
+				</path>
+			</svg>
+			<div id="ID004-sound-bars">
+				<svg class="Path_68467_ic" viewBox="143.5 420 3.091 3.16">
+					<linearGradient id="Path_68467_ic" spreadMethod="pad" x1="0.5" x2="0.5" y1="0" y2="1">
+						<stop offset="0" stop-color="#ed8770" stop-opacity="1"></stop>
+						<stop offset="1" stop-color="#d9519d" stop-opacity="1"></stop>
+					</linearGradient>
+					<path id="Path_68467_ic" d="M 146.0758361816406 423.15966796875 L 144.0151672363281 423.15966796875 C 143.7306518554688 423.15966796875 143.5 422.9290161132812 143.5 422.6445007324219 L 143.5 420.51513671875 C 143.5 420.2306518554688 143.7306518554688 420 144.0151672363281 420 L 146.0758361816406 420 C 146.3603363037109 420 146.5909881591797 420.2306518554688 146.5909881591797 420.51513671875 L 146.5909881591797 422.6445007324219 C 146.5909881591797 422.9290161132812 146.3603363037109 423.15966796875 146.0758361816406 423.15966796875 Z">
+					</path>
+				</svg>
+				<svg class="Path_68468_ie" viewBox="278.5 180 3.091 11.402">
+					<linearGradient id="Path_68468_ie" spreadMethod="pad" x1="0.5" x2="0.5" y1="0" y2="1">
+						<stop offset="0" stop-color="#ed8770" stop-opacity="1"></stop>
+						<stop offset="1" stop-color="#d9519d" stop-opacity="1"></stop>
+					</linearGradient>
+					<path id="Path_68468_ie" d="M 281.0758361816406 191.4023132324219 L 279.0151672363281 191.4023132324219 C 278.7306518554688 191.4023132324219 278.5 191.1716613769531 278.5 190.8871765136719 L 278.5 180.5151672363281 C 278.5 180.2306518554688 278.7306518554688 180 279.0151672363281 180 L 281.0758361816406 180 C 281.3603515625 180 281.5909729003906 180.2306518554688 281.5909729003906 180.5151672363281 L 281.5909729003906 190.8871765136719 C 281.5909729003906 191.1716613769531 281.3603515625 191.4023132324219 281.0758361816406 191.4023132324219 Z">
+					</path>
+				</svg>
+				<svg class="Path_68469_ig" viewBox="278.5 60 3.091 1.03">
+					<linearGradient id="Path_68469_ig" spreadMethod="pad" x1="0.5" x2="0.5" y1="0" y2="1">
+						<stop offset="0" stop-color="#ed8770" stop-opacity="1"></stop>
+						<stop offset="1" stop-color="#d9519d" stop-opacity="1"></stop>
+					</linearGradient>
+					<path id="Path_68469_ig" d="M 281.0758361816406 61.03033065795898 L 279.0151672363281 61.03033065795898 C 278.7306518554688 61.03033065795898 278.5 60.79967498779297 278.5 60.51516723632812 C 278.5 60.23065567016602 278.7306518554688 60 279.0151672363281 60 L 281.0758361816406 60 C 281.3603515625 60 281.5909729003906 60.23065567016602 281.5909729003906 60.51516723632812 C 281.5909729003906 60.79967498779297 281.3603515625 61.03033065795898 281.0758361816406 61.03033065795898 Z">
+					</path>
+				</svg>
+				<svg class="Path_68470_ii" viewBox="278.5 0 3.091 1.03">
+					<linearGradient id="Path_68470_ii" spreadMethod="pad" x1="0.5" x2="0.5" y1="0" y2="1">
+						<stop offset="0" stop-color="#ed8770" stop-opacity="1"></stop>
+						<stop offset="1" stop-color="#d9519d" stop-opacity="1"></stop>
+					</linearGradient>
+					<path id="Path_68470_ii" d="M 281.0758361816406 1.030331134796143 L 279.0151672363281 1.030331134796143 C 278.7306518554688 1.030331134796143 278.5 0.7996743321418762 278.5 0.5151655673980713 C 278.5 0.2306567877531052 278.7306518554688 0 279.0151672363281 0 L 281.0758361816406 0 C 281.3603515625 0 281.5909729003906 0.2306568175554276 281.5909729003906 0.5151655673980713 C 281.5909729003906 0.7996743321418762 281.3603515625 1.030331134796143 281.0758361816406 1.030331134796143 Z">
+					</path>
+				</svg>
+				<svg class="Path_68471_ik" viewBox="143.5 300 3.091 1.03">
+					<linearGradient id="Path_68471_ik" spreadMethod="pad" x1="0.5" x2="0.5" y1="0" y2="1">
+						<stop offset="0" stop-color="#ed8770" stop-opacity="1"></stop>
+						<stop offset="1" stop-color="#d9519d" stop-opacity="1"></stop>
+					</linearGradient>
+					<path id="Path_68471_ik" d="M 146.0758361816406 301.0303344726562 L 144.0151672363281 301.0303344726562 C 143.7306518554688 301.0303344726562 143.5 300.7996826171875 143.5 300.51513671875 C 143.5 300.2306518554688 143.7306518554688 300 144.0151672363281 300 L 146.0758361816406 300 C 146.3603363037109 300 146.5909881591797 300.2306518554688 146.5909881591797 300.51513671875 C 146.5909881591797 300.7996826171875 146.3603363037109 301.0303344726562 146.0758361816406 301.0303344726562 Z">
+					</path>
+				</svg>
+				<svg class="Path_68472_im" viewBox="1 240 3.091 1.03">
+					<linearGradient id="Path_68472_im" spreadMethod="pad" x1="0.5" x2="0.5" y1="0" y2="1">
+						<stop offset="0" stop-color="#ed8770" stop-opacity="1"></stop>
+						<stop offset="1" stop-color="#d9519d" stop-opacity="1"></stop>
+					</linearGradient>
+					<path id="Path_68472_im" d="M 3.575827598571777 241.0303192138672 L 1.515165567398071 241.0303192138672 C 1.230656743049622 241.0303192138672 1 240.7996826171875 1 240.5151672363281 C 1 240.2306671142578 1.230656743049622 240 1.515165567398071 240 L 3.575827598571777 240 C 3.860336303710938 240 4.090993404388428 240.2306671142578 4.090993404388428 240.5151672363281 C 4.090993404388428 240.7996826171875 3.860336303710938 241.0303192138672 3.575827598571777 241.0303192138672 Z">
+					</path>
+				</svg>
+				<svg class="Path_68473_io" viewBox="143.5 360 3.091 1.03">
+					<linearGradient id="Path_68473_io" spreadMethod="pad" x1="0.5" x2="0.5" y1="0" y2="1">
+						<stop offset="0" stop-color="#ed8770" stop-opacity="1"></stop>
+						<stop offset="1" stop-color="#d9519d" stop-opacity="1"></stop>
+					</linearGradient>
+					<path id="Path_68473_io" d="M 146.0758361816406 361.0303344726562 L 144.0151672363281 361.0303344726562 C 143.7306518554688 361.0303344726562 143.5 360.7996826171875 143.5 360.51513671875 C 143.5 360.2306518554688 143.7306518554688 360 144.0151672363281 360 L 146.0758361816406 360 C 146.3603363037109 360 146.5909881591797 360.2306518554688 146.5909881591797 360.51513671875 C 146.5909881591797 360.7996826171875 146.3603363037109 361.0303344726562 146.0758361816406 361.0303344726562 Z">
+					</path>
+				</svg>
+				<svg class="Path_68474_iq" viewBox="143.5 240 3.091 1.03">
+					<linearGradient id="Path_68474_iq" spreadMethod="pad" x1="0.5" x2="0.5" y1="0" y2="1">
+						<stop offset="0" stop-color="#ed8770" stop-opacity="1"></stop>
+						<stop offset="1" stop-color="#d9519d" stop-opacity="1"></stop>
+					</linearGradient>
+					<path id="Path_68474_iq" d="M 146.0758361816406 241.0303192138672 L 144.0151672363281 241.0303192138672 C 143.7306518554688 241.0303192138672 143.5 240.7996826171875 143.5 240.5151672363281 C 143.5 240.2306671142578 143.7306518554688 240 144.0151672363281 240 L 146.0758361816406 240 C 146.3603363037109 240 146.5909881591797 240.2306671142578 146.5909881591797 240.5151672363281 C 146.5909881591797 240.7996826171875 146.3603363037109 241.0303192138672 146.0758361816406 241.0303192138672 Z">
+					</path>
+				</svg>
+				<svg class="Path_68475_is" viewBox="143.5 180 3.091 1.03">
+					<linearGradient id="Path_68475_is" spreadMethod="pad" x1="0.5" x2="0.5" y1="0" y2="1">
+						<stop offset="0" stop-color="#ed8770" stop-opacity="1"></stop>
+						<stop offset="1" stop-color="#d9519d" stop-opacity="1"></stop>
+					</linearGradient>
+					<path id="Path_68475_is" d="M 146.0758361816406 181.0303344726562 L 144.0151672363281 181.0303344726562 C 143.7306518554688 181.0303344726562 143.5 180.7996826171875 143.5 180.5151672363281 C 143.5 180.2306518554688 143.7306518554688 180 144.0151672363281 180 L 146.0758361816406 180 C 146.3603363037109 180 146.5909881591797 180.2306518554688 146.5909881591797 180.5151672363281 C 146.5909881591797 180.7996826171875 146.3603363037109 181.0303344726562 146.0758361816406 181.0303344726562 Z">
+					</path>
+				</svg>
+				<svg class="Path_68476_iu" viewBox="1 180 3.091 1.03">
+					<linearGradient id="Path_68476_iu" spreadMethod="pad" x1="0.5" x2="0.5" y1="0" y2="1">
+						<stop offset="0" stop-color="#ed8770" stop-opacity="1"></stop>
+						<stop offset="1" stop-color="#d9519d" stop-opacity="1"></stop>
+					</linearGradient>
+					<path id="Path_68476_iu" d="M 3.575827598571777 181.0303344726562 L 1.515165567398071 181.0303344726562 C 1.230656743049622 181.0303344726562 1 180.7996826171875 1 180.5151672363281 C 1 180.2306518554688 1.230656743049622 180 1.515165567398071 180 L 3.575827598571777 180 C 3.860336303710938 180 4.090993404388428 180.2306518554688 4.090993404388428 180.5151672363281 C 4.090993404388428 180.7996826171875 3.860336303710938 181.0303344726562 3.575827598571777 181.0303344726562 Z">
+					</path>
+				</svg>
+				<svg class="Path_68477_iw" viewBox="1 120 3.091 1.03">
+					<linearGradient id="Path_68477_iw" spreadMethod="pad" x1="0.5" x2="0.5" y1="0" y2="1">
+						<stop offset="0" stop-color="#ed8770" stop-opacity="1"></stop>
+						<stop offset="1" stop-color="#d9519d" stop-opacity="1"></stop>
+					</linearGradient>
+					<path id="Path_68477_iw" d="M 3.575827598571777 121.0303344726562 L 1.515165567398071 121.0303344726562 C 1.230656743049622 121.0303344726562 1 120.799674987793 1 120.5151596069336 C 1 120.2306594848633 1.230656743049622 120 1.515165567398071 120 L 3.575827598571777 120 C 3.860336303710938 120 4.090993404388428 120.2306594848633 4.090993404388428 120.5151596069336 C 4.090993404388428 120.799674987793 3.860336303710938 121.0303344726562 3.575827598571777 121.0303344726562 Z">
+					</path>
+				</svg>
+				<svg class="Path_68478_iy" viewBox="421 180 3.091 1.03">
+					<linearGradient id="Path_68478_iy" spreadMethod="pad" x1="0.5" x2="0.5" y1="0" y2="1">
+						<stop offset="0" stop-color="#ed8770" stop-opacity="1"></stop>
+						<stop offset="1" stop-color="#d9519d" stop-opacity="1"></stop>
+					</linearGradient>
+					<path id="Path_68478_iy" d="M 423.5758056640625 181.0303344726562 L 421.51513671875 181.0303344726562 C 421.2306518554688 181.0303344726562 421 180.7996826171875 421 180.5151672363281 C 421 180.2306518554688 421.2306518554688 180 421.51513671875 180 L 423.5758056640625 180 C 423.8603515625 180 424.0910034179688 180.2306518554688 424.0910034179688 180.5151672363281 C 424.0910034179688 180.7996826171875 423.8603515625 181.0303344726562 423.5758056640625 181.0303344726562 Z">
+					</path>
+				</svg>
+				<svg class="Path_68479_i" viewBox="421 120 3.091 1.03">
+					<linearGradient id="Path_68479_i" spreadMethod="pad" x1="0.5" x2="0.5" y1="0" y2="1">
+						<stop offset="0" stop-color="#ed8770" stop-opacity="1"></stop>
+						<stop offset="1" stop-color="#d9519d" stop-opacity="1"></stop>
+					</linearGradient>
+					<path id="Path_68479_i" d="M 423.5758056640625 121.0303344726562 L 421.51513671875 121.0303344726562 C 421.2306518554688 121.0303344726562 421 120.799674987793 421 120.5151596069336 C 421 120.2306594848633 421.2306518554688 120 421.51513671875 120 L 423.5758056640625 120 C 423.8603515625 120 424.0910034179688 120.2306594848633 424.0910034179688 120.5151596069336 C 424.0910034179688 120.799674987793 423.8603515625 121.0303344726562 423.5758056640625 121.0303344726562 Z">
+					</path>
+				</svg>
+				<svg class="Path_68480_i" viewBox="278.5 120 3.091 1.03">
+					<linearGradient id="Path_68480_i" spreadMethod="pad" x1="0.5" x2="0.5" y1="0" y2="1">
+						<stop offset="0" stop-color="#ed8770" stop-opacity="1"></stop>
+						<stop offset="1" stop-color="#d9519d" stop-opacity="1"></stop>
+					</linearGradient>
+					<path id="Path_68480_i" d="M 281.0758361816406 121.0303344726562 L 279.0151672363281 121.0303344726562 C 278.7306518554688 121.0303344726562 278.5 120.799674987793 278.5 120.5151596069336 C 278.5 120.2306594848633 278.7306518554688 120 279.0151672363281 120 L 281.0758361816406 120 C 281.3603515625 120 281.5909729003906 120.2306594848633 281.5909729003906 120.5151596069336 C 281.5909729003906 120.799674987793 281.3603515625 121.0303344726562 281.0758361816406 121.0303344726562 Z">
+					</path>
+				</svg>
+				<svg class="Path_68481_i" viewBox="1 300 3.091 7.281">
+					<linearGradient id="Path_68481_i" spreadMethod="pad" x1="0.5" x2="0.5" y1="0" y2="1">
+						<stop offset="0" stop-color="#ed8770" stop-opacity="1"></stop>
+						<stop offset="1" stop-color="#d9519d" stop-opacity="1"></stop>
+					</linearGradient>
+					<path id="Path_68481_i" d="M 3.575827598571777 307.281005859375 L 1.515165567398071 307.281005859375 C 1.230656743049622 307.281005859375 1 307.0503234863281 1 306.7658386230469 L 1 300.51513671875 C 1 300.2306518554688 1.230656743049622 300 1.515165567398071 300 L 3.575827598571777 300 C 3.860336303710938 300 4.090993404388428 300.2306518554688 4.090993404388428 300.51513671875 L 4.090993404388428 306.7658386230469 C 4.090993404388428 307.0503234863281 3.860336303710938 307.281005859375 3.575827598571777 307.281005859375 Z">
+					</path>
+				</svg>
+				<svg class="Path_68482_i" viewBox="421 240 3.091 9.342">
+					<linearGradient id="Path_68482_i" spreadMethod="pad" x1="0.5" x2="0.5" y1="0" y2="1">
+						<stop offset="0" stop-color="#ed8770" stop-opacity="1"></stop>
+						<stop offset="1" stop-color="#d9519d" stop-opacity="1"></stop>
+					</linearGradient>
+					<path id="Path_68482_i" d="M 423.5758056640625 249.3416748046875 L 421.51513671875 249.3416748046875 C 421.2306518554688 249.3416748046875 421 249.1110076904297 421 248.8264923095703 L 421 240.5151672363281 C 421 240.2306671142578 421.2306518554688 240 421.51513671875 240 L 423.5758056640625 240 C 423.8603515625 240 424.0910034179688 240.2306671142578 424.0910034179688 240.5151672363281 L 424.0910034179688 248.8264923095703 C 424.0910034179688 249.1110076904297 423.8603515625 249.3416748046875 423.5758056640625 249.3416748046875 Z">
+					</path>
+				</svg>
+			</div>
+		</div>
+		<div onclick="application.goToTargetView(event)" id="Drive_Mode">
+			<div id="Drive_Mode_i">
+				<span>Drive Mode</span>
+			</div>
+			<svg class="Line_189_i" viewBox="0 0 244.697 1">
+				<path id="Line_189_i" d="M 0 0 L 244.697265625 0">
+				</path>
+			</svg>
+			<div id="ID13-car">
+				<div id="glyph">
+					<svg class="Path_68483_jd" viewBox="68 236 4.18 4.18">
+						<linearGradient id="Path_68483_jd" spreadMethod="pad" x1="0.5" x2="0.5" y1="0" y2="1">
+							<stop offset="0" stop-color="#ed8770" stop-opacity="1"></stop>
+							<stop offset="1" stop-color="#d9519d" stop-opacity="1"></stop>
+						</linearGradient>
+						<path id="Path_68483_jd" d="M 70.09000396728516 235.9999694824219 C 68.93573760986328 235.9999694824219 68.00001525878906 236.9356994628906 68.00001525878906 238.0899658203125 C 68.00001525878906 239.2442321777344 68.93573760986328 240.1799468994141 70.09000396728516 240.1799468994141 C 71.24427032470703 240.1799468994141 72.17999267578125 239.2442321777344 72.17999267578125 238.0899658203125 C 72.17868804931641 236.9362335205078 71.24372863769531 236.0012817382812 70.09000396728516 235.9999694824219 Z M 70.09000396728516 239.0545654296875 C 69.55726623535156 239.0545654296875 69.12539672851562 238.6226959228516 69.12539672851562 238.0899658203125 C 69.12539672851562 237.5572204589844 69.55726623535156 237.1253509521484 70.09000396728516 237.1253509521484 C 70.62274169921875 237.1253509521484 71.05461120605469 237.5572204589844 71.05461120605469 238.0899658203125 C 71.05461120605469 238.6226959228516 70.62274169921875 239.0545654296875 70.09000396728516 239.0545654296875 Z">
+						</path>
+					</svg>
+					<svg class="Path_68484_jf" viewBox="356 236 4.18 4.18">
+						<linearGradient id="Path_68484_jf" spreadMethod="pad" x1="0.5" x2="0.5" y1="0" y2="1">
+							<stop offset="0" stop-color="#ed8770" stop-opacity="1"></stop>
+							<stop offset="1" stop-color="#d9519d" stop-opacity="1"></stop>
+						</linearGradient>
+						<path id="Path_68484_jf" d="M 358.0900268554688 235.9999694824219 C 356.9357604980469 235.9999694824219 356.0000305175781 236.9356994628906 356.0000305175781 238.0899658203125 C 356.0000305175781 239.2442321777344 356.9357604980469 240.1799468994141 358.0900268554688 240.1799468994141 C 359.2442932128906 240.1799468994141 360.1799926757812 239.2442321777344 360.1799926757812 238.0899658203125 C 360.1787109375 236.9362335205078 359.2437438964844 236.0012817382812 358.0900268554688 235.9999694824219 Z M 358.0900268554688 239.0545654296875 C 357.5572814941406 239.0545654296875 357.1253967285156 238.6226959228516 357.1253967285156 238.0899658203125 C 357.1253967285156 237.5572204589844 357.5572814941406 237.1253509521484 358.0900268554688 237.1253509521484 C 358.6227416992188 237.1253509521484 359.0546264648438 237.5572204589844 359.0546264648438 238.0899658203125 C 359.0546264648438 238.6226959228516 358.6227416992188 239.0545654296875 358.0900268554688 239.0545654296875 Z">
+						</path>
+					</svg>
+					<svg class="Path_68485_jh" viewBox="4 100 20.257 8.038">
+						<linearGradient id="Path_68485_jh" spreadMethod="pad" x1="0.5" x2="0.5" y1="0" y2="1">
+							<stop offset="0" stop-color="#ed8770" stop-opacity="1"></stop>
+							<stop offset="1" stop-color="#d9519d" stop-opacity="1"></stop>
+						</linearGradient>
+						<path id="Path_68485_jh" d="M 23.02693939208984 103.7393493652344 L 19.27299690246582 103.0544738769531 L 16.07712364196777 100.4028015136719 C 15.76038932800293 100.1426239013672 15.36328506469727 100.000244140625 14.95339202880859 99.9998779296875 L 10.24504852294922 99.9998779296875 C 9.70751953125 99.99861145019531 9.198883056640625 100.2430725097656 8.86408805847168 100.6636123657227 L 6.822771549224854 103.0544738769531 L 5.446915626525879 103.0544738769531 C 4.648173809051514 103.0553665161133 4.0008864402771 103.7026519775391 4 104.5013961791992 L 4 106.2698516845703 C 4.001085758209229 107.24609375 4.792213439941406 108.0372161865234 5.768452644348145 108.0382995605469 L 6.136009216308594 108.0382995605469 C 5.940901756286621 107.020751953125 6.375324249267578 105.9854736328125 7.238121032714844 105.4118347167969 C 8.100917816162109 104.8382110595703 9.223648071289062 104.8382034301758 10.08644485473633 105.4118347167969 C 10.94924163818359 105.9854736328125 11.38366508483887 107.020751953125 11.18855857849121 108.0382995605469 L 17.71133232116699 108.0382995605469 C 17.51622581481934 107.020751953125 17.95064926147461 105.9854736328125 18.81344604492188 105.4118347167969 C 19.67624282836914 104.8382034301758 20.79897308349609 104.8382034301758 21.66176986694336 105.4118347167969 C 22.52456665039062 105.9854736328125 22.95898818969727 107.020751953125 22.76388168334961 108.0382995605469 L 22.80990028381348 108.0382995605469 C 23.60864448547363 108.0374145507812 24.25593185424805 107.3901214599609 24.2568187713623 106.5913848876953 L 24.25681686401367 105.1698684692383 C 24.26040840148926 104.453254699707 23.73599052429199 103.8432769775391 23.02694129943848 103.7393493652344 Z M 11.07380867004395 102.5721740722656 C 11.07380867004395 102.8385467529297 10.85787391662598 103.0544738769531 10.59150505065918 103.0544738769531 L 8.471170425415039 103.0544738769531 C 8.37701416015625 103.0545349121094 8.291437149047852 102.9997863769531 8.252025604248047 102.9142761230469 C 8.212612152099609 102.8287582397461 8.226572036743164 102.7281341552734 8.287774085998535 102.6565780639648 L 9.691120147705078 101.0127258300781 C 9.782814979553223 100.905517578125 9.91684627532959 100.8438339233398 10.0579137802124 100.8439178466797 L 10.59150505065918 100.8439178466797 C 10.85787391662598 100.8439178466797 11.07380867004395 101.0598449707031 11.07380867004395 101.3262176513672 L 11.07380867004395 102.5721740722656 Z M 13.4853343963623 104.8229370117188 L 12.84226226806641 104.8229370117188 C 12.57589340209961 104.8229370117188 12.35995674133301 104.6069946289062 12.35995674133301 104.3406295776367 C 12.35995674133301 104.0742568969727 12.57589340209961 103.8583221435547 12.84226226806641 103.8583221435547 L 13.4853343963623 103.8583221435547 C 13.75170516967773 103.8583221435547 13.9676399230957 104.0742568969727 13.9676399230957 104.3406295776367 C 13.9676399230957 104.6069946289062 13.75170516967773 104.8229370117188 13.4853343963623 104.8229370117188 Z M 17.28264427185059 103.0662994384766 L 12.68036842346191 103.0556030273438 C 12.41443824768066 103.0549850463867 12.19919013977051 102.8392333984375 12.19919013977051 102.5733032226562 L 12.19918823242188 101.3262176513672 C 12.19918823242188 101.0598449707031 12.41512298583984 100.8439178466797 12.68149375915527 100.8439178466797 L 14.99446868896484 100.8439178466797 C 15.10283660888672 100.8439178466797 15.20808219909668 100.8804321289062 15.29318618774414 100.9475860595703 L 17.43256187438965 102.6356811523438 C 17.51340103149414 102.699333190918 17.54494857788086 102.8072662353516 17.5111198425293 102.9044342041016 C 17.47729110717773 103.0016021728516 17.38553619384766 103.0666046142578 17.28264427185059 103.0662994384766 Z">
+						</path>
+					</svg>
+				</div>
+			</div>
+		</div>
+		<div id="Hidden_Folders">
+			<div onclick="application.goToTargetView(event)" id="Settings_jj">
+				<span>Settings</span>
+			</div>
+			<svg class="Line_189_jk" viewBox="0 0 244.697 1">
+				<path id="Line_189_jk" d="M 0 0 L 244.697265625 0">
+				</path>
+			</svg>
+			<div id="ID006-folder">
+				<div id="Group_2197">
+					<div id="Group_2196">
+						<svg class="Path_68486_jp" viewBox="0 85.175 18 14.027">
+							<linearGradient id="Path_68486_jp" spreadMethod="pad" x1="0.5" x2="0.5" y1="0" y2="1">
+								<stop offset="0" stop-color="#ed8770" stop-opacity="1"></stop>
+								<stop offset="1" stop-color="#d9519d" stop-opacity="1"></stop>
+							</linearGradient>
+							<path id="Path_68486_jp" d="M 16 87.2015380859375 L 9 87.2015380859375 L 8 85.2015380859375 C 7.951095104217529 85.14275360107422 8.076410293579102 85.19915771484375 8 85.2015380859375 L 2 85.2015380859375 C 1.099762201309204 85.20809173583984 0 86.30130004882812 0 87.2015380859375 L 0 97.2015380859375 C 0.001092280494049191 98.10485076904297 1.096683979034424 99.200439453125 2 99.2015380859375 L 16 99.2015380859375 C 16.90331649780273 99.200439453125 17.99890518188477 98.10485076904297 18 97.2015380859375 L 18 89.2015380859375 C 17.99890518188477 88.29822540283203 16.90331649780273 87.20262908935547 16 87.2015380859375 Z">
+							</path>
+						</svg>
+					</div>
+				</div>
+				<div id="Group_2199">
+					<div id="Group_2198">
+						<svg class="Path_68487_jt" viewBox="43.245 42.652 18 14.027">
+							<linearGradient id="Path_68487_jt" spreadMethod="pad" x1="0.5" x2="0.5" y1="0" y2="1">
+								<stop offset="0" stop-color="#ed8770" stop-opacity="1"></stop>
+								<stop offset="1" stop-color="#d9519d" stop-opacity="1"></stop>
+							</linearGradient>
+							<path id="Path_68487_jt" d="M 60.2452392578125 44.67855834960938 L 52.2452392578125 44.67855834960938 L 51.2452392578125 42.67855834960938 C 51.19633483886719 42.61977386474609 51.32164764404297 42.67617034912109 51.2452392578125 42.67855834960938 L 45.2452392578125 42.67855834960938 C 44.42841339111328 42.67989730834961 43.35625457763672 42.86933135986328 43.2452392578125 43.67855834960938 L 49.2452392578125 43.67855834960938 C 49.52714538574219 43.6778678894043 49.06397247314453 44.46268463134766 49.2452392578125 44.67855834960938 L 51.2452392578125 45.67855834960938 L 57.2452392578125 45.67855834960938 C 58.53636169433594 45.68074035644531 60.24305725097656 47.38743591308594 60.2452392578125 48.67855834960938 L 60.2452392578125 56.67855834960938 C 61.06385803222656 56.57643127441406 61.24459838867188 55.5035285949707 61.2452392578125 54.67855834960938 L 61.2452392578125 45.67855834960938 C 61.24310302734375 44.77985763549805 61.14389038085938 44.68511199951172 60.2452392578125 44.67855834960938 Z">
+							</path>
+						</svg>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="Theme">
+			<div id="Themes">
+				<span>Themes</span>
+			</div>
+			<svg class="Line_189_jw" viewBox="0 0 244.697 1">
+				<path id="Line_189_jw" d="M 0 0 L 244.697265625 0">
+				</path>
+			</svg>
+			<div id="ID001-paint">
+				<div id="Group_2178">
+					<div id="Group_2177">
+						<svg class="Path_68457_j" viewBox="90.078 240.908 1.391 1.391">
+							<linearGradient id="Path_68457_j" spreadMethod="pad" x1="0.5" x2="0.5" y1="0" y2="1">
+								<stop offset="0" stop-color="#ed8770" stop-opacity="1"></stop>
+								<stop offset="1" stop-color="#d9519d" stop-opacity="1"></stop>
+							</linearGradient>
+							<path id="Path_68457_j" d="M 90.77348327636719 240.9079895019531 C 90.38975524902344 240.9079895019531 90.0780029296875 241.2197570800781 90.0780029296875 241.6034851074219 C 90.0780029296875 241.9872131347656 90.38975524902344 242.2989501953125 90.77348327636719 242.2989501953125 C 91.15721130371094 242.2989501953125 91.46896362304688 241.9872131347656 91.46896362304688 241.6034851074219 C 91.46896362304688 241.2197570800781 91.15721130371094 240.9079895019531 90.77348327636719 240.9079895019531 Z">
+							</path>
+						</svg>
+					</div>
+				</div>
+				<div id="Group_2180">
+					<div id="Group_2179">
+						<svg class="Path_68458_j" viewBox="205.662 214.115 4.244 3.283">
+							<linearGradient id="Path_68458_j" spreadMethod="pad" x1="0.5" x2="0.5" y1="0" y2="1">
+								<stop offset="0" stop-color="#ed8770" stop-opacity="1"></stop>
+								<stop offset="1" stop-color="#d9519d" stop-opacity="1"></stop>
+							</linearGradient>
+							<path id="Path_68458_j" d="M 209.4978637695312 214.5089416503906 C 208.9721984863281 213.9831848144531 208.0567016601562 213.9831848144531 207.5310363769531 214.5088958740234 C 207.3639526367188 214.67529296875 207.2471618652344 214.8722229003906 207.1812896728516 215.0943298339844 L 207.1812896728516 215.0950317382812 C 206.9435577392578 215.8964233398438 206.3901062011719 216.5715637207031 205.6619873046875 217.0007934570312 C 206.8606872558594 217.6786193847656 208.496826171875 217.4768981933594 209.4978942871094 216.4757995605469 C 210.0417175292969 215.9319305419922 210.0417175292969 215.0528564453125 209.4978637695312 214.5089416503906 Z">
+							</path>
+						</svg>
+					</div>
+				</div>
+				<div id="Group_2182">
+					<div id="Group_2181">
+						<svg class="Path_68459_j" viewBox="120.087 360.946 1.391 1.391">
+							<linearGradient id="Path_68459_j" spreadMethod="pad" x1="0.5" x2="0.5" y1="0" y2="1">
+								<stop offset="0" stop-color="#ed8770" stop-opacity="1"></stop>
+								<stop offset="1" stop-color="#d9519d" stop-opacity="1"></stop>
+							</linearGradient>
+							<path id="Path_68459_j" d="M 120.782470703125 360.9460144042969 C 120.3987426757812 360.9460144042969 120.0869903564453 361.2577514648438 120.0869903564453 361.6414794921875 C 120.0869903564453 362.0252075195312 120.3987426757812 362.3369750976562 120.782470703125 362.3369750976562 C 121.1662063598633 362.3369750976562 121.4779510498047 362.0252075195312 121.4779510498047 361.6414794921875 C 121.4779510498047 361.2577514648438 121.1662063598633 360.9460144042969 120.782470703125 360.9460144042969 Z">
+							</path>
+						</svg>
+					</div>
+				</div>
+				<div id="Group_2184">
+					<div id="Group_2183">
+						<svg class="Path_68460_kd" viewBox="150.097 150.88 1.391 1.391">
+							<linearGradient id="Path_68460_kd" spreadMethod="pad" x1="0.5" x2="0.5" y1="0" y2="1">
+								<stop offset="0" stop-color="#ed8770" stop-opacity="1"></stop>
+								<stop offset="1" stop-color="#d9519d" stop-opacity="1"></stop>
+							</linearGradient>
+							<path id="Path_68460_kd" d="M 150.79248046875 150.8800048828125 C 150.4087524414062 150.8800048828125 150.0970001220703 151.1917419433594 150.0970001220703 151.5754852294922 C 150.0970001220703 151.9592132568359 150.4087066650391 152.2709655761719 150.79248046875 152.2709655761719 C 151.1762084960938 152.2709655761719 151.4879608154297 151.9592132568359 151.4879608154297 151.5754852294922 C 151.4879608154297 151.1917419433594 151.1762084960938 150.8800048828125 150.79248046875 150.8800048828125 Z">
+							</path>
+						</svg>
+					</div>
+				</div>
+				<div id="Group_2186">
+					<div id="Group_2185">
+						<svg class="Path_68461_kh" viewBox="0 61.685 20.866 20.872">
+							<linearGradient id="Path_68461_kh" spreadMethod="pad" x1="0.5" x2="0.5" y1="0" y2="1">
+								<stop offset="0" stop-color="#ed8770" stop-opacity="1"></stop>
+								<stop offset="1" stop-color="#d9519d" stop-opacity="1"></stop>
+							</linearGradient>
+							<path id="Path_68461_kh" d="M 20.61763763427734 69.82705688476562 C 20.39437103271484 68.79716491699219 20.00948143005371 67.82330322265625 19.48345565795898 66.91304016113281 C 18.16614723205566 68.06432342529297 16.42584800720215 69.35799407958984 15.08234691619873 69.52494812011719 C 15.32285594940186 70.53111267089844 15.01147937774658 71.48114013671875 14.35164070129395 72.14102172851562 C 13.48503684997559 73.00833129882812 12.33245372772217 73.48577880859375 11.10589599609375 73.48577880859375 C 9.880033493041992 73.48577880859375 8.727450370788574 73.00833129882812 7.860150814056396 72.14102172851562 C 7.583395957946777 71.86334228515625 7.356837749481201 71.65995788574219 7.49407958984375 71.23776245117188 C 7.574264526367188 70.98983764648438 7.787474155426025 70.80716705322266 8.044902801513672 70.76573181152344 C 8.850371360778809 70.63600158691406 9.507148742675781 70.09263610839844 9.717670440673828 69.381591796875 C 9.848098754882812 68.94014739990234 10.09050846099854 68.53398132324219 10.4185733795166 68.20661926269531 C 11.10167789459229 67.52309417724609 12.11530303955078 67.29222106933594 13.03117752075195 67.499267578125 C 13.1854305267334 66.15688323974609 14.52508068084717 64.37088012695312 15.64999389648438 63.07753753662109 C 11.72253513336182 60.81482696533203 6.537557125091553 61.26664733886719 3.057838916778564 64.74826049804688 C 0.5822458267211914 67.22386169433594 -0.4629907310009003 70.64480590820312 0.190311074256897 74.13435363769531 C 0.9434968233108521 78.15635681152344 4.136262893676758 81.44085693359375 8.136584281921387 82.30810546875 C 8.902654647827148 82.47380828857422 9.670811653137207 82.55668640136719 10.43285083770752 82.55668640136719 C 12.21681308746338 82.55668640136719 13.77101612091064 82.21833038330078 14.36322975158691 80.41795349121094 C 14.7293004989624 79.30546569824219 14.4461030960083 78.10334014892578 13.62362384796143 77.28090667724609 C 13.07970809936523 76.73698425292969 13.07970809936523 75.85791778564453 13.62362384796143 75.31404113769531 C 14.14932537078857 74.78834533691406 15.06482791900635 74.78834533691406 15.59048271179199 75.31404113769531 C 16.41231155395508 76.13587951660156 17.61170959472656 76.41972351074219 18.72753524780273 76.05364990234375 C 19.80739593505859 75.69847106933594 20.58236694335938 74.78765106201172 20.74941253662109 73.67724609375 C 20.9409294128418 72.41194152832031 20.89680290222168 71.11674499511719 20.61763763427734 69.82705688476562 Z M 7.652366161346436 64.47457122802734 C 8.802864074707031 64.47457122802734 9.738760948181152 65.41046905517578 9.738760948181152 66.56095886230469 C 9.738760948181152 67.71145629882812 8.802863121032715 68.64735412597656 7.652365207672119 68.64735412597656 C 6.50186824798584 68.64735412597656 5.565971374511719 67.71145629882812 5.565971374511719 66.56095886230469 C 5.565971374511719 65.41051483154297 6.501822471618652 64.47457122802734 7.652366161346436 64.47457122802734 Z M 2.784097671508789 70.73379516601562 C 2.784097671508789 69.58329772949219 3.719994783401489 68.64739990234375 4.870491504669189 68.64739990234375 C 6.020988464355469 68.64739990234375 6.956885814666748 69.58329772949219 6.956885814666748 70.73379516601562 C 6.956885814666748 71.88429260253906 6.020988464355469 72.8201904296875 4.870491504669189 72.8201904296875 C 3.719994783401489 72.8201904296875 2.784097671508789 71.88429260253906 2.784097671508789 70.73379516601562 Z M 6.261405467987061 78.38394165039062 C 5.110908508300781 78.38394165039062 4.175011157989502 77.44804382324219 4.175011157989502 76.29754638671875 C 4.175011157989502 75.14704895019531 5.110908508300781 74.21115112304688 6.261405467987061 74.21115112304688 C 7.411902904510498 74.21115112304688 8.347800254821777 75.14704895019531 8.347800254821777 76.29754638671875 C 8.347846031188965 77.447998046875 7.411902904510498 78.38394165039062 6.261405467987061 78.38394165039062 Z">
+							</path>
+						</svg>
+					</div>
+				</div>
+				<div id="Group_2188">
+					<div id="Group_2187">
+						<svg class="Path_68462_kl" viewBox="418.057 0.008 4.354 4.307">
+							<linearGradient id="Path_68462_kl" spreadMethod="pad" x1="0.5" x2="0.5" y1="0" y2="1">
+								<stop offset="0" stop-color="#ed8770" stop-opacity="1"></stop>
+								<stop offset="1" stop-color="#d9519d" stop-opacity="1"></stop>
+							</linearGradient>
+							<path id="Path_68462_kl" d="M 422.3182983398438 0.08271604776382446 C 422.2958984375 0.06032904237508774 422.2435913085938 0.008000016212463379 422.0717468261719 0.008000016212463379 C 421.2073364257812 0.008000016212463379 419.6321411132812 1.05689799785614 418.0570068359375 2.441601276397705 L 419.9301147460938 4.314693450927734 C 421.8538208007812 2.125031471252441 422.7101440429688 0.4750679731369019 422.3182983398438 0.08271604776382446 Z">
+							</path>
+						</svg>
+					</div>
+				</div>
+				<div id="Group_2190">
+					<div id="Group_2189">
+						<svg class="Path_68463_kp" viewBox="310.224 72.897 5.927 5.944">
+							<linearGradient id="Path_68463_kp" spreadMethod="pad" x1="0.5" x2="0.5" y1="0" y2="1">
+								<stop offset="0" stop-color="#ed8770" stop-opacity="1"></stop>
+								<stop offset="1" stop-color="#d9519d" stop-opacity="1"></stop>
+							</linearGradient>
+							<path id="Path_68463_kp" d="M 314.19970703125 72.89700317382812 C 314.0574951171875 73.03392028808594 313.9126586914062 73.17028045654297 313.775146484375 73.30780029296875 C 311.7131958007812 75.37042236328125 310.2190551757812 77.51252746582031 310.2237548828125 78.40225219726562 C 310.2256469726562 78.78357696533203 310.5494689941406 78.90742492675781 310.8325805664062 78.80828857421875 C 311.96630859375 78.61847686767578 314.1285400390625 76.88819122314453 315.7420043945312 75.27474975585938 C 315.8875122070312 75.12930297851562 316.0126342773438 74.99095153808594 316.150634765625 74.84796142578125 L 314.19970703125 72.89700317382812 Z">
+							</path>
+						</svg>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<img id="Image_1" src="Image_1.png" srcset="Image_1.png 1x, Image_1@2x.png 2x">
+</div>
+</body>
+</html>
